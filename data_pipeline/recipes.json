@@ -1,0 +1,1055 @@
+{
+  "Dal Bhat": {
+    "ingredients": {
+      "rice_white_cooked": 170,
+      "red_lentils_masoor_cooked": 70,
+      "spinach_raw": 30,
+      "potato_boiled": 20,
+      "mustard_oil": 5,
+      "ghee_clarified_butter": 5
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_staple"
+  },
+  "Chicken Momo": {
+    "ingredients": {
+      "wheat_flour": 50,
+      "chicken_breast_skinless": 70,
+      "onion_raw": 22,
+      "mustard_oil": 5,
+      "ginger_raw": 1.5,
+      "garlic_raw": 1.5
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_snack"
+  },
+  "Buff Momo": {
+    "ingredients": {
+      "wheat_flour": 50,
+      "buffalo_meat_lean": 70,
+      "onion_raw": 22,
+      "mustard_oil": 5,
+      "ginger_raw": 1.5,
+      "garlic_raw": 1.5
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_snack"
+  },
+  "Veg Momo": {
+    "ingredients": {
+      "wheat_flour": 50,
+      "cabbage_raw": 45,
+      "onion_raw": 25,
+      "cauliflower_raw": 20,
+      "mustard_oil": 6,
+      "ginger_raw": 2,
+      "garlic_raw": 2
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_snack"
+  },
+  "Fried Buff Momo": {
+    "ingredients": {
+      "wheat_flour": 48,
+      "buffalo_meat_lean": 65,
+      "onion_raw": 20,
+      "mustard_oil": 14,
+      "ginger_raw": 1.5,
+      "garlic_raw": 1.5
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_snack"
+  },
+  "Puri": {
+    "ingredients": {
+      "wheat_flour": 40,
+      "mustard_oil": 9.5,
+      "salt_table": 0.5
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_bread"
+  },
+  "Roti": {
+    "ingredients": {
+      "wheat_flour": 49,
+      "ghee_clarified_butter": 1
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_bread"
+  },
+  "Jeera Rice": {
+    "ingredients": {
+      "rice_white_cooked": 194,
+      "ghee_clarified_butter": 4,
+      "cumin_seeds_jeera": 2
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_staple"
+  },
+  "Pulao": {
+    "ingredients": {
+      "rice_white_cooked": 210,
+      "green_peas_raw": 20,
+      "ghee_clarified_butter": 6,
+      "cashews_raw": 8,
+      "cumin_seeds_jeera": 4,
+      "turmeric_powder": 2
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_staple"
+  },
+  "Khichdi": {
+    "ingredients": {
+      "rice_white_cooked": 150,
+      "mung_beans_cooked": 70,
+      "ghee_clarified_butter": 8,
+      "ginger_raw": 4,
+      "turmeric_powder": 3,
+      "cumin_seeds_jeera": 3,
+      "salt_table": 12
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_staple"
+  },
+  "Samay Baji": {
+    "ingredients": {
+      "beaten_rice_chiura": 110,
+      "soybeans_cooked": 50,
+      "buffalo_meat_lean": 60,
+      "black_gram_urad_cooked": 50,
+      "mustard_oil": 15,
+      "ginger_raw": 8,
+      "garlic_raw": 7
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_staple"
+  },
+  "Tornak": {
+    "ingredients": {
+      "wheat_flour": 68,
+      "butter_salted": 8,
+      "mustard_oil": 4
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_bread"
+  },
+  "Chatamari": {
+    "ingredients": {
+      "rice_white_raw": 55,
+      "whole_egg": 20,
+      "onion_raw": 15,
+      "mustard_oil": 7,
+      "salt_table": 3
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_snack"
+  },
+  "Yomari": {
+    "ingredients": {
+      "rice_white_raw": 40,
+      "jaggery_gud": 14,
+      "sesame_seeds_til": 6
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_snack"
+  },
+  "Lakhamari": {
+    "ingredients": {
+      "rice_white_raw": 22,
+      "black_gram_urad_cooked": 8,
+      "sugar_granulated": 6,
+      "ghee_clarified_butter": 4
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_snack"
+  },
+  "Pakoda": {
+    "ingredients": {
+      "chickpeas_chana_cooked": 45,
+      "onion_raw": 35,
+      "mustard_oil": 16,
+      "turmeric_powder": 2,
+      "salt_table": 2
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_snack"
+  },
+  "Aloo Chop": {
+    "ingredients": {
+      "potato_boiled": 55,
+      "chickpeas_chana_cooked": 15,
+      "mustard_oil": 7,
+      "onion_raw": 2.5,
+      "salt_table": 0.5
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_snack"
+  },
+  "Phuraula": {
+    "ingredients": {
+      "black_gram_urad_cooked": 42,
+      "mustard_oil": 14,
+      "ginger_raw": 2,
+      "cumin_seeds_jeera": 1,
+      "salt_table": 1
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_snack"
+  },
+  "Khajuri": {
+    "ingredients": {
+      "wheat_flour": 32,
+      "sugar_granulated": 10,
+      "ghee_clarified_butter": 8
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_snack"
+  },
+  "Nimki": {
+    "ingredients": {
+      "wheat_flour": 31,
+      "mustard_oil": 8,
+      "cumin_seeds_jeera": 0.5,
+      "salt_table": 0.5
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_snack"
+  },
+  "Pani Puri": {
+    "ingredients": {
+      "wheat_flour": 30,
+      "potato_boiled": 45,
+      "chickpeas_chana_cooked": 35,
+      "mustard_oil": 8,
+      "salt_table": 2
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_snack"
+  },
+  "Chana Chatpate": {
+    "ingredients": {
+      "beaten_rice_chiura": 35,
+      "chickpeas_chana_cooked": 35,
+      "onion_raw": 15,
+      "tomato_red_ripe": 10,
+      "mustard_oil": 4,
+      "salt_table": 1
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_snack"
+  },
+  "Cauliflower Tarkari": {
+    "ingredients": {
+      "cauliflower_raw": 125,
+      "tomato_red_ripe": 15,
+      "mustard_oil": 5,
+      "turmeric_powder": 2,
+      "cumin_seeds_jeera": 2,
+      "salt_table": 1
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_vegetable"
+  },
+  "Mixed Vegetable Tarkari": {
+    "ingredients": {
+      "cauliflower_raw": 45,
+      "potato_boiled": 40,
+      "green_peas_raw": 30,
+      "tomato_red_ripe": 25,
+      "mustard_oil": 6,
+      "turmeric_powder": 2,
+      "salt_table": 2
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_vegetable"
+  },
+  "Mushroom Curry": {
+    "ingredients": {
+      "mushrooms_white": 115,
+      "onion_raw": 15,
+      "tomato_red_ripe": 12,
+      "mustard_oil": 5,
+      "garlic_raw": 2,
+      "salt_table": 1
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_curry"
+  },
+  "Paneer Curry": {
+    "ingredients": {
+      "paneer_cottage_cheese": 55,
+      "tomato_red_ripe": 45,
+      "onion_raw": 35,
+      "ghee_clarified_butter": 9,
+      "turmeric_powder": 3,
+      "salt_table": 3
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_curry"
+  },
+  "Aloo Kerau": {
+    "ingredients": {
+      "potato_boiled": 80,
+      "green_peas_raw": 45,
+      "tomato_red_ripe": 15,
+      "mustard_oil": 6,
+      "cumin_seeds_jeera": 2,
+      "salt_table": 2
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_curry"
+  },
+  "Tama Aloo": {
+    "ingredients": {
+      "bamboo_shoots_tama": 110,
+      "potato_boiled": 65,
+      "mustard_oil": 6,
+      "tomato_red_ripe": 13,
+      "garlic_raw": 3,
+      "turmeric_powder": 2,
+      "salt_table": 1
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_curry"
+  },
+  "Kerau Paneer": {
+    "ingredients": {
+      "paneer_cottage_cheese": 50,
+      "green_peas_raw": 55,
+      "tomato_red_ripe": 30,
+      "ghee_clarified_butter": 9,
+      "cumin_seeds_jeera": 3,
+      "salt_table": 3
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_curry"
+  },
+  "Mula ko Tarkari": {
+    "ingredients": {
+      "radish_mula": 82,
+      "tomato_red_ripe": 10,
+      "mustard_oil": 5,
+      "turmeric_powder": 1.5,
+      "salt_table": 1.5
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_vegetable"
+  },
+  "Karela ko Tarkari": {
+    "ingredients": {
+      "bitter_gourd_karela": 80,
+      "onion_raw": 12,
+      "mustard_oil": 5,
+      "turmeric_powder": 1.5,
+      "salt_table": 1.5
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_vegetable"
+  },
+  "Bhindi ko Tarkari": {
+    "ingredients": {
+      "okra_bhindi_raw": 80,
+      "onion_raw": 12,
+      "mustard_oil": 5,
+      "turmeric_powder": 1.5,
+      "salt_table": 1.5
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_vegetable"
+  },
+  "Sekuwa": {
+    "ingredients": {
+      "goat_meat_mutton": 130,
+      "mustard_oil": 8,
+      "ginger_raw": 5,
+      "garlic_raw": 5,
+      "cumin_seeds_jeera": 1,
+      "salt_table": 1
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_meat"
+  },
+  "Choila": {
+    "ingredients": {
+      "buffalo_meat_lean": 125,
+      "mustard_oil": 12,
+      "garlic_raw": 6,
+      "ginger_raw": 5,
+      "fenugreek_methi": 1,
+      "salt_table": 1
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_meat"
+  },
+  "Buff Curry": {
+    "ingredients": {
+      "buffalo_meat_lean": 115,
+      "onion_raw": 35,
+      "tomato_red_ripe": 35,
+      "mustard_oil": 10,
+      "ginger_raw": 2.5,
+      "garlic_raw": 2.5
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_meat"
+  },
+  "Chicken Curry": {
+    "ingredients": {
+      "chicken_breast_skinless": 110,
+      "onion_raw": 40,
+      "tomato_red_ripe": 35,
+      "mustard_oil": 9,
+      "ginger_raw": 3,
+      "garlic_raw": 3
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_meat"
+  },
+  "Mutton Curry": {
+    "ingredients": {
+      "goat_meat_mutton": 110,
+      "onion_raw": 40,
+      "tomato_red_ripe": 35,
+      "mustard_oil": 10,
+      "ginger_raw": 2.5,
+      "garlic_raw": 2.5
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_meat"
+  },
+  "Fish Curry": {
+    "ingredients": {
+      "fish_trout_freshwater": 125,
+      "tomato_red_ripe": 40,
+      "mustard_oil": 8,
+      "onion_raw": 20,
+      "ginger_raw": 3.5,
+      "garlic_raw": 3.5
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_meat"
+  },
+  "Egg Curry": {
+    "ingredients": {
+      "whole_egg": 100,
+      "tomato_red_ripe": 50,
+      "onion_raw": 38,
+      "mustard_oil": 8,
+      "ginger_raw": 2,
+      "garlic_raw": 2
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_meat"
+  },
+  "Kukhura ko Jhol": {
+    "ingredients": {
+      "chicken_thigh_skinless": 105,
+      "tomato_red_ripe": 65,
+      "onion_raw": 65,
+      "mustard_oil": 8,
+      "ginger_raw": 3.5,
+      "garlic_raw": 3.5
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_meat"
+  },
+  "Sungur ko Masu": {
+    "ingredients": {
+      "pork_chop_lean": 130,
+      "onion_raw": 35,
+      "tomato_red_ripe": 22,
+      "mustard_oil": 7,
+      "ginger_raw": 3,
+      "garlic_raw": 3
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_meat"
+  },
+  "Bhutun": {
+    "ingredients": {
+      "goat_meat_mutton": 75,
+      "mustard_oil": 18,
+      "onion_raw": 5,
+      "garlic_raw": 1,
+      "salt_table": 1
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_meat"
+  },
+  "Kachila": {
+    "ingredients": {
+      "buffalo_meat_lean": 85,
+      "mustard_oil": 8,
+      "garlic_raw": 4,
+      "fenugreek_methi": 2,
+      "salt_table": 1
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_meat"
+  },
+  "Machha Tareko (Fried Fish)": {
+    "ingredients": {
+      "fish_trout_freshwater": 100,
+      "mustard_oil": 16,
+      "turmeric_powder": 2,
+      "salt_table": 2
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_meat"
+  },
+  "Kheer": {
+    "ingredients": {
+      "cow_milk_whole": 115,
+      "rice_white_raw": 22,
+      "sugar_granulated": 8,
+      "ghee_clarified_butter": 3,
+      "cashews_raw": 2
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_sweet"
+  },
+  "Sikarni": {
+    "ingredients": {
+      "yogurt_plain": 82,
+      "sugar_granulated": 12,
+      "almonds_raw": 3,
+      "cashews_raw": 3
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_sweet"
+  },
+  "Haluwa": {
+    "ingredients": {
+      "semolina_suji": 50,
+      "ghee_clarified_butter": 24,
+      "sugar_granulated": 22,
+      "cashews_raw": 4
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_sweet"
+  },
+  "Rasbari": {
+    "ingredients": {
+      "paneer_cottage_cheese": 25,
+      "sugar_granulated": 23,
+      "wheat_flour": 2
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_sweet"
+  },
+  "Laddoo": {
+    "ingredients": {
+      "chickpeas_chana_cooked": 24,
+      "sugar_granulated": 16,
+      "ghee_clarified_butter": 8,
+      "cashews_raw": 2
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_sweet"
+  },
+  "Barfi": {
+    "ingredients": {
+      "cow_milk_whole": 30,
+      "sugar_granulated": 14,
+      "ghee_clarified_butter": 4,
+      "cashews_raw": 2
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_sweet"
+  },
+  "Peda": {
+    "ingredients": {
+      "cow_milk_whole": 32,
+      "sugar_granulated": 13,
+      "ghee_clarified_butter": 4,
+      "almonds_raw": 1
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_sweet"
+  },
+  "Lal Mohan": {
+    "ingredients": {
+      "cow_milk_whole": 30,
+      "sugar_granulated": 20,
+      "wheat_flour": 5,
+      "ghee_clarified_butter": 5
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_sweet"
+  },
+  "Jeri": {
+    "ingredients": {
+      "wheat_flour": 22,
+      "sugar_granulated": 20,
+      "ghee_clarified_butter": 8
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_sweet"
+  },
+  "Chiya": {
+    "ingredients": {
+      "cow_milk_whole": 100,
+      "sugar_granulated": 8,
+      "water": 42
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_beverage"
+  },
+  "Masala Tea": {
+    "ingredients": {
+      "cow_milk_whole": 100,
+      "sugar_granulated": 8,
+      "ginger_raw": 2,
+      "water": 40
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_beverage"
+  },
+  "Lassi": {
+    "ingredients": {
+      "yogurt_plain": 180,
+      "sugar_granulated": 20,
+      "water": 50
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_beverage"
+  },
+  "Tomato Achar": {
+    "ingredients": {
+      "tomato_red_ripe": 23,
+      "mustard_oil": 4,
+      "garlic_raw": 1.5,
+      "salt_table": 1.5
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_pickle"
+  },
+  "Mula ko Achar": {
+    "ingredients": {
+      "radish_mula": 23,
+      "mustard_oil": 4,
+      "turmeric_powder": 1.5,
+      "salt_table": 1.5
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_pickle"
+  },
+  "Til ko Achar": {
+    "ingredients": {
+      "sesame_seeds_til": 13,
+      "tomato_red_ripe": 5,
+      "mustard_oil": 1.5,
+      "salt_table": 0.5
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_pickle"
+  },
+  "Gundruk ko Achar": {
+    "ingredients": {
+      "gundruk_fermented": 12,
+      "mustard_oil": 5,
+      "garlic_raw": 1.5,
+      "salt_table": 1.5
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_pickle"
+  },
+  "Kakro ko Achar": {
+    "ingredients": {
+      "cucumber_kakro": 24,
+      "sesame_seeds_til": 3,
+      "mustard_oil": 2,
+      "salt_table": 1
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_pickle"
+  },
+  "Thukpa (Tibetan Noodle Soup)": {
+    "ingredients": {
+      "wheat_flour": 70,
+      "buffalo_meat_lean": 60,
+      "cabbage_raw": 50,
+      "onion_raw": 30,
+      "tomato_red_ripe": 25,
+      "mustard_oil": 7,
+      "water": 58
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_snack"
+  },
+  "Vegetable Chow Mein": {
+    "ingredients": {
+      "wheat_flour": 80,
+      "cabbage_raw": 50,
+      "onion_raw": 30,
+      "green_peas_raw": 25,
+      "mustard_oil": 13,
+      "salt_table": 2
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_snack"
+  },
+  "Chicken Chow Mein": {
+    "ingredients": {
+      "wheat_flour": 80,
+      "chicken_breast_skinless": 50,
+      "cabbage_raw": 35,
+      "onion_raw": 20,
+      "mustard_oil": 13,
+      "salt_table": 2
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_snack"
+  },
+  "Dhido": {
+    "ingredients": {
+      "millet_flour_kodo": 70,
+      "water": 178,
+      "ghee_clarified_butter": 2
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_staple"
+  },
+  "Chiura": {
+    "ingredients": {
+      "beaten_rice_chiura": 100
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_staple"
+  },
+  "Baji": {
+    "ingredients": {
+      "beaten_rice_chiura": 100
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_staple"
+  },
+  "Kwati": {
+    "ingredients": {
+      "black_gram_urad_cooked": 35,
+      "chickpeas_chana_cooked": 35,
+      "kidney_beans_rajma_cooked": 35,
+      "green_peas_raw": 30,
+      "mustard_oil": 4,
+      "ginger_raw": 3,
+      "garlic_raw": 3,
+      "water": 55
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_staple"
+  },
+  "Naan": {
+    "ingredients": {
+      "wheat_flour": 75,
+      "cow_milk_whole": 15,
+      "butter_salted": 8,
+      "sugar_granulated": 2
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_bread"
+  },
+  "Bara": {
+    "ingredients": {
+      "black_gram_urad_cooked": 62,
+      "mustard_oil": 10,
+      "ginger_raw": 3,
+      "garlic_raw": 3,
+      "cumin_seeds_jeera": 1,
+      "salt_table": 1
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_snack"
+  },
+  "Sel Roti": {
+    "ingredients": {
+      "rice_white_raw": 36,
+      "ghee_clarified_butter": 7,
+      "sugar_granulated": 6,
+      "water": 1
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_snack"
+  },
+  "Samosa": {
+    "ingredients": {
+      "wheat_flour": 40,
+      "potato_boiled": 45,
+      "mustard_oil": 12,
+      "green_peas_raw": 3
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_snack"
+  },
+  "Aloo Tama": {
+    "ingredients": {
+      "bamboo_shoots_tama": 115,
+      "potato_boiled": 60,
+      "mustard_oil": 5,
+      "tomato_red_ripe": 15,
+      "garlic_raw": 3,
+      "salt_table": 2
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_curry"
+  },
+  "Gundruk ko Jhol": {
+    "ingredients": {
+      "gundruk_fermented": 35,
+      "mustard_oil": 4,
+      "tomato_red_ripe": 15,
+      "garlic_raw": 3,
+      "water": 93
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_curry"
+  },
+  "Rayo ko Saag": {
+    "ingredients": {
+      "mustard_greens_rayo_raw": 90,
+      "mustard_oil": 6,
+      "garlic_raw": 3,
+      "salt_table": 1
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_vegetable"
+  },
+  "Aloo Gobi": {
+    "ingredients": {
+      "cauliflower_raw": 80,
+      "potato_boiled": 50,
+      "mustard_oil": 6,
+      "tomato_red_ripe": 12,
+      "salt_table": 2
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_curry"
+  },
+  "Chana Masala": {
+    "ingredients": {
+      "chickpeas_chana_cooked": 110,
+      "onion_raw": 20,
+      "tomato_red_ripe": 14,
+      "mustard_oil": 5,
+      "salt_table": 1
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_curry"
+  },
+  "Farsi ko Tarkari": {
+    "ingredients": {
+      "potato_boiled": 40,
+      "cauliflower_raw": 45,
+      "mustard_oil": 5,
+      "tomato_red_ripe": 9,
+      "salt_table": 1
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_vegetable"
+  },
+  "Lauka ko Tarkari": {
+    "ingredients": {
+      "cucumber_kakro": 85,
+      "mustard_oil": 5,
+      "tomato_red_ripe": 8,
+      "salt_table": 2
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_vegetable"
+  },
+  "Iskus ko Tarkari": {
+    "ingredients": {
+      "cabbage_raw": 85,
+      "mustard_oil": 5,
+      "tomato_red_ripe": 8,
+      "salt_table": 2
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_vegetable"
+  },
+  "Sukuti": {
+    "ingredients": {
+      "buffalo_meat_lean": 45,
+      "mustard_oil": 4,
+      "salt_table": 1
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_meat"
+  },
+  "Juju Dhau": {
+    "ingredients": {
+      "cow_milk_whole": 130,
+      "sugar_granulated": 15,
+      "yogurt_plain": 5
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_sweet"
+  },
+  "Chhyang": {
+    "ingredients": {
+      "rice_white_cooked": 60,
+      "water": 140
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_beverage"
+  },
+  "Lemon Water": {
+    "ingredients": {
+      "water": 245,
+      "sugar_granulated": 5
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_beverage"
+  },
+  "Raksi": {
+    "ingredients": {
+      "rice_white_raw": 35,
+      "water": 15
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_beverage"
+  },
+  "Tongba": {
+    "ingredients": {
+      "millet_flour_kodo": 60,
+      "water": 240
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_beverage"
+  },
+  "Lapsi ko Achar": {
+    "ingredients": {
+      "apple_raw": 12,
+      "sugar_granulated": 5,
+      "mustard_oil": 2,
+      "salt_table": 1
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_pickle"
+  },
+  "Aam ko Achar": {
+    "ingredients": {
+      "mango_raw": 14,
+      "mustard_oil": 4,
+      "salt_table": 1,
+      "turmeric_powder": 1
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_pickle"
+  },
+  "Kodo ko Roti": {
+    "ingredients": {
+      "millet_flour_kodo": 74,
+      "ghee_clarified_butter": 6
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_bread"
+  },
+  "Fapar ko Roti": {
+    "ingredients": {
+      "buckwheat_flour_fapar": 74,
+      "ghee_clarified_butter": 6
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_bread"
+  },
+  "Gahat ko Dal": {
+    "ingredients": {
+      "horsegram_gahat_cooked": 125,
+      "mustard_oil": 4,
+      "garlic_raw": 3,
+      "water": 18
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_staple"
+  },
+  "Rahar ko Dal": {
+    "ingredients": {
+      "pigeon_pea_rahar_cooked": 125,
+      "mustard_oil": 4,
+      "garlic_raw": 3,
+      "water": 18
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_staple"
+  },
+  "Kalo Dal Cooked": {
+    "ingredients": {
+      "black_gram_urad_cooked": 125,
+      "ghee_clarified_butter": 4,
+      "garlic_raw": 3,
+      "water": 18
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_staple"
+  },
+  "Palungo ko Saag": {
+    "ingredients": {
+      "spinach_raw": 92,
+      "mustard_oil": 5,
+      "garlic_raw": 2,
+      "salt_table": 1
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_vegetable"
+  },
+  "Methi ko Saag": {
+    "ingredients": {
+      "spinach_raw": 90,
+      "fenugreek_methi": 3,
+      "mustard_oil": 5,
+      "salt_table": 2
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_vegetable"
+  },
+  "Bhatmas Sadeko": {
+    "ingredients": {
+      "soybeans_cooked": 38,
+      "onion_raw": 5,
+      "mustard_oil": 5,
+      "garlic_raw": 1,
+      "salt_table": 1
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_snack"
+  },
+  "Badam Sadeko (Spiced Peanuts)": {
+    "ingredients": {
+      "peanuts_raw": 38,
+      "onion_raw": 5,
+      "mustard_oil": 5,
+      "salt_table": 2
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_snack"
+  },
+  "Poleko Makai (Roasted Corn)": {
+    "ingredients": {
+      "cornmeal_makai": 96,
+      "mustard_oil": 3,
+      "salt_table": 1
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_snack"
+  },
+  "Gundruk Bhatmas Sadeko": {
+    "ingredients": {
+      "gundruk_fermented": 35,
+      "soybeans_cooked": 32,
+      "mustard_oil": 8,
+      "garlic_raw": 3,
+      "salt_table": 2
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_snack"
+  },
+  "Mohi (Nepali Buttermilk)": {
+    "ingredients": {
+      "yogurt_plain": 120,
+      "water": 78,
+      "salt_table": 2
+    },
+    "cuisine": "Nepali",
+    "category": "nepali_beverage"
+  }
+}

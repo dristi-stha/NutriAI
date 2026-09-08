@@ -1,0 +1,958 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Meal Recommendations — NutriAI{% endblock %}
+
+{% block content %}
+<div class="rec-page-container">
+    <!-- Header Section -->
+    <div class="rec-header-wrapper">
+        <div class="rec-title-block">
+            <h1 class="rec-title">Meal Recommendations</h1>
+            <p class="rec-subtitle">
+                Ranked by XGBoost nutritional quality + today's remaining macro budget. Scores vary based on what you've already eaten today.
+            </p>
+        </div>
+        <div class="rec-actions">
+            <button id="refreshBtn" class="rec-refresh-btn" onclick="fetchRecommendations()">
+                <span class="refresh-icon">🔄</span> Refresh
+            </button>
+        </div>
+    </div>
+
+    <!-- Daily Macro Summary Strip -->
+    <div class="rec-budget-strip">
+        <div class="rec-budget-card">
+            <div class="rec-budget-label">Remaining Calories</div>
+            <div class="rec-budget-val {% if over_budget %}text-danger{% else %}text-primary{% endif %}">
+                {{ rem_cal }} <span class="unit">kcal</span>
+            </div>
+            <div class="rec-budget-sub">Target: {{ calorie_target }} kcal | Eaten: {{ consumed_cal }} kcal</div>
+        </div>
+        <div class="rec-budget-card">
+            <div class="rec-budget-label">Remaining Protein</div>
+            <div class="rec-budget-val text-info">{{ rem_prot }} <span class="unit">g</span></div>
+            <div class="rec-budget-sub">Target: {{ prot_target }}g | Eaten: {{ consumed_prot }}g</div>
+        </div>
+        <div class="rec-budget-card">
+            <div class="rec-budget-label">Remaining Carbs</div>
+            <div class="rec-budget-val text-warning">{{ rem_carb }} <span class="unit">g</span></div>
+            <div class="rec-budget-sub">Target: {{ carb_target }}g | Eaten: {{ consumed_carb }}g</div>
+        </div>
+        <div class="rec-budget-card">
+            <div class="rec-budget-label">Remaining Fat</div>
+            <div class="rec-budget-val text-danger">{{ rem_fat }} <span class="unit">g</span></div>
+            <div class="rec-budget-sub">Target: {{ fat_target }}g | Eaten: {{ consumed_fat }}g</div>
+        </div>
+    </div>
+
+    <!-- Filter Pills -->
+    <div class="rec-filters-bar">
+        <button class="filter-pill active" onclick="setFilter('all', this)">All Picks</button>
+        <button class="filter-pill" onclick="setFilter('nepali', this)">🇳🇵 Nepali Dishes</button>
+        <button class="filter-pill" onclick="setFilter('veg', this)">🥗 Vegetarian</button>
+        <button class="filter-pill" onclick="setFilter('protein', this)">🍗 High Protein</button>
+        <button class="filter-pill" onclick="setFilter('preferred', this)">⭐ Preferred</button>
+    </div>
+
+    <!-- Loading State -->
+    <div id="loadingState" class="rec-loading-container">
+        <div class="rec-spinner"></div>
+        <p>Analyzing nutritional metrics with XGBoost & calculating optimal macro match...</p>
+    </div>
+
+    <!-- Error State -->
+    <div id="errorState" class="rec-error-container" style="display: none;">
+        <p>Could not load recommendations at this moment.</p>
+        <button onclick="fetchRecommendations()" class="rec-retry-btn">Try Again</button>
+    </div>
+
+    <!-- Cards Grid -->
+    <div id="recGrid" class="rec-grid" style="display: none;">
+        <!-- Dynamic Cards Injected via JS -->
+    </div>
+</div>
+
+<!-- Quick Log Modal -->
+<div id="logModal" class="rec-modal-backdrop" style="display: none;">
+    <div class="rec-modal-dialog">
+        <div class="rec-modal-header">
+            <h3 id="modalFoodTitle">Add to Today's Food Log</h3>
+            <button class="rec-modal-close" onclick="closeLogModal()">&times;</button>
+        </div>
+        <div class="rec-modal-body">
+            <p id="modalFoodNepali" class="modal-nepali-text"></p>
+            <div class="modal-nutrition-preview" id="modalNutritionPreview">
+                <!-- Preview stats -->
+            </div>
+
+            <form id="quickLogForm" onsubmit="submitQuickLog(event)">
+                <input type="hidden" id="logFoodId" value="">
+                
+                <div class="form-group-modal">
+                    <label for="logMealType">Meal Type</label>
+                    <select id="logMealType" class="modal-input" required>
+                        <option value="lunch" selected>Lunch</option>
+                        <option value="breakfast">Breakfast</option>
+                        <option value="dinner">Dinner</option>
+                        <option value="snack">Snack</option>
+                    </select>
+                </div>
+
+                <div class="form-group-modal">
+                    <label for="logQuantity">Portion / Serving Size</label>
+                    <div class="quantity-input-wrap">
+                        <input type="number" id="logQuantity" class="modal-input" min="0.1" step="0.1" value="1.0" oninput="updateNutritionPreview()" required>
+                        <span class="quantity-unit-label">serving (~<span id="modalServingG">100</span>g)</span>
+                    </div>
+                </div>
+
+                <div class="modal-actions">
+                    <button type="button" class="btn-cancel" onclick="closeLogModal()">Cancel</button>
+                    <button type="submit" id="logSubmitBtn" class="btn-confirm-log">Confirm & Log Meal</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Toast Notification -->
+<div id="recToast" class="rec-toast" style="display: none;"></div>
+
+<style>
+/* =========================================================
+   MEAL RECOMMENDATIONS PAGE STYLES
+========================================================= */
+.rec-page-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 30px 20px 60px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1e293b;
+}
+
+.rec-header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 24px;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.rec-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #0f2744;
+    margin-bottom: 6px;
+    letter-spacing: -0.5px;
+}
+
+.rec-subtitle {
+    font-size: 0.95rem;
+    color: #64748b;
+    max-width: 750px;
+    line-height: 1.5;
+}
+
+.rec-refresh-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #0f2744;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 8px rgba(15, 39, 68, 0.2);
+}
+
+.rec-refresh-btn:hover {
+    background: #1b3a5f;
+    transform: translateY(-1px);
+}
+
+.refresh-icon.spinning {
+    display: inline-block;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    100% { transform: rotate(360deg); }
+}
+
+/* Macro Budget Strip */
+.rec-budget-strip {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    margin-bottom: 28px;
+}
+
+.rec-budget-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 16px 20px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+}
+
+.rec-budget-label {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
+
+.rec-budget-val {
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-bottom: 4px;
+}
+
+.rec-budget-val .unit {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #64748b;
+}
+
+.text-primary { color: #2E7D32; }
+.text-info { color: #0284c7; }
+.text-warning { color: #d97706; }
+.text-danger { color: #dc2626; }
+
+.rec-budget-sub {
+    font-size: 0.78rem;
+    color: #94a3b8;
+}
+
+/* Filter Pills */
+.rec-filters-bar {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 28px;
+    overflow-x: auto;
+    padding-bottom: 4px;
+}
+
+.filter-pill {
+    background: #f1f5f9;
+    color: #475569;
+    border: 1px solid transparent;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+}
+
+.filter-pill:hover {
+    background: #e2e8f0;
+    color: #1e293b;
+}
+
+.filter-pill.active {
+    background: #0f2744;
+    color: #ffffff;
+}
+
+/* Recommendations Grid */
+.rec-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+    gap: 24px;
+}
+
+/* Recommendation Card */
+.rec-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    position: relative;
+}
+
+.rec-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    border-color: #cbd5e1;
+}
+
+/* Top Pick Badge */
+.top-pick-badge {
+    display: inline-block;
+    align-self: flex-start;
+    background: #f1f5f9;
+    color: #475569;
+    font-size: 0.72rem;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 6px;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+/* Card Header */
+.rec-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 12px;
+    gap: 12px;
+}
+
+.rec-food-name {
+    font-size: 1.18rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.3;
+    margin-bottom: 4px;
+}
+
+.rec-food-nepali {
+    font-size: 0.9rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.rec-match-score {
+    font-size: 1.45rem;
+    font-weight: 800;
+    color: #16a34a;
+    white-space: nowrap;
+}
+
+/* Sub scores pills row */
+.rec-subscores-row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+}
+
+.subscore-pill {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #64748b;
+}
+
+/* Reason box */
+.rec-reason-box {
+    background: #f8fafc;
+    border-left: 3px solid #3b82f6;
+    padding: 10px 12px;
+    border-radius: 6px;
+    font-size: 0.83rem;
+    color: #334155;
+    line-height: 1.45;
+    display: flex;
+    gap: 8px;
+    align-items: flex-start;
+    margin-bottom: 14px;
+}
+
+.rec-reason-icon {
+    font-size: 0.9rem;
+    color: #3b82f6;
+    flex-shrink: 0;
+}
+
+/* Macros strip */
+.rec-macros-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #475569;
+    margin-bottom: 14px;
+    flex-wrap: wrap;
+}
+
+.rec-calories {
+    color: #ea580c;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 700;
+}
+
+.macro-item span {
+    color: #1e293b;
+    font-weight: 700;
+}
+
+/* Tags row */
+.rec-tags-row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+}
+
+.rec-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 3px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.tag-nepali {
+    background: #f1f5f9;
+    color: #334155;
+    border: 1px solid #cbd5e1;
+}
+
+.tag-veg {
+    background: #dcfce7;
+    color: #166534;
+    border: 1px solid #bbf7d0;
+}
+
+.tag-preferred {
+    background: #fef3c7;
+    color: #92400e;
+    border: 1px solid #fde68a;
+}
+
+/* Action buttons row */
+.rec-card-actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.btn-add-log {
+    flex: 1;
+    background: #0f2744;
+    color: #ffffff;
+    border: none;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.btn-add-log:hover {
+    background: #1b3a5f;
+    transform: translateY(-1px);
+}
+
+.btn-feedback {
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    padding: 9px 13px;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-feedback:hover {
+    background: #f8fafc;
+    border-color: #94a3b8;
+}
+
+.btn-feedback.liked-active {
+    background: #dcfce7;
+    border-color: #22c55e;
+    color: #15803d;
+}
+
+.btn-feedback.disliked-active {
+    background: #fee2e2;
+    border-color: #ef4444;
+    color: #b91c1c;
+}
+
+/* Loading & Empty States */
+.rec-loading-container, .rec-error-container {
+    text-align: center;
+    padding: 80px 20px;
+    color: #64748b;
+}
+
+.rec-spinner {
+    width: 44px;
+    height: 44px;
+    border: 4px solid #e2e8f0;
+    border-top-color: #0f2744;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    margin: 0 auto 20px;
+}
+
+.rec-retry-btn {
+    margin-top: 15px;
+    background: #0f2744;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* Modal */
+.rec-modal-backdrop {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 20px;
+}
+
+.rec-modal-dialog {
+    background: #ffffff;
+    border-radius: 14px;
+    width: 100%;
+    max-width: 460px;
+    padding: 24px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.rec-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.rec-modal-header h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0;
+}
+
+.rec-modal-close {
+    background: none;
+    border: none;
+    font-size: 1.6rem;
+    color: #94a3b8;
+    cursor: pointer;
+    line-height: 1;
+}
+
+.modal-nepali-text {
+    font-size: 0.95rem;
+    color: #64748b;
+    margin-bottom: 16px;
+}
+
+.modal-nutrition-preview {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 0.88rem;
+    font-weight: 600;
+}
+
+.form-group-modal {
+    margin-bottom: 16px;
+}
+
+.form-group-modal label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #475569;
+    margin-bottom: 6px;
+}
+
+.modal-input {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    outline: none;
+}
+
+.modal-input:focus {
+    border-color: #0f2744;
+}
+
+.quantity-input-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.quantity-unit-label {
+    font-size: 0.85rem;
+    color: #64748b;
+    white-space: nowrap;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.btn-cancel {
+    flex: 1;
+    background: #f1f5f9;
+    border: 1px solid #cbd5e1;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 600;
+    color: #475569;
+    cursor: pointer;
+}
+
+.btn-confirm-log {
+    flex: 2;
+    background: #2E7D32;
+    color: #ffffff;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-confirm-log:hover {
+    background: #256428;
+}
+
+/* Toast */
+.rec-toast {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: #0f172a;
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.2);
+    z-index: 10000;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+    .rec-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+
+<script>
+// State
+let allRecommendations = [];
+let activeFilter = 'all';
+let selectedFoodForLog = null;
+
+// CSRF Helper
+function getCookie(name) {
+    let cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+        const cookies = document.cookie.split(';');
+        for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
+const csrftoken = getCookie('csrftoken');
+
+// Toast Notification
+function showToast(message) {
+    const toast = document.getElementById('recToast');
+    toast.textContent = message;
+    toast.style.display = 'block';
+    setTimeout(() => {
+        toast.style.display = 'none';
+    }, 3200);
+}
+
+// Fetch Recommendations
+async function fetchRecommendations() {
+    const refreshBtn = document.getElementById('refreshBtn');
+    const refreshIcon = refreshBtn.querySelector('.refresh-icon');
+    const loading = document.getElementById('loadingState');
+    const grid = document.getElementById('recGrid');
+    const errorState = document.getElementById('errorState');
+
+    refreshIcon.classList.add('spinning');
+    loading.style.display = 'block';
+    grid.style.display = 'none';
+    errorState.style.display = 'none';
+
+    try {
+        const res = await fetch('/api/recommendations/', {
+            headers: { 'Accept': 'application/json' }
+        });
+        if (!res.ok) throw new Error('API Error');
+        const data = await res.json();
+        allRecommendations = data;
+        renderCards();
+        loading.style.display = 'none';
+        grid.style.display = 'grid';
+    } catch (err) {
+        console.error(err);
+        loading.style.display = 'none';
+        errorState.style.display = 'block';
+    } finally {
+        refreshIcon.classList.remove('spinning');
+    }
+}
+
+// Filter function
+function setFilter(filterType, btnEl) {
+    activeFilter = filterType;
+    document.querySelectorAll('.filter-pill').forEach(el => el.classList.remove('active'));
+    btnEl.classList.add('active');
+    renderCards();
+}
+
+// Render cards
+function renderCards() {
+    const grid = document.getElementById('recGrid');
+    grid.innerHTML = '';
+
+    let list = [...allRecommendations];
+    if (activeFilter === 'nepali') {
+        list = list.filter(item => item.is_nepali);
+    } else if (activeFilter === 'veg') {
+        list = list.filter(item => item.is_vegetarian);
+    } else if (activeFilter === 'protein') {
+        list = list.filter(item => item.protein >= 15);
+    } else if (activeFilter === 'preferred') {
+        list = list.filter(item => item.liked);
+    }
+
+    if (list.length === 0) {
+        grid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: #64748b;">No food recommendations found for this filter.</div>`;
+        return;
+    }
+
+    list.forEach((food, index) => {
+        const isTopPick = index < 3 && activeFilter === 'all';
+        const card = document.createElement('div');
+        card.className = 'rec-card';
+        card.id = `food-card-${food.id}`;
+
+        card.innerHTML = `
+            <div>
+                ${isTopPick ? `<div class="top-pick-badge">TOP PICK #${index + 1}</div>` : ''}
+                <div class="rec-card-header">
+                    <div>
+                        <div class="rec-food-name">${food.name}</div>
+                        <div class="rec-food-nepali">${food.name_nepali || ''}</div>
+                    </div>
+                    <div class="rec-match-score">${food.match_percent}%</div>
+                </div>
+
+                <div class="rec-subscores-row">
+                    <span class="subscore-pill">XGB: ${food.xgb_score}%</span>
+                    <span class="subscore-pill">RF: ${food.rf_score}%</span>
+                    <span class="subscore-pill">Budget fit: ${food.budget_fit}%</span>
+                </div>
+
+                <div class="rec-reason-box">
+                    <span class="rec-reason-icon">ⓘ</span>
+                    <span>${food.reason}</span>
+                </div>
+
+                <div class="rec-macros-row">
+                    <span class="rec-calories">🔥 ${food.calories} kcal</span>
+                    <span class="macro-item">P: <span>${food.protein}g</span></span>
+                    <span class="macro-item">C: <span>${food.carbohydrates}g</span></span>
+                    <span class="macro-item">F: <span>${food.fat}g</span></span>
+                </div>
+
+                <div class="rec-tags-row">
+                    ${food.is_nepali ? `<span class="rec-tag tag-nepali">🇳🇵 Nepali</span>` : ''}
+                    ${food.is_vegetarian ? `<span class="rec-tag tag-veg">🌱 Veg</span>` : ''}
+                    ${food.liked ? `<span class="rec-tag tag-preferred">⭐ Preferred</span>` : ''}
+                </div>
+            </div>
+
+            <div class="rec-card-actions">
+                <button class="btn-add-log" onclick="openLogModal(${food.id})">
+                    ⊕ Add to Log
+                </button>
+                <button class="btn-feedback btn-like ${food.liked ? 'liked-active' : ''}" 
+                        title="${food.liked ? 'Remove like' : 'Like this food'}" 
+                        onclick="toggleFeedback(${food.id}, 'liked')">
+                    👍
+                </button>
+                <button class="btn-feedback btn-dislike ${food.disliked ? 'disliked-active' : ''}" 
+                        title="${food.disliked ? 'Remove dislike' : 'Dislike this food'}" 
+                        onclick="toggleFeedback(${food.id}, 'disliked')">
+                    👎
+                </button>
+            </div>
+        `;
+        grid.appendChild(card);
+    });
+}
+
+// Like / Dislike Toggle
+async function toggleFeedback(foodId, type) {
+    try {
+        const res = await fetch(`/api/recommendations/feedback/${foodId}/`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': csrftoken,
+            },
+            body: JSON.stringify({ feedback: type })
+        });
+
+        if (!res.ok) throw new Error('Feedback update failed');
+        const data = await res.json();
+
+        // Update local item state
+        const item = allRecommendations.find(f => f.id === foodId);
+        if (item) {
+            item.liked = data.liked;
+            item.disliked = data.disliked;
+            if (data.feedback === 'liked') {
+                showToast(`Marked ${item.name} as Preferred! 👍`);
+            } else if (data.feedback === 'disliked') {
+                showToast(`Noted! We'll recommend ${item.name} less. 👎`);
+            } else {
+                showToast(`Preference removed for ${item.name}.`);
+            }
+            renderCards();
+        }
+    } catch (err) {
+        console.error(err);
+        showToast('Error saving feedback. Please try again.');
+    }
+}
+
+// Modal handling
+function openLogModal(foodId) {
+    selectedFoodForLog = allRecommendations.find(f => f.id === foodId);
+    if (!selectedFoodForLog) return;
+
+    document.getElementById('logFoodId').value = selectedFoodForLog.id;
+    document.getElementById('modalFoodTitle').textContent = `Add "${selectedFoodForLog.name}" to Log`;
+    document.getElementById('modalFoodNepali').textContent = selectedFoodForLog.name_nepali || '';
+    document.getElementById('modalServingG').textContent = selectedFoodForLog.serving_size || 100;
+    document.getElementById('logQuantity').value = '1.0';
+
+    updateNutritionPreview();
+    document.getElementById('logModal').style.display = 'flex';
+}
+
+function closeLogModal() {
+    document.getElementById('logModal').style.display = 'none';
+    selectedFoodForLog = null;
+}
+
+function updateNutritionPreview() {
+    if (!selectedFoodForLog) return;
+    const qty = parseFloat(document.getElementById('logQuantity').value) || 1.0;
+    const preview = document.getElementById('modalNutritionPreview');
+
+    const cal = Math.round(selectedFoodForLog.calories * qty);
+    const prot = (selectedFoodForLog.protein * qty).toFixed(1);
+    const carb = (selectedFoodForLog.carbohydrates * qty).toFixed(1);
+    const fat = (selectedFoodForLog.fat * qty).toFixed(1);
+
+    preview.innerHTML = `
+        <span style="color: #ea580c;">🔥 ${cal} kcal</span>
+        <span>Protein: ${prot}g</span>
+        <span>Carbs: ${carb}g</span>
+        <span>Fat: ${fat}g</span>
+    `;
+}
+
+// Quick Log Submission
+async function submitQuickLog(e) {
+    e.preventDefault();
+    const foodId = document.getElementById('logFoodId').value;
+    const mealType = document.getElementById('logMealType').value;
+    const quantity = document.getElementById('logQuantity').value;
+    const submitBtn = document.getElementById('logSubmitBtn');
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Logging...';
+
+    try {
+        const res = await fetch('/api/recommendations/quick-log/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'X-CSRFToken': csrftoken,
+            },
+            body: JSON.stringify({
+                food_id: foodId,
+                meal_type: mealType,
+                quantity: quantity
+            })
+        });
+
+        if (!res.ok) throw new Error('Logging failed');
+        const data = await res.json();
+        showToast(data.message || 'Meal logged successfully!');
+        closeLogModal();
+        // Refresh recommendations after logging meal to reflect updated budget!
+        fetchRecommendations();
+    } catch (err) {
+        console.error(err);
+        showToast('Failed to log meal. Please try again.');
+    } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Confirm & Log Meal';
+    }
+}
+
+// Initial load
+document.addEventListener('DOMContentLoaded', fetchRecommendations);
+</script>
+{% endblock %}

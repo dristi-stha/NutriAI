@@ -1,0 +1,130 @@
+food_id,name,name_nepali,category,calories,protein,carbohydrates,fat,fiber,sugar,sodium,serving_size_g,is_vegetarian,is_vegan,is_gluten_free,contains_nuts,contains_dairy,contains_gluten,contains_egg,is_nepali,data_source
+1,Dal Bhat,दाल भात,nepali_staple,414.5,12.2,67.1,10.9,7.2,1.7,27.9,300.0,True,False,True,False,True,False,False,True,USDA_Recipe_Calc
+2,Dhido,ढिडो,nepali_staple,282.1,7.7,51.0,4.9,5.9,0.3,3.5,250.0,True,False,False,False,True,True,False,True,USDA_Recipe_Calc
+3,Chiura,चिउरा,nepali_staple,340.0,6.5,77.0,1.0,2.0,0.0,5.0,100.0,True,True,True,False,False,False,False,True,USDA_Recipe_Calc
+4,Baji,बजी,nepali_staple,340.0,6.5,77.0,1.0,2.0,0.0,5.0,100.0,True,True,True,False,False,False,False,True,USDA_Recipe_Calc
+5,Puri,पुरी,nepali_bread,229.6,4.1,30.5,9.9,1.1,0.1,194.6,50.0,True,True,False,False,False,True,False,True,USDA_Recipe_Calc
+6,Roti,रोटी,nepali_bread,187.1,5.1,37.4,1.5,1.3,0.1,1.0,50.0,True,False,False,False,True,True,False,True,USDA_Recipe_Calc
+7,Plain Rice,भात,nepali_staple,130.0,2.7,28.0,0.3,0.4,0.0,1.0,200.0,True,True,True,False,False,False,False,True,USDA
+8,Jeera Rice,जिरा भात,nepali_staple,294.7,5.6,55.6,5.0,1.0,0.2,5.4,200.0,True,False,True,False,True,False,False,True,USDA_Recipe_Calc
+9,Pulao,पुलाउ,nepali_staple,407.2,9.1,67.6,11.1,3.1,2.0,11.4,250.0,True,False,True,True,True,False,False,True,USDA_Recipe_Calc
+10,Masoor Dal Cooked,मसुरो दाल,nepali_staple,116.0,9.0,20.0,0.4,8.0,0.5,200.0,150.0,True,True,True,False,False,False,False,True,USDA
+11,Mung Dal Cooked,मुंग दाल,nepali_staple,105.0,7.0,19.0,0.4,7.5,0.5,180.0,150.0,True,True,True,False,False,False,False,True,USDA
+12,Chana Dal Cooked,चना दाल,nepali_staple,164.0,8.9,27.4,2.6,7.6,1.0,250.0,150.0,True,True,True,False,False,False,False,True,USDA
+13,Rajma Cooked,राजमा,nepali_staple,127.0,8.7,22.8,0.5,6.4,0.3,200.0,150.0,True,True,True,False,False,False,False,True,USDA
+14,Kwati,क्वाटी,nepali_staple,213.9,11.5,31.3,5.5,9.3,3.7,7.3,200.0,True,True,True,False,False,False,False,True,USDA_Recipe_Calc
+15,Samay Baji,समय बजी,nepali_staple,760.7,35.3,104.6,23.4,9.1,1.9,43.7,300.0,False,False,True,False,False,False,False,True,USDA_Recipe_Calc
+16,Tornak,तोर्नाक,nepali_bread,340.2,7.1,51.9,11.2,1.8,0.2,52.8,80.0,True,False,False,False,True,True,False,True,USDA_Recipe_Calc
+17,Naan,नान,nepali_bread,347.2,8.3,60.0,7.7,2.0,3.0,59.4,100.0,True,False,False,False,True,True,False,True,USDA_Recipe_Calc
+18,Buff Momo,बफ मम,nepali_snack,338.5,22.3,41.0,8.3,1.8,1.1,40.8,150.0,False,False,False,False,False,True,False,True,USDA_Recipe_Calc
+19,Chicken Momo,चिकेन मम,nepali_snack,353.9,27.2,41.0,8.1,1.8,1.1,54.1,150.0,False,False,False,False,False,True,False,True,USDA_Recipe_Calc
+20,Veg Momo,भेज मम,nepali_snack,265.9,6.6,45.1,6.7,3.4,3.1,16.7,150.0,True,True,False,False,False,True,False,True,USDA_Recipe_Calc
+21,Fried Buff Momo,फ्राइड बफ मम,nepali_snack,402.9,20.9,39.2,17.1,1.7,1.0,38.0,150.0,False,False,False,False,False,True,False,True,USDA_Recipe_Calc
+22,Chatamari,चतामरी,nepali_snack,297.2,6.6,45.5,9.3,1.0,0.8,1194.5,100.0,True,False,True,False,False,False,True,True,USDA_Recipe_Calc
+23,Bara,बरा,nepali_snack,179.6,6.5,15.9,10.7,4.7,0.4,393.3,80.0,True,True,True,False,False,False,False,True,USDA_Recipe_Calc
+24,Sel Roti,सेल रोटी,nepali_snack,215.9,2.6,34.8,7.2,0.5,6.0,2.0,50.0,True,False,True,False,True,False,False,True,USDA_Recipe_Calc
+25,Yomari,योमरी,nepali_snack,234.0,4.0,46.7,3.3,1.2,12.0,6.9,60.0,True,True,True,False,False,False,False,True,USDA_Recipe_Calc
+26,Lakhamari,लाखामरी,nepali_snack,149.0,2.4,25.4,4.2,0.9,6.1,1.6,40.0,True,False,True,False,True,False,False,True,USDA_Recipe_Calc
+27,Samosa,समोसा,nepali_snack,293.3,5.1,40.0,12.5,2.1,0.7,3.2,100.0,True,True,False,False,False,True,False,True,USDA_Recipe_Calc
+28,Pakoda,पकौडा,nepali_snack,235.5,4.6,16.9,17.3,4.5,3.7,780.2,100.0,True,True,True,False,False,False,False,True,USDA_Recipe_Calc
+29,Aloo Chop,आलु चप,nepali_snack,135.3,2.4,15.4,7.4,2.2,1.3,197.7,80.0,True,True,True,False,False,False,False,True,USDA_Recipe_Calc
+30,Phuraula,फुरौला,nepali_snack,183.7,4.3,10.2,14.5,3.2,0.2,391.6,60.0,True,True,True,False,False,False,False,True,USDA_Recipe_Calc
+31,Khajuri,खजुरी,nepali_snack,225.3,3.3,34.4,8.3,0.9,10.1,0.9,50.0,True,False,False,False,True,True,False,True,USDA_Recipe_Calc
+32,Nimki,निम्की,nepali_snack,185.4,3.3,23.9,8.4,0.9,0.1,195.2,40.0,True,True,False,False,False,True,False,True,USDA_Recipe_Calc
+33,Pani Puri,पानी पुरी,nepali_snack,276.5,7.1,41.5,9.3,4.3,2.2,780.5,120.0,True,True,False,False,False,True,False,True,USDA_Recipe_Calc
+34,Chana Chatpate,चना चटपटे,nepali_snack,219.6,5.6,38.3,5.3,3.7,2.6,392.9,100.0,True,True,True,False,False,False,False,True,USDA_Recipe_Calc
+35,Aloo Tama,आलु तामा,nepali_curry,134.6,4.5,19.6,5.5,3.9,4.4,784.0,200.0,True,True,True,False,False,False,False,True,USDA_Recipe_Calc
+36,Gundruk ko Jhol,गुन्द्रुक को झोल,nepali_curry,55.8,1.9,3.4,4.2,1.6,0.6,17.0,150.0,True,True,True,False,False,False,False,True,USDA_Recipe_Calc
+37,Rayo ko Saag,रायो को साग,nepali_vegetable,81.8,2.8,5.2,6.4,2.9,1.2,406.1,100.0,True,True,True,False,False,False,False,True,USDA_Recipe_Calc
+38,Cauliflower Tarkari,काउलीको तरकारी,nepali_vegetable,91.9,3.1,9.1,5.9,3.3,2.9,429.7,150.0,True,True,True,False,False,False,False,True,USDA_Recipe_Calc
+39,Aloo Gobi,आलु गोभी,nepali_curry,118.7,2.6,14.5,6.3,2.6,2.3,802.3,150.0,True,True,True,False,False,False,False,True,USDA_Recipe_Calc
+40,Mixed Vegetable Tarkari,मिक्स तरकारी,nepali_vegetable,134.1,3.7,17.0,6.4,4.1,3.6,793.9,150.0,True,True,True,False,False,False,False,True,USDA_Recipe_Calc
+41,Mushroom Curry,च्याउको तरकारी,nepali_curry,80.6,4.0,6.3,5.4,1.6,3.3,394.9,150.0,True,True,True,False,False,False,False,True,USDA_Recipe_Calc
+42,Paneer Curry,पनिरको तरकारी,nepali_curry,256.1,11.2,8.7,20.6,1.8,4.3,1179.5,150.0,True,False,True,False,True,False,False,True,USDA_Recipe_Calc
+43,Chana Masala,चना मसला,nepali_curry,235.1,10.1,32.5,7.9,8.9,6.5,396.8,150.0,True,True,True,False,False,False,False,True,USDA_Recipe_Calc
+44,Aloo Kerau,आलु केराउ,nepali_curry,169.3,4.4,24.1,6.7,4.4,3.7,785.5,150.0,True,True,True,False,False,False,False,True,USDA_Recipe_Calc
+45,Tama Aloo,तामा आलु,nepali_curry,152.3,4.6,21.6,6.5,4.3,4.3,396.9,200.0,True,True,True,False,False,False,False,True,USDA_Recipe_Calc
+46,Kerau Paneer,केराउ पनिर,nepali_curry,272.5,13.0,12.0,20.3,3.8,5.4,1183.2,150.0,True,False,True,False,True,False,False,True,USDA_Recipe_Calc
+47,Mula ko Tarkari,मुलाको तरकारी,nepali_vegetable,63.8,0.8,4.2,5.2,1.8,1.9,614.3,100.0,True,True,True,False,False,False,False,True,USDA_Recipe_Calc
+48,Farsi ko Tarkari,फर्सीको तरकारी,nepali_vegetable,91.9,1.7,10.6,5.2,1.7,1.4,403.5,100.0,True,True,True,False,False,False,False,True,USDA_Recipe_Calc
+49,Karela ko Tarkari,करेलाको तरकारी,nepali_vegetable,67.3,1.1,5.1,5.2,2.8,0.6,586.3,100.0,True,True,True,False,False,False,False,True,USDA_Recipe_Calc
+50,Bhindi ko Tarkari,भिन्डीको तरकारी,nepali_vegetable,80.1,1.8,8.1,5.2,3.1,1.8,587.9,100.0,True,True,True,False,False,False,False,True,USDA_Recipe_Calc
+51,Lauka ko Tarkari,लौकाको तरकारी,nepali_vegetable,58.4,0.7,3.4,5.1,0.5,1.7,777.3,100.0,True,True,True,False,False,False,False,True,USDA_Recipe_Calc
+52,Iskus ko Tarkari,इस्कुसको तरकारी,nepali_vegetable,66.9,1.2,5.2,5.1,2.2,2.9,790.9,100.0,True,True,True,False,False,False,False,True,USDA_Recipe_Calc
+53,Sekuwa,सेकुवा,nepali_meat,271.8,35.8,3.0,12.2,0.3,0.2,502.6,150.0,False,False,True,False,False,False,False,True,USDA_Recipe_Calc
+54,Choila,छोइला,nepali_meat,301.0,30.7,3.5,17.1,0.5,0.1,458.7,150.0,False,False,True,False,False,False,False,True,USDA_Recipe_Calc
+55,Sukuti,सुकुटी,nepali_meat,99.7,10.8,0.0,5.8,0.0,0.0,412.3,50.0,False,False,True,False,False,False,False,True,USDA_Recipe_Calc
+56,Buff Curry,बफको तरकारी,nepali_meat,278.9,28.5,5.9,14.7,1.1,2.4,67.1,200.0,False,False,True,False,False,False,False,True,USDA_Recipe_Calc
+57,Chicken Curry,कुखुराको तरकारी,nepali_meat,290.2,35.1,6.6,13.1,1.2,2.7,85.7,200.0,False,False,True,False,False,False,False,True,USDA_Recipe_Calc
+58,Mutton Curry,खसीको तरकारी,nepali_meat,273.7,30.8,6.4,13.4,1.2,2.7,98.7,200.0,False,False,True,False,False,False,False,True,USDA_Recipe_Calc
+59,Fish Curry,माछाको तरकारी,nepali_meat,270.2,25.7,5.2,15.9,1.0,2.0,68.8,200.0,False,False,True,False,False,False,False,True,USDA_Recipe_Calc
+60,Egg Curry,अन्डाको तरकारी,nepali_meat,242.5,13.6,7.2,17.7,1.3,3.4,146.6,200.0,True,False,True,False,False,False,True,True,USDA_Recipe_Calc
+61,Kukhura ko Jhol,कुखुराको झोल,nepali_meat,335.9,28.9,10.4,19.7,2.0,4.5,95.1,250.0,False,False,True,False,False,False,False,True,USDA_Recipe_Calc
+62,Sungur ko Masu,सुँगुरको मासु,nepali_meat,341.5,34.4,5.6,19.6,1.0,2.1,73.6,200.0,False,False,True,False,False,False,False,True,USDA_Recipe_Calc
+63,Bhutun,भुटुन,nepali_meat,269.9,20.4,0.8,20.3,0.1,0.2,452.4,100.0,False,False,True,False,False,False,False,True,USDA_Recipe_Calc
+64,Kachila,कचिला,nepali_meat,204.7,21.1,2.5,11.5,0.6,0.0,436.3,100.0,False,False,True,False,False,False,False,True,USDA_Recipe_Calc
+65,Juju Dhau,जुजु धौ,nepali_sweet,140.4,4.3,21.5,4.5,0.0,21.9,58.3,150.0,True,False,True,False,True,False,False,True,USDA_Recipe_Calc
+66,Kheer,खीर,nepali_sweet,218.8,5.6,31.7,7.8,0.4,14.0,50.9,150.0,True,False,True,True,True,False,False,True,USDA_Recipe_Calc
+67,Sikarni,सिकार्नी,nepali_sweet,130.4,4.1,17.4,5.5,0.5,16.2,38.2,100.0,True,False,True,True,True,False,False,True,USDA_Recipe_Calc
+68,Haluwa,हलुवा,nepali_sweet,497.5,7.1,59.6,26.2,2.1,22.2,1.7,100.0,True,False,False,True,True,True,False,True,USDA_Recipe_Calc
+69,Rasbari,रसबरी,nepali_sweet,162.5,4.8,25.3,5.2,0.1,23.7,5.8,50.0,True,False,False,False,True,True,False,True,USDA_Recipe_Calc
+70,Laddoo,लड्डु,nepali_sweet,182.4,2.5,23.2,9.5,1.9,17.3,2.2,50.0,True,False,True,True,True,False,False,True,USDA_Recipe_Calc
+71,Barfi,बर्फी,nepali_sweet,118.6,1.3,16.0,5.8,0.1,15.6,13.4,50.0,True,False,True,True,True,False,False,True,USDA_Recipe_Calc
+72,Peda,पेँडा,nepali_sweet,110.7,1.2,14.8,5.5,0.1,14.7,14.0,50.0,True,False,True,True,True,False,False,True,USDA_Recipe_Calc
+73,Lal Mohan,लाल मोहन,nepali_sweet,157.7,1.5,25.3,6.0,0.1,21.5,13.3,60.0,True,False,False,False,True,True,False,True,USDA_Recipe_Calc
+74,Jeri,जेरी,nepali_sweet,227.6,2.3,36.8,8.2,0.6,20.1,0.8,50.0,True,False,False,False,True,True,False,True,USDA_Recipe_Calc
+75,Chiya,चिया,nepali_beverage,92.0,3.2,12.8,3.3,0.0,13.1,43.1,150.0,True,False,True,False,True,False,False,True,USDA_Recipe_Calc
+76,Masala Tea,मसला चिया,nepali_beverage,93.6,3.2,13.2,3.3,0.0,13.1,43.3,150.0,True,False,True,False,True,False,False,True,USDA_Recipe_Calc
+77,Lassi,लस्सी,nepali_beverage,187.2,6.3,28.5,5.9,0.0,28.5,83.0,250.0,True,False,True,False,True,False,False,True,USDA_Recipe_Calc
+78,Chhyang,छ्याङ,nepali_beverage,78.0,1.6,16.9,0.2,0.2,0.1,0.6,200.0,True,True,True,False,False,False,False,True,USDA_Recipe_Calc
+79,Lemon Water,कागती पानी,nepali_beverage,19.4,0.0,5.0,0.0,0.0,5.0,0.1,250.0,True,True,True,False,False,False,False,True,USDA_Recipe_Calc
+80,Raksi,रक्सी,nepali_beverage,127.7,2.5,28.0,0.2,0.5,0.0,1.8,50.0,True,True,True,False,False,False,False,True,USDA_Recipe_Calc
+81,Tongba,तोङबा,nepali_beverage,226.8,6.6,43.7,2.5,5.1,0.3,3.0,300.0,True,True,False,False,False,True,False,True,USDA_Recipe_Calc
+82,Tomato Achar,गोलभेडाको अचार,nepali_pickle,41.7,0.3,1.4,4.1,0.3,0.6,582.8,30.0,True,True,True,False,False,False,False,True,USDA_Recipe_Calc
+83,Mula ko Achar,मुलाको अचार,nepali_pickle,43.7,0.3,1.8,4.1,0.7,0.5,590.7,30.0,True,True,True,False,False,False,False,True,USDA_Recipe_Calc
+84,Til ko Achar,तिलको अचार,nepali_pickle,88.7,2.3,3.2,8.0,1.6,0.2,195.5,20.0,True,True,True,False,False,False,False,True,USDA_Recipe_Calc
+85,Lapsi ko Achar,लप्सीको अचार,nepali_pickle,43.3,0.0,6.7,2.0,0.3,6.2,387.8,20.0,True,True,True,False,False,False,False,True,USDA_Recipe_Calc
+86,Gundruk ko Achar,गुन्द्रुकको अचार,nepali_pickle,51.0,0.6,1.1,5.1,0.5,0.1,587.0,20.0,True,True,True,False,False,False,False,True,USDA_Recipe_Calc
+87,Kakro ko Achar,काँक्रोको अचार,nepali_pickle,38.5,0.7,1.6,3.5,0.5,0.4,388.4,30.0,True,True,True,False,False,False,False,True,USDA_Recipe_Calc
+88,Aam ko Achar,आँपको अचार,nepali_pickle,46.9,0.2,2.8,4.1,0.5,2.0,388.0,20.0,True,True,True,False,False,False,False,True,USDA_Recipe_Calc
+89,White Rice Cooked,सेतो भात,grain,130.0,2.7,28.2,0.3,0.4,0.1,1.0,100.0,True,True,True,False,False,False,False,True,USDA
+90,Brown Rice Cooked,ब्राउन चामल भात,grain,111.0,2.6,23.0,0.9,1.8,0.4,5.0,100.0,True,True,True,False,False,False,False,True,USDA
+91,Kodo ko Roti,कोदोको रोटी,nepali_bread,332.3,8.2,53.9,9.1,6.3,0.4,3.8,80.0,True,False,False,False,True,True,False,True,USDA_Recipe_Calc
+92,Fapar ko Roti,फापरको रोटी,nepali_bread,300.5,9.3,52.2,8.3,7.4,1.1,8.3,80.0,True,False,False,False,True,True,False,True,USDA_Recipe_Calc
+93,Khichdi,खिचडी,nepali_staple,362.4,9.9,59.8,9.5,7.0,1.8,4660.4,250.0,True,False,True,False,True,False,False,True,USDA_Recipe_Calc
+94,Gahat ko Dal,गहतको दाल,nepali_staple,208.6,13.9,28.5,5.0,8.8,0.7,6.8,150.0,True,True,True,False,False,False,False,True,USDA_Recipe_Calc
+95,Rahar ko Dal,रहरको दाल,nepali_staple,191.1,10.8,27.6,4.8,7.8,0.8,5.5,150.0,True,True,True,False,False,False,False,True,USDA_Recipe_Calc
+96,Kalo Dal Cooked,कालो मासको दाल,nepali_staple,202.0,12.5,29.1,4.9,9.1,0.5,6.8,150.0,True,False,True,False,True,False,False,True,USDA_Recipe_Calc
+97,Mustard Oil,तोरीको तेल,fat_oil,124.0,0.0,0.0,14.0,0.0,0.0,0.0,14.0,True,True,True,False,False,False,False,True,USDA
+98,Ghee,घ्यू,fat_oil,123.0,0.0,0.0,13.9,0.0,0.0,0.3,14.0,True,False,True,False,True,False,False,True,USDA
+99,Boiled Egg,उसिनेको अन्डा,protein,72.0,6.3,0.4,4.8,0.0,0.2,71.0,50.0,False,False,True,False,False,False,True,True,USDA
+100,Paneer Fresh,ताजा पनिर,dairy,265.0,18.3,3.1,20.8,0.0,2.8,22.0,100.0,True,False,True,False,True,False,False,True,USDA
+101,Chicken Breast Cooked,कुखुराको छाती,protein,165.0,31.0,0.0,3.6,0.0,0.0,74.0,100.0,False,False,True,False,False,False,False,True,USDA
+102,Buff Meat Lean,बफ मासु,protein,143.0,24.0,0.0,4.0,0.0,0.0,55.0,100.0,False,False,True,False,False,False,False,True,USDA
+103,Tofu Cooked,टोफु,protein,83.0,10.0,2.1,4.8,1.2,0.5,12.0,100.0,True,True,True,False,False,False,False,True,USDA
+104,Machha Tareko (Fried Fish),तारेको माछा,nepali_meat,288.7,20.1,1.3,22.3,0.5,0.1,827.7,120.0,False,False,True,False,False,False,False,True,USDA_Recipe_Calc
+105,Garlic (Raw),लसुन,vegetable,15.0,0.6,3.3,0.0,0.2,0.1,1.7,10.0,True,True,True,False,False,False,False,True,USDA
+106,Ginger (Raw),अदुवा,vegetable,8.0,0.2,1.8,0.1,0.2,0.2,1.3,10.0,True,True,True,False,False,False,False,True,USDA
+107,Onion Chopped,प्याज,vegetable,40.0,1.1,9.3,0.1,1.7,4.2,4.0,100.0,True,True,True,False,False,False,False,True,USDA
+108,Palungo ko Saag,पालुङ्गोको साग,nepali_vegetable,68.3,2.8,4.0,5.4,2.1,0.4,460.6,100.0,True,True,True,False,False,False,False,True,USDA_Recipe_Calc
+109,Methi ko Saag,मेथीको साग,nepali_vegetable,74.6,3.3,5.0,5.6,2.7,0.4,848.3,100.0,True,True,True,False,False,False,False,True,USDA_Recipe_Calc
+110,Thukpa (Tibetan Noodle Soup),थुक्पा,nepali_snack,431.5,22.8,60.1,10.2,3.9,3.7,45.9,300.0,False,False,False,False,False,True,False,True,USDA_Recipe_Calc
+111,Vegetable Chow Mein,भेज चाउमिन,nepali_snack,450.9,10.6,70.4,14.0,5.3,4.5,788.2,200.0,True,True,False,False,False,True,False,True,USDA_Recipe_Calc
+112,Chicken Chow Mein,चिकेन चाउमिन,nepali_snack,505.4,24.4,64.9,15.7,3.4,2.2,820.9,200.0,False,False,False,False,False,True,False,True,USDA_Recipe_Calc
+113,Bhatmas Sadeko,भटमास साधेको,nepali_snack,113.4,6.4,4.6,8.4,2.4,1.4,388.3,50.0,True,True,True,False,False,False,False,True,USDA_Recipe_Calc
+114,Badam Sadeko (Spiced Peanuts),बदाम साधेको,nepali_snack,261.7,9.9,6.6,23.7,3.3,2.0,782.2,50.0,True,True,True,True,False,False,False,True,USDA_Recipe_Calc
+115,Poleko Makai (Roasted Corn),पोलेको मकै,nepali_snack,374.0,7.8,73.8,6.5,7.0,0.6,421.2,100.0,True,True,True,False,False,False,False,True,USDA_Recipe_Calc
+116,Gundruk Bhatmas Sadeko,गुन्द्रुक भटमास साधेको,nepali_snack,143.8,7.1,6.0,11.1,3.3,1.2,791.7,80.0,True,True,True,False,False,False,False,True,USDA_Recipe_Calc
+117,Apple (Mustang),स्याउ,fruit,95.0,0.5,25.0,0.3,4.4,19.0,2.0,180.0,True,True,True,False,False,False,False,True,USDA
+118,Banana (Malbhog),केरा,fruit,105.0,1.3,27.0,0.4,3.1,14.4,1.2,120.0,True,True,True,False,False,False,False,True,USDA
+119,Orange (Suntala),सुन्तला,fruit,62.0,1.2,15.4,0.2,3.1,12.2,1.3,130.0,True,True,True,False,False,False,False,True,USDA
+120,Walnuts (Jumla Okhar),ओखर,snack,185.0,4.3,3.9,18.5,1.9,0.7,1.0,28.0,True,True,True,True,False,False,False,True,USDA
+121,Curd / Dahi Plain,सादा दही,dairy,92.0,5.5,7.0,5.0,0.0,7.0,70.0,150.0,True,False,True,False,True,False,False,True,USDA
+122,Cow Milk (1 Glass),गाईको दूध,dairy,149.0,7.7,11.7,8.0,0.0,12.3,105.0,240.0,True,False,True,False,True,False,False,True,USDA
+123,Mohi (Nepali Buttermilk),मोही,nepali_beverage,73.2,4.2,5.6,4.0,0.0,5.6,830.4,200.0,True,False,True,False,True,False,False,True,USDA_Recipe_Calc
+124,Green Tea (Ilam),हरियो चिया,beverage,2.0,0.0,0.0,0.0,0.0,0.0,2.0,200.0,True,True,True,False,False,False,False,True,USDA
+125,Margherita Pizza Slice,मार्गेरिटा पिज्जा,international,380.0,15.0,45.0,15.0,3.2,4.8,780.0,150.0,True,False,False,False,True,True,False,False,USDA
+126,Chicken Burger,चिकेन बर्गर,international,520.0,26.0,44.0,26.0,2.5,6.0,850.0,200.0,False,False,False,False,True,True,False,False,USDA
+127,French Fries,फ्रेन्च फ्राइज,international,312.0,3.4,41.0,15.0,3.8,0.3,210.0,100.0,True,True,True,False,False,False,False,False,USDA
+128,Oatmeal with Water,ओट्स,grain,102.0,3.6,18.0,2.1,2.6,0.8,73.0,150.0,True,True,True,False,False,False,False,False,USDA
+129,Whole Wheat Toast (2 Slices),टोस्ट,international,146.0,5.5,27.5,2.0,3.0,2.5,260.0,50.0,True,True,False,False,False,True,False,False,USDA

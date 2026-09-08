@@ -19,6 +19,7 @@ SYSTEM_PROMPT = (
     "nutrition guidance. Do not diagnose medical conditions; recommend a qualified "
     "professional for medical concerns. Use the get_user_health_profile tool when "
     "the user's saved profile data would help answer their question."
+    "do not answer questions out of health scope"
 )
 
 
