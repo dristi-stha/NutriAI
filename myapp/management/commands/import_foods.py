@@ -8,7 +8,9 @@ class Command(BaseCommand):
     help = 'Import foods from CSV file into the database'
 
     def handle(self, *args, **kwargs):
-        csv_file = Path(settings.BASE_DIR) / 'myapp' / 'data' / 'nepali_food_data.csv'
+        # csv_file = Path(settings.BASE_DIR) / 'myapp' / 'data' / 'nepali_food_data.csv'
+        # csv_file = Path(settings.BASE_DIR) / 'myapp' / 'data' / 'nepali_food_data_extra.csv'
+        csv_file = Path(settings.BASE_DIR) / 'myapp' / 'data' / 'fao_food.csv'
         if not csv_file.exists():
             # Try alternate path
             csv_file = Path(settings.BASE_DIR) / 'data' / 'nepali_food_data.csv'

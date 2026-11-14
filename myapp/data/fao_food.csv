@@ -1,0 +1,623 @@
+food_id,name,name_nepali,category,calories,protein,carbohydrates,fat,fiber,sugar,sodium,serving_size_g,is_vegetarian,is_vegan,is_gluten_free,contains_nuts,contains_dairy,contains_gluten,contains_egg,is_nepali,data_source
+493b6aeb-678c-4a58-9a16-b76419d9eac8,Amaranth seed,,Cereal & Cereal Product,375.0,9.4,68.1,7.17,2.2,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+89208c97-d534-4f2b-a8a5-76fce2ad2457,Barely,,Cereal & Cereal Product,336.0,11.5,69.6,1.3,3.9,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+902027dd-e592-476d-823e-b2bd415c4221,Buck wheat( whole),,Cereal & Cereal Product,323.0,10.3,65.1,2.4,8.6,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+d6dcb725-65c5-4ff6-93d8-e3f1ccb085bd,Bajra,,Cereal & Cereal Product,361.0,11.6,67.5,5.0,1.2,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+cf6f901b-c14f-4188-858e-90699ffdd0ed,Bamboo seed,,Cereal & Cereal Product,367.0,13.1,75.9,1.1,0.9,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+08300151-25be-448a-82d2-5fd9a6209b04,Buckwheat flour,,Cereal & Cereal Product,313.0,6.1,69.2,1.3,7.8,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+b536cce6-1a6a-4644-9748-a74593ec62b1,Foxtail millet,,Cereal & Cereal Product,331.0,12.3,60.9,4.3,8.0,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+0120801f-cd9e-4326-9bb0-6ef1225f75bb,Finger millet(Ragi),,Cereal & Cereal Product,328.0,7.3,72.0,1.3,3.6,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+125cfb40-201a-4699-afc3-91ec12b3a460,Prosomillet( chino),,Cereal & Cereal Product,378.0,11.0,72.9,4.22,1.0,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+d5c704a3-5d39-4ffe-b47b-ca7f040ad8ba,French millet,,Cereal & Cereal Product,341.0,12.5,70.4,1.1,2.2,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+cb3f40e7-a1f7-4282-80bb-36e844bb7b58,Jowar,,Cereal & Cereal Product,349.0,10.4,72.6,1.9,1.6,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+f6df676b-4c80-4892-91ac-d97c5424f43e,Maize green( tender),,Cereal & Cereal Product,125.0,4.7,24.6,0.9,1.9,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+c7cd7282-9d9f-4837-82ee-0b0284f8a167,Maize Dry,,Cereal & Cereal Product,342.0,11.1,66.2,3.6,2.7,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+3e0a4c24-1740-4abb-bcac-4a8cf7212400,Maize dry ( Murali),,Cereal & Cereal Product,372.0,12.1,70.9,4.31,2.2,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+0d150fad-7e47-4e81-9abb-74fc8f8fd040,Maize flour (yellow),,Cereal & Cereal Product,360.0,9.2,72.1,3.9,1.6,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+09a07eb0-5f93-408a-964f-19365b9436dc,Maize flour (white),,Cereal & Cereal Product,360.0,9.2,72.1,3.9,1.6,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+8cf714d3-d906-4306-aa80-cb7bcbc3ccee,Millet,,Cereal & Cereal Product,322.0,7.7,70.1,1.2,3.7,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+b649917e-d0c1-45e2-a52e-b09ced13d55f,Maize granular,,Cereal & Cereal Product,362.0,9.0,74.5,3.4,1.0,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+35d1c585-227f-470b-b011-fa9bbe3fcf5f,Naked barley white( Uwa),,Cereal & Cereal Product,346.0,12.6,70.5,1.6,2.3,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+5b922b3a-08b9-414b-8734-70abc5a3693b,Naked barley black( Uwa),,Cereal & Cereal Product,340.0,10.4,70.9,1.75,2.5,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+12a3cc72-2a18-4511-9413-365d701b7c62,Uwa flour,,Cereal & Cereal Product,369.0,9.6,76.7,2.6,2.0,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+46cf9371-0c00-4d3a-9bfe-f311af3e87a7,Oatmeal,,Cereal & Cereal Product,374.0,13.6,62.8,7.6,3.5,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+ec7368df-ce1a-420c-830a-423d233c9a33,"Rice Parboiled, (hand punded)",,Cereal & Cereal Product,349.0,8.5,77.4,0.6,0.0,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+5bae4227-7217-4078-a19f-199dcd97abde,Rice ( raw) (Milled),,Cereal & Cereal Product,345.0,6.8,78.2,0.5,0.2,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+32dd10ad-53e7-4d80-a6ef-5c67bc76b4c8,Rice (Raw)(Handpounded),,Cereal & Cereal Product,346.0,7.5,76.7,1.0,0.6,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+9fac363d-21ab-4089-9e3a-b155f795a5e0,Rice flakes,,Cereal & Cereal Product,346.0,6.6,77.3,1.2,0.7,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+89fd93b2-c828-42e2-868e-59146e2031d6,"Rice parboiled,(Milled",,Cereal & Cereal Product,345.0,6.4,79.0,0.4,0.2,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+ec77ff1a-1fde-4db9-9a33-4ac0a970715f,Rice Puff,,Cereal & Cereal Product,325.0,7.5,73.6,0.1,0.3,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+fdf6867b-fb2d-4aa7-87b1-c4499e0716e9,Rice bran,,Cereal & Cereal Product,393.0,13.5,48.4,16.2,4.3,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+afc2303b-58f6-4cd1-bf15-39acda1080fd,Semolina,,Cereal & Cereal Product,348.0,10.4,74.8,0.8,0.2,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+d7ebfec8-1793-4e65-88d6-cc9e1d0c7f2b,Sorghum,,Cereal & Cereal Product,357.0,7.6,74.7,2.4,0.6,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+0f30af91-28ad-4983-a477-baa4fd6672e6,Sarvottam pitho( lito),,Cereal & Cereal Product,427.0,21.29,61.7,10.84,0.4,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+6c9cacae-d9aa-4032-879c-ab5445d50237,Taichin beaten rice,,Cereal & Cereal Product,360.0,7.68,77.9,1.94,0.56,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+644edc89-d55b-4774-b9ca-3c97fd0ad954,Vermicelli,,Cereal & Cereal Product,352.0,8.7,78.3,0.4,0.2,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+dd7cebd6-0749-4f4b-bea6-1c9bfacabf28,Varagu,,Cereal & Cereal Product,310.0,6.7,67.0,0.7,3.1,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+ed8b8bea-99ca-4fb5-9015-06bc9695f0aa,Varagu flour,,Cereal & Cereal Product,313.0,6.1,69.2,1.3,2.0,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+af41e30d-2da0-4e00-9176-9f3b2f460c40,Wheat flour (whole),,Cereal & Cereal Product,341.0,12.1,69.4,1.7,1.9,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+02c7fc93-1653-4c50-a7f9-5e90cbabb7c9,Wheat flour (refined),,Cereal & Cereal Product,348.0,11.0,73.9,0.9,0.3,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+d59ce147-edab-496b-b4df-19acc09ed5f5,Wheat germ,,Cereal & Cereal Product,397.0,29.2,53.3,7.4,1.4,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+3fb94bba-29db-4c2a-8add-54cc38bb8d1d,wheat bran,,Cereal & Cereal Product,397.0,14.6,66.0,3.0,6.8,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+bbc96159-9379-45fa-9e62-e77f305dae79,"Bengal gram, Big, white( whole)",,Pulses & Legumes,347.2,21.1,56.7,4.0,4.5,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+ac5b2dc6-4b74-48e2-8be9-5d489b4667c0,Bengal gram dal( chickpea),,Pulses & Legumes,372.0,20.8,59.8,5.6,1.2,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+fa25bbf0-4941-40dc-8391-5b75d1d97e38,"Bengal gram medium, white",,Pulses & Legumes,345.0,23.2,54.6,3.7,4.7,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+21048fc4-7ce7-4654-b33f-aeb62c00e863,"Bengal gram ,Dark brown big",,Pulses & Legumes,360.0,17.1,60.9,5.3,3.9,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+f3676f49-804d-4696-825b-16fcc87a909b,"Bengal gram ,light brown small",,Pulses & Legumes,352.5,24.0,54.9,4.1,3.7,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+2e44553c-7f2f-4c08-8799-209d3a867f55,"Bengal gam, brown small",,Pulses & Legumes,349.9,20.6,59.0,3.5,3.5,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+4ab8436c-0b1e-41f8-89a9-bc8c80dda632,"Bengal gram, Smaill, White",,Pulses & Legumes,344.5,23.2,54.6,3.7,4.7,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+05908983-82bf-49a9-8f6e-dcb1746c3c3e,Black gram ( Dal),,Pulses & Legumes,347.0,24.0,59.6,1.4,0.9,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+8f995b4d-bad9-425e-a9a4-87231d362115,Black gram (Whole),,Pulses & Legumes,344.0,21.0,58.8,1.6,4.4,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+aaaa7d57-6909-4f2a-b92b-4fafcf4a579d,Broadbean,,Pulses & Legumes,328.0,25.0,29.3,1.2,5.1,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+3d808d50-d25f-4c42-b832-26220096c761,Black bean,,Pulses & Legumes,342.0,23.73,58.7,1.31,2.1,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+79d986f8-5827-483f-aab8-35e3e8d4cd3e,Bhote simi,,Pulses & Legumes,358.0,23.49,57.7,3.71,1.32,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+55bb6814-54a2-4617-aea4-c0b9a83d282f,Cow Pea,,Pulses & Legumes,323.0,24.1,54.5,1.0,3.8,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+22ab2a4e-acbf-4914-b974-efc644fb61f7,Fieldbean dry( simi),,Pulses & Legumes,347.0,24.9,60.1,1.3,1.4,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+deaae8c5-e9b7-4ba6-8ed3-e65f568f1af2,Gram Flour besan,,Pulses & Legumes,364.0,17.9,63.5,4.3,0.1,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+20111f4c-7a6c-4985-8d27-0f210f13bd73,"Green gram (Dal), Green",,Pulses & Legumes,348.0,24.5,59.9,1.2,4.2,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+90317273-fa84-48e7-9af5-92a53df6110f,Green gram (whole),,Pulses & Legumes,335.0,24.0,56.7,1.3,4.1,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+d0063198-bc1b-4a24-bc18-32e63d525b49,Green peas dry,,Pulses & Legumes,348.0,23.33,61.3,1.03,3.71,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+0e2411c1-b24f-4b04-8d68-6b31c968dfd4,Mung dal( yellow),,Pulses & Legumes,348.0,26.71,58.0,0.93,1.71,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+2a7f6e6e-c541-40d8-89c6-b8234a186c47,Horsegram black,,Pulses & Legumes,321.0,22.0,57.2,0.5,5.3,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+dbea7780-7ea5-44d2-bcb1-a17e41e133c0,Horsegram red,,Pulses & Legumes,322.0,21.11,57.4,0.85,4.12,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+739a5533-9ca3-4aaa-9406-0353ecf17a1e,Khesari dal,,Pulses & Legumes,345.0,28.2,56.6,0.6,2.3,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+8547af30-7166-42b7-af94-fef72b00626c,Katike Cow Pea,,Pulses & Legumes,330.0,22.86,56.1,1.56,5.1,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+5629d76f-3126-4d4d-a1a5-e5e0beafab70,Kause bean,,Pulses & Legumes,369.0,18.04,62.5,5.26,0.88,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+8b4bae11-c406-4f2a-af17-7508a83d864c,Lentil,,Pulses & Legumes,343.0,25.1,59.0,0.7,0.7,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+db2c1404-b47c-47c3-8d01-f1802122a12f,Moth beans,,Pulses & Legumes,330.0,23.6,56.6,1.1,4.5,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+f2935d1e-a4dc-4140-a785-f28d0bf15314,Moth beans( Yellow),,Pulses & Legumes,358.0,22.95,59.1,0.46,3.27,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+e3df2f1e-7b30-403b-9f10-e339658011b2,Moth beans( Red),,Pulses & Legumes,336.0,19.74,62.7,0.7,3.63,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+178c0063-64f0-4290-8046-5d2d6f5842cc,Peas (dry),,Pulses & Legumes,319.0,19.7,55.7,1.9,4.5,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+42ac6006-d749-4d2f-838c-0dbdc76b2d19,Rajmah,,Pulses & Legumes,346.0,22.9,60.6,1.3,4.8,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+7db2a67e-caa4-469f-ab74-abc1b3d3349e,Red gram dal,,Pulses & Legumes,335.0,22.3,57.6,1.7,1.5,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+94514f92-6d0e-43f8-9a27-d2b42ab2a13b,Soyabean (black),,Pulses & Legumes,393.0,33.3,31.3,15.0,4.3,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+98018367-bc7c-4fda-83bd-88e867f43751,Soyabean (Brown),,Pulses & Legumes,432.0,43.2,20.9,19.5,3.7,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+cc1ad9bc-f4a3-4fa1-b03d-572bda006b84,Soyabean (white),,Pulses & Legumes,411.0,33.3,29.6,17.7,4.2,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+fbe13afb-ef54-4a89-b0cf-3987e4024517,Tarbare Simi( red),,Pulses & Legumes,338.0,23.52,57.8,1.42,1.24,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+c5624ca5-ed55-4bda-94d2-4459f1010f0b,Sprout bean,,Pulses & Legumes,56.0,13.0,0.5,0.2,0.8,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+662428ba-921d-4ad0-8e4c-896f67e5ef06,White peas big,,Pulses & Legumes,332.0,23.3,58.0,0.8,3.1,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+ef55377e-0cd0-44da-b6c9-f61659f2bbfc,White bean,,Pulses & Legumes,330.0,22.6,56.6,1.42,1.42,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+c7c506b7-c918-4309-be9d-9eec442b25b7,Mung(Titura),,Pulses & Legumes,355.0,26.2,59.5,1.3,0.9,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+34e5ac33-0a5e-4733-82b3-0adffd830a8e,Tofu( Soybean product),,Pulses & Legumes,75.0,16.5,1.6,0.3,0.03,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+2a4d708e-1c47-4c8b-adf5-d357152d0b31,Nutrila (Soybean),,Pulses & Legumes,329.0,46.9,33.2,1.0,1.4,0.0,0.0,100.0,True,True,True,True,False,False,False,True,Nepal Food Composition Table
+ee0ab901-a82e-4505-a274-a3d7ad26007f,Amaranth (spined),,Green Leafy Vegetables,43.0,3.0,7.0,0.3,1.1,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+3325eeb9-42ef-4760-8c6c-eb517c52d11f,Amaranth (tender),,Green Leafy Vegetables,45.0,4.0,6.1,0.5,1.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+87b430d7-8035-428e-80af-01c8ddd6288b,Asparagus (Kurilo),,Green Leafy Vegetables,25.0,3.3,2.7,0.1,0.8,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+cf9cdb80-2260-496f-931c-63506e025225,Agathi,,Green Leafy Vegetables,93.0,8.4,11.8,1.4,2.2,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+36426de9-d71f-4dbf-a9a0-22e4657591e3,Aniseed leaves,,Green Leafy Vegetables,38.0,2.86,5.2,0.59,1.15,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+dcfbddec-9557-4285-92b0-bf08c54fc58d,Betheleaves,,Green Leafy Vegetables,30.0,3.7,2.9,0.4,0.8,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+79d042a5-5820-4f0f-b967-08f41beb646e,Beet green,,Green Leafy Vegetables,46.0,3.4,6.5,0.8,0.7,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+7e6ed555-8c67-4414-99ea-3b16886583d7,Buckwheat leaves,,Green Leafy Vegetables,31.0,3.92,3.8,0.11,0.87,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+d0c76500-62f5-4acc-b193-85d7d5074c65,Bengalgram leaves,,Green Leafy Vegetables,97.0,7.0,14.1,1.4,2.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+1d805f5a-b99f-4588-a48f-743642cde6dd,Bottleguard leaves,,Green Leafy Vegetables,39.0,2.3,6.1,0.7,1.3,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+08fc6f38-e54e-49f7-b09b-ab97b887d723,Broadbean leaves,,Green Leafy Vegetables,71.0,5.6,11.5,0.3,1.7,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+5f15a4d5-5e95-4668-ae06-3e0c110d79fb,Brvssis sprouts,,Green Leafy Vegetables,52.0,4.7,7.1,0.5,1.2,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+ff6a63de-30d0-481e-827e-be36791dcfe2,Cabbage green,,Green Leafy Vegetables,27.0,1.8,4.6,0.1,1.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+fffc62bb-cabe-43a2-9129-d564e34a68e7,Cabbage purple,,Green Leafy Vegetables,11.0,1.9,3.5,0.2,2.2,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+dde4a908-fb95-4aea-8712-df7d8d434a31,"Cauliflower, Green",,Green Leafy Vegetables,66.0,5.9,7.6,1.3,2.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+ce3546e7-304c-4bf9-969a-be5f8d53a8d3,Cauliflower(flower only),,Green Leafy Vegetables,41.0,0.75,6.6,2.4,0.25,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+10a7024a-e237-4822-9be2-d85611218a40,Choisum Sag,,Green Leafy Vegetables,39.0,2.7,6.4,0.3,1.5,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+3f9b15ce-37df-44ae-950f-26f65d5c1043,Chukandar,,Green Leafy Vegetables,43.0,2.8,7.8,0.1,0.4,0.0,0.0,100.0,False,False,True,False,False,False,True,True,Nepal Food Composition Table
+50b59d38-70c0-4cfb-8e1b-23ba4ca3fe94,Chocho leaves,,Green Leafy Vegetables,27.0,3.01,3.2,0.21,1.01,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+ce43670e-1cdc-453b-9f0c-ba17e3e83411,Coriander leaves,,Green Leafy Vegetables,44.0,3.3,6.3,0.6,1.2,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+32932cb0-6d40-4e02-ae86-6bb2b02b61b1,Carrot leaves,,Green Leafy Vegetables,77.0,5.1,13.1,0.5,1.9,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+ff6a3beb-cb79-459a-b629-e350c4c65e86,Celery leaves,,Green Leafy Vegetables,37.0,6.3,1.6,0.6,1.4,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+28e8975f-f625-4fd4-b4db-96f6330a9b9a,Colocasia leaves( Black variety),,Green Leafy Vegetables,77.0,6.8,8.1,2.0,1.8,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+b7105e00-9f9b-4871-a515-cb4115573be6,Colocasia leaves( Green variety),,Green Leafy Vegetables,56.0,3.9,6.8,1.5,2.9,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+21b2241c-6859-4905-afa4-145ade23907b,Colocasia leaves( dried),,Green Leafy Vegetables,277.0,13.7,42.3,5.9,16.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+07bfd535-3259-433c-a7ba-8be497f9cfa6,Cowpea leaves,,Green Leafy Vegetables,38.0,3.4,4.1,0.7,1.2,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+f2458a53-9885-4d60-a870-03ae3f60823f,Dundu,,Green Leafy Vegetables,25.0,2.57,3.66,0.0,1.22,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+6ec6233a-beb2-4e25-a179-e9e540609b82,Drumstick leaves,,Green Leafy Vegetables,92.0,6.7,12.5,1.7,0.9,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+404f97a9-ee16-47f7-8953-37e602040c37,Fenugreek leaves,,Green Leafy Vegetables,49.0,4.4,6.0,0.9,1.1,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+a00d9116-7140-4d63-a829-994bed8ac163,Garden cress,,Green Leafy Vegetables,67.0,5.8,8.7,1.0,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+170b5afb-eab4-44c8-9b23-b86bc082b9cc,Garden sorrel,,Green Leafy Vegetables,25.0,0.6,5.1,0.2,1.3,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+a5f2626a-10cb-4ae4-b00f-a277d90dea27,Garlic (stem& leaves,,Green Leafy Vegetables,76.0,2.4,15.1,0.5,1.6,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+f8540993-4487-48ad-9989-9de25b8a0227,Gyanth Kobi,,Green Leafy Vegetables,43.0,2.6,6.0,1.0,0.2,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+9fb1cafe-1c4e-49e8-b5eb-2a8ac887019b,Gyanth Kobi Leaves,,Green Leafy Vegetables,56.0,2.8,9.7,0.5,0.8,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+28a281f1-3a40-4686-9bc6-7bf8646f9ac8,Gothale Sag,,Green Leafy Vegetables,51.0,2.07,9.6,0.4,2.01,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+7cfa6fc5-0551-41b1-b378-16372afbc463,jaluka Saag,,Green Leafy Vegetables,35.0,2.4,5.5,0.43,3.02,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+d6056f64-b67a-4c59-9239-a3eb1a35d64d,Khesari leaves,,Green Leafy Vegetables,55.0,6.1,5.5,1.0,2.1,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+94cd75e3-76f5-4a7d-affa-e34bd9c699d2,Koiralo Sag,,Green Leafy Vegetables,62.0,3.6,9.7,1.0,5.5,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+9b2a75fc-74cc-4849-9c90-58d5c86c4f83,Khole garden cress,,Green Leafy Vegetables,35.0,3.5,4.4,0.4,0.95,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+bcd01c99-13ab-4bcb-b64c-c21cc2078460,Knol-knol green,,Green Leafy Vegetables,43.0,3.5,6.4,0.4,1.8,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+41ff0ac4-785b-42b6-a569-5cce778fbdab,Kitchen garden persley,,Green Leafy Vegetables,27.0,2.4,2.9,0.6,1.3,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+1571d6f3-1934-4b3d-8f87-6811b8d68d9d,lettuce,,Green Leafy Vegetables,21.0,2.1,2.5,0.3,0.5,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+171c955b-d36e-4227-909c-28ba56ac84f1,love-lies bleeding,,Green Leafy Vegetables,26.0,3.0,2.0,0.7,1.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+f82dd32f-e47a-4a6d-b369-9ed80d3a3d99,Mint,,Green Leafy Vegetables,48.0,4.8,5.8,0.6,2.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+df214286-70b3-4e63-b2c6-ee618d77df47,Mustard leaves,,Green Leafy Vegetables,34.0,4.0,3.2,0.6,0.8,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+3b1c7969-82b5-40a3-aa64-bc465c03bc54,Nakore sag,,Green Leafy Vegetables,44.0,2.49,8.0,0.18,0.89,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+2d5f513a-9c6f-470f-873b-684a43383e58,Niguro green,,Green Leafy Vegetables,19.0,1.15,3.4,0.15,0.99,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+03c7a06f-7d6c-4941-8315-2664e12dcbc0,Neem leaves tender,,Green Leafy Vegetables,158.0,11.6,21.2,3.0,2.2,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+f64d3164-0796-48a9-b55c-48b30f4d3e7e,Poisag,,Green Leafy Vegetables,32.0,2.8,4.2,0.4,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+1b344754-77c3-4110-a259-13b803c98e47,Patua sag,,Green Leafy Vegetables,63.0,5.1,8.1,1.1,1.6,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+848da384-869b-44c2-8492-c5a9d4922e0e,Potato leaves,,Green Leafy Vegetables,40.0,4.4,3.6,0.9,1.3,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+a05c8af6-91d8-41d0-a596-d735f33f0c59,Pumpkin leaves,,Green Leafy Vegetables,53.0,4.6,6.9,0.8,2.1,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+3be719c7-d836-4b73-baa3-ebbc59d9abea,Purple Cabbage,,Green Leafy Vegetables,66.0,1.9,52.0,0.2,2.2,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+9da09c9c-3878-4aa8-8722-fbb82991ec08,Rape leaves,,Green Leafy Vegetables,48.0,5.1,5.9,0.4,1.2,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+b4574e30-da22-43d6-8895-ac11f0ba8f4c,Radish leaves,,Green Leafy Vegetables,28.0,3.8,2.4,0.4,1.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+72e6232a-caca-44b1-b6a0-c09f26ff3dff,Rapes leaves dried,,Green Leafy Vegetables,297.0,27.0,40.7,2.9,6.7,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+7a3b4580-e3dc-4a10-b580-6fe762df5980,Safflower leaves,,Green Leafy Vegetables,33.0,2.5,4.5,0.6,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+413cf518-0966-48ed-bda9-295e77ef700d,Sim saag fresh,,Green Leafy Vegetables,20.0,2.4,1.5,0.44,0.67,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+4aa6a859-0746-460a-9d34-98e2279d5255,Spinach,,Green Leafy Vegetables,26.0,2.0,2.9,0.7,0.6,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+83a7e1c1-e64e-436b-bd19-3f3015684d5d,Stinging Nettle ( Sisnu) leaves,,Green Leafy Vegetables,53.0,6.9,5.0,0.2,1.8,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+52c10625-e54d-4bac-90a9-3586bacf5246,Soya leaves,,Green Leafy Vegetables,72.0,6.0,10.8,0.5,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+594e6c6b-95ab-42e1-a04b-ebb01c5488bc,Sweet potato green leaves,,Green Leafy Vegetables,63.0,4.2,9.7,0.8,2.4,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+27fc3780-3fea-4d5f-a09e-7e588ae867ab,Sweetchard,,Green Leafy Vegetables,32.0,2.21,5.3,0.24,0.7,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+a82e2c8a-1f1a-408c-9eca-7ba2f615f9cf,Tamarind leaves tender,,Green Leafy Vegetables,305.0,8.6,60.9,3.0,10.1,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+11887c06-b59f-4432-a678-a180692d2c51,Tanki Sag,,Green Leafy Vegetables,190.0,1.3,44.2,0.8,3.7,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+f51aa7a2-22fb-497a-a6a5-a8617cb4ca65,Thai spinach,,Green Leafy Vegetables,36.0,2.3,6.1,0.3,0.8,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+bc2b534d-704e-4ec2-a780-7c9da6ed8b38,Turnip green leaves,,Green Leafy Vegetables,67.0,4.0,9.4,1.5,1.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+60d43577-ec3b-4d09-b919-5f3c01d8f73d,Ashgourd,,Other Vegetables,10.0,0.4,1.9,0.1,0.8,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+5b8263d2-a99e-42c1-b0dc-00918bd1bca5,Agathi flower,,Other Vegetables,26.0,1.0,4.4,0.5,0.8,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+ee48cb58-7279-49dd-a95b-26fff14a4e43,Bitter gourd,,Other Vegetables,25.0,1.6,4.2,0.2,0.8,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+a3d59c62-9093-4d5a-aa6c-963945ef5183,Barela,,Other Vegetables,33.0,0.99,6.7,0.26,0.79,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+80aaddd5-647c-49c9-9d13-f723c5a939a9,Bottle gourd,,Other Vegetables,12.0,0.2,2.5,0.1,0.6,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+214dcf43-9931-442e-b4d5-9730ec8c3706,Brinjal,,Other Vegetables,24.0,1.4,4.0,0.3,1.3,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+267ef8ba-63f6-4da9-9678-ed2d4169590e,Broadbeans,,Other Vegetables,48.0,4.5,7.2,0.1,2.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+31bd3429-eb79-4ba2-b5c1-8196fb9fa9f8,Bamboo shoot (tender),,Other Vegetables,43.0,3.9,5.7,0.5,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+372c81cf-bc10-406d-a691-0d9f8b80bb10,Broccoli marrow,,Other Vegetables,50.0,4.99,7.1,0.2,0.94,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+ccf66660-28a8-4a17-bc78-2fe63a791105,Cauliflower,,Other Vegetables,30.0,2.6,4.0,0.0,1.2,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+62419504-5f46-4d77-b8dc-3ecab4a78a93,Cho-chomarrow,,Other Vegetables,27.0,0.7,5.7,0.1,0.6,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+be01239d-e0f4-43d6-b806-e5f86c2f6071,Cluster beans,,Other Vegetables,16.0,3.2,10.8,0.4,3.2,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+c752a4d9-ecfd-4e4f-8ff0-a34bc9a63bfb,Cowpea pods,,Other Vegetables,48.0,3.5,8.1,0.2,2.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+43094f46-76a7-47e2-9090-49042bb98bdc,Cucumber,,Other Vegetables,13.0,0.4,2.5,0.1,0.4,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+d27958e0-7b96-46b6-87df-096697e3501d,Chattel,,Other Vegetables,34.0,2.04,6.1,0.18,1.2,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+b302bf29-7938-42ee-ac29-9a809f3b7ffd,Colocasia stem,,Other Vegetables,18.0,0.3,3.6,0.3,0.6,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+c1fa9a1d-d971-4311-b9c2-06070ca10ea5,Capsicum Yellow,,Other Vegetables,73.23,0.86,17.2,0.11,0.66,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+28564c23-4aec-45a4-9ab0-95c4c6491342,Capsicum Red,,Other Vegetables,105.38,0.92,25.2,0.1,0.7,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+a69d82d7-f1fa-40b8-a1bf-1c457b0c2064,Capsicum Green,,Other Vegetables,103.6,0.9,25.0,0.11,0.7,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+ff0e721d-7b09-4957-9dc6-d0cb27628331,Chillies Akbare Fresh,,Other Vegetables,53.42,3.81,8.2,0.62,0.76,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+e4d192eb-1fa2-4f4c-8543-ced2be605389,Chillies Akbare Dry,,Other Vegetables,337.37,13.97,52.9,7.77,7.34,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+d06c2cdf-ef99-4963-a45b-c4be5b53e954,Celery Stalks,,Other Vegetables,18.0,0.8,3.5,0.1,1.2,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+a0147270-3715-489d-8387-d452d96dd67a,Double bean,,Other Vegetables,85.0,8.3,12.3,0.3,4.3,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+96dcc28b-5214-4d2d-9f8f-2266f7add9fc,Drumstick flower,,Other Vegetables,50.0,3.6,7.1,0.8,1.3,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+f14f1251-366c-4119-a7d5-2a0408c95ef7,Drumstick,,Other Vegetables,26.0,2.5,3.7,0.1,4.8,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+2ade0bc3-6f85-4b56-803d-8ed4068118e2,French bean,,Other Vegetables,26.0,1.7,4.5,0.1,1.8,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+5a76839e-fbad-4b51-8331-7a938b66d9ba,Field bean tender,,Other Vegetables,48.0,3.8,6.7,0.7,1.8,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+6d982385-07c6-43f6-aa0e-b5b45bf51ce8,Jack fruit tender,,Other Vegetables,51.0,2.6,9.4,0.3,2.8,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+dfa4b8db-e404-4607-8263-c63afd8e0e05,Knol-knol,,Other Vegetables,21.0,1.1,3.8,0.2,1.5,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+3151d299-87d5-4976-9d33-03a8a3e2299c,Karonda Fresh,,Other Vegetables,42.0,1.1,2.9,2.9,1.5,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+65e82365-16da-4aaf-92c1-67ae7bff5850,Ladies finger,,Other Vegetables,35.0,1.9,6.4,0.2,1.2,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+f23236f2-71fc-4f95-9205-abc05bb6f276,Leeks,,Other Vegetables,77.0,1.8,17.2,0.1,1.3,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+d87342d0-d403-4661-b4d8-60ba9c7e1f46,"Lakooch, Badher raw",,Other Vegetables,73.0,1.6,13.9,1.2,2.8,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+5d44b117-e931-4826-9a15-a75ee4f513a6,"Lotus stem, dry",,Other Vegetables,234.0,4.1,51.4,1.3,25.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+7ebc9e72-1ac2-47d8-9559-2976af96a732,MushroomBotton( Gobre),,Other Vegetables,43.0,4.6,4.3,0.8,0.4,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+059d354d-6c80-4951-b1b5-38e2bb08df79,Mushroom Oyster( Kanne),,Other Vegetables,37.0,3.0,5.8,0.2,0.9,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+73da9aad-e9fe-4443-be7f-b15b67722f95,"Mushroom, wild , dry",,Other Vegetables,134.7,16.9,14.1,0.0,20.8,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+de15451d-7652-4a24-aaf8-4b4824dd5736,Mango green,,Other Vegetables,44.0,0.7,10.1,0.1,1.2,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+58b61fae-a01a-4e8a-9748-77036314024e,Onion stalk( Green),,Other Vegetables,41.0,0.9,8.9,0.2,1.6,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+eb0a9ad4-3934-470a-b653-c9ec71de8bff,Pink beans,,Other Vegetables,44.0,3.1,7.0,0.4,2.1,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+0aea8515-7d11-4f26-aa13-c6671e303e41,Pumpkin,,Other Vegetables,25.0,1.4,4.6,0.1,0.7,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+27f7055f-3f00-4ecc-8062-f5246f339ff9,Plantain flower,,Other Vegetables,34.0,1.7,5.1,0.7,1.3,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+50ae1aed-b950-4c77-88a0-69f67e05c529,Plantain green,,Other Vegetables,64.0,1.4,14.0,0.2,0.7,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+dda707d5-8978-43ea-a398-e9062f7fff46,plantain stem,,Other Vegetables,42.0,0.5,90.7,0.1,0.8,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+46523956-7a1e-4984-b94a-d8bd32ab4019,Pumpkin flower,,Other Vegetables,39.0,2.2,5.8,0.8,0.7,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+46f6eb43-accc-4bdc-b870-1dd6bf362427,Parwar,,Other Vegetables,20.0,2.0,2.2,0.3,3.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+d15a8890-f6a5-4c81-8873-817464422a98,Peas,,Other Vegetables,93.0,7.2,15.9,0.1,4.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+b7e70241-f8a9-4316-9667-377850f5c187,Papaya green,,Other Vegetables,27.0,0.7,5.7,0.2,0.9,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+a0882556-1803-49f6-8a05-eccfe6e529b8,Ridge gourd,,Other Vegetables,17.0,0.5,3.4,0.1,0.5,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+c4dee6b7-0b4a-4388-9b61-d95e6d6fb9d2,"Rape, stem",,Other Vegetables,29.0,0.0,4.0,1.4,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+a321e229-9ad7-45eb-b2a7-9aac7ddecd34,Redgram tender,,Other Vegetables,116.0,9.8,16.9,1.0,6.2,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+4471ff1d-84e3-4890-93c6-449e91e0db8d,Red beans (Rato Bodi),,Other Vegetables,34.0,3.1,5.2,0.1,2.5,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+29d2c391-75af-4cd1-a5cb-913451916588,Red bean (Simi),,Other Vegetables,121.0,3.5,26.6,0.1,2.7,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+1def80ff-2828-4b02-a5a2-cde5f345ae7c,Spotted beans(Chirke simi),,Other Vegetables,107.0,3.34,21.8,0.75,2.12,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+177772e1-31f3-440e-bffa-cb3a27c06a1e,Red cowpea,,Other Vegetables,34.0,3.1,5.2,0.1,2.5,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+1f2cd9f9-371d-4493-b1ff-fb72f15fc9b3,Snakegourd,,Other Vegetables,18.0,0.5,3.3,0.3,0.8,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+54ab8df8-7a08-42c9-9820-0a4c9e565c38,Sponge guard,,Other Vegetables,26.43,1.03,5.0,0.11,0.39,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+38910f14-0703-411f-b27f-44f74f34f4dc,Sannhemp flower,,Other Vegetables,66.0,4.8,10.4,0.6,3.9,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+0765b74b-7a32-42a6-9b8e-6c4a84c77c3c,Silkcotton flower,,Other Vegetables,47.0,1.5,9.5,0.3,1.6,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+9bd006e2-56ba-45ff-b1b7-fe2f4c10e0f1,Spinach stalk,,Other Vegetables,20.0,0.9,3.8,0.1,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+a27cceb9-0aee-4403-822a-690df1822bd3,Sword beans,,Other Vegetables,44.0,2.7,7.8,0.2,1.5,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+4b457d20-2c32-4aef-be12-fa6c5b5bd66f,Soyabean tender,,Other Vegetables,146.2,14.89,15.1,2.92,3.68,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+e4fdba69-6d22-4502-be5a-14b97034db13,Tomato green,,Other Vegetables,23.0,1.9,3.6,0.1,0.7,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+7ebb4223-710d-4cca-bf6e-3c6346af6566,Tomato red,,Other Vegetables,21.0,1.3,3.9,0.1,0.5,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+553edbdf-6acc-44c8-941a-d17c60768819,Tree tomato,,Other Vegetables,35.0,1.5,6.7,0.2,4.2,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+c4b97afa-4aa4-460d-a8e5-44b5ee202318,Tinda tender,,Other Vegetables,21.0,1.4,3.4,0.2,1.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+393eb782-6938-4a91-ad8d-326164e8be39,Vegeable marrow,,Other Vegetables,17.0,0.5,3.5,0.1,0.8,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+61ca9609-10e7-4d19-b727-a096a6b6fe11,Water chesnut fresh,,Other Vegetables,115.0,4.7,23.3,0.3,0.6,0.0,0.0,100.0,True,True,True,True,False,False,False,True,Nepal Food Composition Table
+24195383-85f3-4a11-abda-fe17f5511489,Water chesnut dry,,Other Vegetables,70.0,13.4,68.9,0.8,330.0,0.0,0.0,100.0,True,True,True,True,False,False,False,True,Nepal Food Composition Table
+bf056a09-5a1e-4196-aa19-7791388a7f1f,Water lily flower,,Other Vegetables,33.0,1.6,5.4,0.6,0.9,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+3a39518e-3870-4f09-ae3c-305f37d5c762,Winged bean tender,,Other Vegetables,45.1,2.66,7.9,34.0,1.79,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+b34b070a-aa54-4d72-85c4-b58cd71d8cc6,Beet root,,Roots And Tubers,43.0,1.7,8.8,0.1,0.9,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+703a1ed9-beff-407b-a883-cbbc2bcabc98,Banana rhizome,,Roots And Tubers,51.0,0.4,11.8,0.2,1.1,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+44c35344-88c3-4788-b8f3-8b8c7ce3a333,Colacasia,,Roots And Tubers,97.0,3.0,21.1,0.1,1.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+e3f33806-d4b7-43ce-9838-17d476edc1f6,Cassava,,Roots And Tubers,146.3,1.2,34.7,0.3,0.43,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+b1b63bd3-368b-404b-b908-068408dcbfce,Carrot,,Roots And Tubers,47.8,0.9,10.6,0.2,1.2,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+c4d5916f-5825-4ff2-a96e-1e97d28c4a89,Cho-cho marrow root,,Roots And Tubers,89.93,1.9,20.3,0.1,0.7,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+c17feb70-5e34-4c1f-8063-1ad95e34f145,Ghar tarul,,Roots And Tubers,147.0,4.0,32.6,0.1,2.56,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+43f1d885-5ab7-40e4-8231-0e706a5b0178,Garlic dry,,Roots And Tubers,145.0,6.0,29.8,0.1,0.8,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+26904714-c39a-4dee-b067-2fa0aee04714,Gittha,,Roots And Tubers,124.0,3.72,25.2,0.9,0.91,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+b62e3f70-ac96-45ae-acd0-d84eabd4bb66,Lotus root,,Roots And Tubers,53.0,1.7,11.3,0.1,0.8,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+bb42d022-c1fe-44f4-a0f3-27a34fcf87e9,Mango ginger,,Roots And Tubers,53.0,1.1,10.5,0.7,1.3,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+1473d4ea-163d-49cb-b725-34da5d60096e,Onion (Small),,Roots And Tubers,59.0,1.8,12.6,0.1,0.6,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+f23abab1-b8ed-4402-9ead-675f1d7a7793,Onion (Big),,Roots And Tubers,47.0,1.2,10.4,0.1,1.3,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+5389188e-7d45-454b-b764-850db77453e2,Potato,,Roots And Tubers,97.0,1.6,22.4,0.1,0.6,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+09db0544-e32f-43b1-a3e8-541b126b0219,Potato( Red),,Roots And Tubers,72.0,1.1,15.0,0.52,0.25,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+0128082d-efdb-4495-bf40-996e939ee1c6,Potato boiled ( without skin),,Roots And Tubers,72.0,1.9,16.3,0.1,0.4,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+a4e6229f-a5e6-4b32-8acc-7c2cfc1e1b5d,Potato chips fried,,Roots And Tubers,562.0,3.6,45.9,43.8,0.9,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+eb28695f-9868-42c8-9676-21552ef90ef4,Rani vyakur,,Roots And Tubers,101.0,2.3,22.7,0.2,1.1,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+57ac9728-973c-4987-826f-ae1a14a19c41,Radish Pink,,Roots And Tubers,32.0,0.6,6.8,0.3,0.6,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+f3e5426b-a913-405a-bf28-96a88561002b,Radish white,,Roots And Tubers,101.0,0.7,22.7,0.1,9.6,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+16391160-1b05-4c2e-a8b1-64a1f69719f7,Radish Rat- tailed,,Roots And Tubers,72.0,1.3,4.3,0.03,0.4,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+606a00e1-8c11-4c8d-8cb8-c4b5edea3ade,Sweet Potato( white)),,Roots And Tubers,121.0,1.2,28.3,0.3,0.7,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+0e46117f-5f6c-44e0-8a4e-9b3e12fb15d8,Sweet potato red,,Roots And Tubers,126.0,1.35,29.1,0.5,1.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+b3c7ee07-92e0-4989-8b49-76a5ea7599ac,Sweet potato boiled,,Roots And Tubers,114.0,1.0,27.4,0.1,0.8,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+304c8942-147f-49bd-8f1e-c12534d1a073,Turnip red,,Roots And Tubers,37.0,1.2,7.7,0.2,1.3,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+3c1d7f18-cd38-4005-8023-3111e89f205e,Yam elephant,,Roots And Tubers,79.0,1.2,18.4,0.1,0.9,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+1401e940-4020-464d-87e4-7176b71c2125,Yam wild,,Roots And Tubers,110.0,2.5,29.1,0.3,0.8,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+d47b5acc-49b2-4392-b493-d5fb42679c32,Gundurk(Mustard),,Vegetables Product,0.0,0.0,0.0,0.0,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+99075b83-7bf3-489d-97f8-2f057071484b,Mulako Sinki,,Vegetables Product,245.0,12.0,47.5,0.7,14.92,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+58de63ae-1ffa-4e20-b481-71e9e9085cc2,Dried rape leaves,,Vegetables Product,297.0,27.0,40.7,2.9,6.7,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+f7b2f773-6f94-4a58-9f95-b6e07bb53f66,Varieties of Maseura - Blackgram+Colocosia tuber,,Vegetables Product,341.0,19.8,63.8,0.7,3.5,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+8e799f55-a17b-4a9a-93f6-9f43d11bab07,Varieties of Maseura - Blackgram+Colocosia tuber+Gundruk,,Vegetables Product,338.0,25.3,57.6,0.7,3.7,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+de802d46-2ea3-4dd9-aea0-0a11bafcbeb6,Varieties of Maseura - Blackgram+Ashgourd (kubindo),,Vegetables Product,352.0,30.3,55.5,1.0,2.5,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+93b4a813-5043-471c-ae86-72f82885ba9a,Varieties of Maseura - Blackgram+Garlic,,Vegetables Product,346.0,22.0,346.0,1.2,1.2,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+6afa4f6e-0d0a-4133-a943-9c362b65f26e,Varieties of Maseura - Blackgram+Cabbage,,Vegetables Product,347.0,22.0,64.4,0.1,2.5,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+4c06f297-e242-4cd3-b728-883decada3cc,Varieties of Maseura - Blackgram+Gardencress(Chamsur),,Vegetables Product,345.0,26.9,59.2,0.1,2.5,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+6a762357-0925-44b9-b471-85fe651db0a9,Varieties of Maseura - Blackgram+Raddish,,Vegetables Product,350.0,24.6,58.6,1.9,2.7,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+9222a6e0-d4f6-49ee-9fdf-d8ef33620d4a,Varieties of Maseura - Blackgram+Cauliflower,,Vegetables Product,333.0,24.5,57.5,0.6,2.5,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+21875a0a-53c6-43b5-9416-290383214a49,Apple,,Fruits,59.0,0.2,13.4,0.5,1.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+3ddb471d-429f-483d-ab99-cbd88378ac90,Amala ( big),,Fruits,54.0,0.0,13.7,0.2,3.6,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+afc7c7d3-825a-4dcd-97c2-3f68aa11aae3,Amala (small),,Fruits,58.0,0.0,0.0,0.2,3.21,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+870ef1ee-ff13-4642-a411-5b61a08e9ff3,Apricot fresh,,Fruits,53.0,1.0,11.6,0.3,1.1,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+a1e81e5f-fb6f-4756-b4ef-52f2e81f0a50,Apricot dried,,Fruits,306.0,1.6,73.4,0.7,2.1,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+11bda0d9-3196-4e85-b061-9e839da18d08,Avocado,,Fruits,215.0,1.7,0.8,22.8,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+22b2e4fe-3ce9-41a6-9be8-caaeb566d58a,Bael fruit,,Fruits,137.0,1.8,31.8,0.3,2.9,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+8b809522-a963-4e69-9eb0-bf2637bdeed6,Bael sarbet,,Fruits,189.0,1.7,45.2,0.1,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+8c29bfd9-e82d-467c-a532-ab5c59133ddd,Banana ripe,,Fruits,116.0,1.2,27.2,0.3,0.4,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+158469b1-a7ab-4715-a8e5-57b53718ce80,Banyan tree figs,,Fruits,72.0,1.7,11.8,2.0,8.5,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+8e3a1e65-6f46-4e91-a715-c76050baec3e,Bamboo fruit,,Fruits,153.0,3.9,34.2,0.1,3.9,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+359c1366-0566-4c5a-9fff-320ffe967554,Cashew fruit,,Fruits,51.0,0.2,12.3,0.1,0.9,0.0,0.0,100.0,True,True,True,True,False,False,False,True,Nepal Food Composition Table
+87f6bfd5-1e23-4b14-bfed-52ca342b9850,"Dates, dried",,Fruits,317.0,2.5,75.8,0.4,3.9,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+f5fc8dfa-06a0-4c7b-aa39-90d5699cded1,"Dates, Fresh",,Fruits,144.0,1.2,33.8,0.4,3.7,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+35c31a78-9f3e-4373-8efa-7c92ca511eec,Figs,,Fruits,37.0,1.3,7.6,0.2,2.2,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+7f4d8221-eb65-41e8-a758-eb2dfb32875a,Grape- pale green vraiety,,Fruits,71.0,0.5,16.5,0.3,2.9,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+79775871-4e79-465e-9d70-438f7a3c33e2,Grape-Blue vraiety,,Fruits,58.0,0.6,13.1,0.4,2.8,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+c77d5448-b9a6-4fef-8c2c-c456faf4648c,Grapes fruits( Marsh' seedless),,Fruits,45.0,1.0,10.0,0.1,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+49ce05c0-037f-4650-9557-e1078a775083,Guape fruit( trumph) juice,,Fruits,32.0,0.7,7.0,0.1,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+d8532ea7-5a89-4b95-8c8e-36e13990f0f7,"Guava , hill",,Fruits,38.0,0.1,9.0,0.2,4.8,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+73136658-952a-455e-afd2-b68fb5aa37ef,"Guava, country",,Fruits,51.0,0.9,11.2,0.3,5.2,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+0df06a8b-4256-403c-99ff-fef767c43b0b,Ground apple,,Fruits,64.0,1.3,14.4,0.2,0.1,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+e845eb13-8bf2-4208-b2c1-a9b2f822a4aa,Jackfruit ripe seed,,Fruits,88.0,1.9,19.8,0.1,0.9,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+a9a99708-5bb2-438e-a096-179085269fae,Jambu fruit,,Fruits,62.0,0.7,14.0,0.3,0.6,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+51d2274a-331a-4d09-bf13-7f9ee3ad4bf4,Kussum fruit,,Fruits,53.0,1.5,9.9,0.8,2.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+0b6dc6f1-1662-4c59-ac01-7fc427e4d7b6,Lapsi,,Fruits,73.0,0.5,17.68,0.02,1.4,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+0746e2ee-c8cf-4ccc-9c12-16ddd1311efc,Lemon(Nibuwa),,Fruits,57.0,1.0,11.1,0.9,0.7,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+c7688820-3320-41ad-946c-9d3cbd9c622e,Lemon sweet,,Fruits,35.0,0.7,7.3,0.3,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+4b7bb5eb-559e-4326-b142-cfdf2cf2c5e0,Lemon Juice,,Fruits,63.0,1.0,12.8,0.9,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+9224a271-0f83-4cb4-8b46-75623ff290d1,Lichi,,Fruits,61.0,1.1,13.6,0.2,0.5,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+b16d747f-efcb-4650-be2a-0c2dadb48358,"Lich ,bastard",,Fruits,61.0,1.4,13.1,0.3,0.5,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+f8ebd326-4944-414f-aa0a-36bcc8fdf86b,Lime,,Fruits,59.0,1.5,10.9,1.0,1.3,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+dd058e4d-c6de-4a2e-8753-1cedfd5748ae,"Lime,sweet,malta",,Fruits,36.0,0.7,7.8,0.2,0.6,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+45b6d8ba-f268-48e0-81de-c6bfadb3031b,Lakuch,,Fruits,66.0,0.7,3.3,1.1,1.7,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+1307796c-50e0-4a67-bc64-9f8a67f5a1c1,Laruat,,Fruits,43.0,0.6,9.6,0.3,0.8,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+46621a4a-c892-4b91-a1e5-724c16c647b3,"Mango, Ripe",,Fruits,74.0,0.6,16.9,0.4,0.7,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+f100c24e-296d-4657-b8ad-2e5d2361864e,"Mango, Ripe - Bombay",,Fruits,89.0,1.2,21.0,0.03,0.07,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+5624de20-399d-4400-a47a-a5143ef50c42,"Mango, Ripe - Malda",,Fruits,78.0,1.4,17.9,0.09,0.28,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+5ab4a478-3b95-4671-b5bb-200e0d7aa542,"Mango, Ripe - Sukutara",,Fruits,73.0,1.0,16.9,0.17,0.17,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+9990f3d0-1e83-4290-b6eb-14a2293f57f3,"Mango, Ripe - Dashari",,Fruits,75.0,1.1,17.6,0.06,0.18,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+b39d093c-84c6-4f45-a989-62c04bd872b2,"Mango, Ripe - Jarda",,Fruits,63.0,0.8,15.0,0.03,0.41,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+c6bb2e74-cae0-47e4-9681-fd36dc6817fc,"Mango, Ripe - Kalkatiya",,Fruits,80.0,0.4,19.0,0.01,0.09,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+bd91f2bf-a6a4-48d5-b8d6-5192359eb892,"Mango, Ripe - Fajali",,Fruits,65.0,0.9,15.0,0.15,0.1,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+31597b66-731b-4575-9d55-a484d39e7cb1,"Mango, Ripe - Amrapali",,Fruits,68.0,1.5,15.4,0.09,0.08,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+eeeb90ee-707e-4a63-82cb-1e88d794dadd,"Mango, Ripe - Chausa",,Fruits,75.0,0.77,17.8,0.08,0.34,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+debd202c-8371-47f1-9e92-07c6bb87b13d,"Mango, Ripe - Mallika",,Fruits,73.0,0.61,17.4,0.09,0.04,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+931dd5d6-1866-4a16-b4d4-0d73d73852f8,"Mahua, ripe",,Fruits,111.0,1.4,22.7,1.6,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+e9d48854-305c-49b9-aaba-039e9b3ee87b,Mulberry,,Fruits,49.0,1.1,10.3,0.4,1.1,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+8306c706-025c-4fc7-9bdb-8a9a822351e5,Melon water,,Fruits,16.0,0.2,3.3,0.2,0.2,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+7a3b2f4c-a777-4601-baf3-7536725dbc8d,Neem fruit,,Fruits,75.0,1.3,15.1,1.0,0.7,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+63b6eaad-0530-4b61-aee9-4c474d460733,Junar,,Fruits,48.0,0.0,11.9,0.05,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+3054168c-e38d-40f0-be1c-c909feec8e50,Orange,,Fruits,48.0,0.7,10.9,0.2,0.3,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+b038ae43-6914-4e66-84c4-472067fcf345,Orange juice,,Fruits,9.0,0.2,1.9,0.1,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+70f61fde-f01a-46b4-a7ad-9a60bfa1fd84,Papaya (ripe),,Fruits,32.0,0.6,7.2,0.1,0.8,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+09d8dbfd-f73e-426d-9c7b-1b5a033187c2,Persimon with peel,,Fruits,0.0,0.7,0.0,0.138,0.57,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+3db8cf60-413f-41fe-bf55-e77c273b5e72,Persimon without peel,,Fruits,0.0,0.9,0.0,0.11,0.85,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+9d691a20-bf15-4336-ba65-f59ce8eecdb1,Peaches,,Fruits,50.0,1.2,10.5,0.3,1.2,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+62f34377-ff74-45f5-a89d-d3d729d0700e,Phalsa,,Fruits,72.0,1.3,14.7,0.9,1.2,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+5e15bc57-73c4-4086-a17d-4000da4b3487,Pinapple,,Fruits,46.0,0.4,10.8,0.1,0.5,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+eed57277-68e5-4097-afc9-ab492c8ff691,Pipal tree figs,,Fruits,110.0,2.6,21.2,1.7,9.9,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+ef1698da-46aa-4915-aa3f-19080d502096,Plums,,Fruits,52.0,0.7,11.1,0.5,0.4,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+523c7cf5-8cbf-4b36-9a9d-06c83ec1ce19,Pomegranate,,Fruits,65.0,1.6,14.5,0.1,5.1,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+a430a038-f621-4b04-bf13-7539b6d434ac,Pummelo,,Fruits,44.0,0.6,10.2,0.1,0.6,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+84c13da2-7fb3-4ebf-920c-d429b54dfc74,Pear,,Fruits,52.0,0.6,11.9,0.2,1.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+30888a0d-6491-4891-b36c-c9d512363798,Pani amala,,Fruits,26.0,2.6,3.4,0.14,1.26,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+2517808e-6d68-4f24-8972-552f52fedae7,Raspbery,,Fruits,56.0,1.0,11.7,0.6,1.1,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+abe81970-d169-456d-861f-04cc1d801747,Red rapsberry( kafal),,Fruits,41.0,1.72,8.2,0.1,6.43,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+c985ab31-b9b6-4983-896a-b71070a0e49b,Rayan,,Fruits,134.0,0.0,27.7,9.6,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+6698c093-db31-4706-b602-0ed14d4e65bb,Rose spple,,Fruits,39.0,0.7,8.5,0.2,1.2,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+24601d19-c431-40f5-9cfd-f3a6812c9881,Seethphal,,Fruits,104.0,1.6,23.5,0.4,3.1,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+fbc027fe-c255-4154-b2de-b0d4685b9030,Strawberry,,Fruits,44.0,0.7,9.8,0.2,1.1,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+f046f9ad-8ed2-4ffc-98a6-012ccbb37909,Sapota,,Fruits,98.0,0.7,21.4,1.1,2.6,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+aee04383-caa5-435c-9496-f8bbe9097535,Wood apple,,Fruits,134.0,7.1,18.1,3.7,5.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+d214f65f-6460-4fc7-ad1a-e988fa78ff74,Zizyphus,,Fruits,74.0,0.8,17.0,0.3,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+5988be81-661f-46b9-88d9-30fffeab3597,Asafoetida,,Condiments And Spices,297.0,4.0,67.7,1.1,4.1,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+ea5e0f59-3f52-4863-9a17-7d661e6a45b3,Anise( Sounf),,Condiments And Spices,341.0,17.5,60.0,3.4,13.5,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+804af674-df1d-4e1d-8c22-6a954d66ad09,Arithippilli Arisithipplli,,Condiments And Spices,329.0,13.2,58.0,4.7,5.2,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+7db26c1f-c2c6-4602-aeba-ccce42e828a0,Betal nut ( Supari),,Condiments And Spices,375.0,4.7,66.1,10.2,13.2,0.0,0.0,100.0,True,True,True,True,False,False,False,True,Nepal Food Composition Table
+0e4c59dd-c083-4f71-ae5d-71b95eb44419,Cinnamon,,Condiments And Spices,259.0,6.1,64.6,1.9,26.5,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+da6711c1-0140-4ee1-bd9a-8480c8abb767,Cardamom,,Condiments And Spices,229.0,10.2,42.1,2.2,20.1,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+2b7d7928-6b87-49fe-aed4-004655de4096,"Chilliy, dry",,Condiments And Spices,246.0,15.9,31.6,6.2,30.2,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+887c8710-f7dc-40a8-80d8-14a2497fb63f,"Chilliy, green",,Condiments And Spices,29.0,2.9,3.0,0.6,6.8,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+94618e3c-7145-4c56-87ba-0a466e9918fd,"Cloves, dry",,Condiments And Spices,286.0,5.2,46.0,8.9,9.5,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+a2a2c4ba-c154-48ae-b458-71c8e3bd1cc3,"Coriander, dry",,Condiments And Spices,288.0,14.4,21.6,16.1,32.6,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+f1f66287-0a13-4255-bb63-ebd2ee3fd825,Cumin seed,,Condiments And Spices,356.0,18.7,36.6,15.0,12.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+cddd573d-4bee-4ce5-ac5c-130f36f3ea80,Fenμgreek seed,,Condiments And Spices,333.0,26.2,44.1,5.8,7.2,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+d5e420c1-596d-42ab-bc87-7845a22fe30a,Garlic dry,,Condiments And Spices,145.0,6.3,29.8,0.1,0.8,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+cc2bd442-303e-4293-bdae-bc08fdb3201e,"Ginger, fresh",,Condiments And Spices,67.0,2.3,12.3,0.9,2.4,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+35e964c7-6e4a-43cb-8c18-66b87ea1ee4f,Mace,,Condiments And Spices,437.0,6.5,47.8,24.5,3.8,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+0af37631-4622-4ce3-8bb6-7eeffdc06cbd,Nutmeg,,Condiments And Spices,472.0,7.5,28.5,36.4,11.6,0.0,0.0,100.0,True,True,True,True,False,False,False,True,Nepal Food Composition Table
+ed9c3396-3ba1-4cdd-ab15-2595b5e299f7,Omum,,Condiments And Spices,363.0,17.1,24.6,21.8,21.2,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+105fe4cf-31a5-4662-a2e6-d66145f3f694,pepper dry,,Condiments And Spices,304.0,11.5,49.2,6.8,14.9,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+ffd476fc-7402-4acd-a9b7-01d53249c021,Pepper green,,Condiments And Spices,98.0,4.8,13.7,2.7,6.4,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+942fa7f6-b6cf-4ca9-ab5f-07849f7f1636,Tamarind pulp,,Condiments And Spices,283.0,3.1,67.4,0.1,5.6,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+5b24beb6-5256-473c-8b45-7265b1652fc1,Turmeric,,Condiments And Spices,349.0,6.3,69.4,5.1,2.6,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+0a1305d0-65d2-4e72-8655-ed9bf7c383a9,Timur,,Condiments And Spices,0.0,0.0,0.0,6.24,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+21883cb6-6f55-4d05-9b40-177d78d2c1c1,Zimbu,,Condiments And Spices,0.0,0.0,0.0,0.0,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+82745157-cdb9-46d2-9097-3bd6ddb79c0c,"Lime, peel",,Condiments And Spices,129.0,1.8,29.4,0.5,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+196191ea-6c87-460b-ad52-57a1b8809de5,Almond,,Nuts & Oilseeds,665.0,20.8,10.5,58.9,1.7,0.0,0.0,100.0,True,True,True,True,False,False,False,True,Nepal Food Composition Table
+9af8b865-3ba8-4b1d-89e4-659dd63e4f41,Cashew nut,,Nuts & Oilseeds,596.0,21.2,22.3,46.9,1.3,0.0,0.0,100.0,True,True,True,True,False,False,False,True,Nepal Food Composition Table
+c43dd98f-2da1-4209-bb15-2d5c54fdeb56,Coconut (dry),,Nuts & Oilseeds,662.0,6.8,18.4,62.3,6.6,0.0,0.0,100.0,True,True,True,True,False,False,False,True,Nepal Food Composition Table
+d2ec75ae-4782-4964-ad31-f73ba981494f,Coconut (fresh),,Nuts & Oilseeds,444.0,4.5,13.0,41.6,3.6,0.0,0.0,100.0,True,True,True,True,False,False,False,True,Nepal Food Composition Table
+fab4e523-f4a2-47fc-a625-f2b4c320dd42,chilgoza,,Nuts & Oilseeds,615.0,13.9,29.0,49.3,1.0,0.0,0.0,100.0,True,True,True,True,False,False,False,True,Nepal Food Composition Table
+b82df289-8ba1-43a4-a580-243d76f34901,Filinge( Jhhusetil),,Nuts & Oilseeds,567.0,25.6,22.3,41.4,3.1,0.0,0.0,100.0,True,True,True,True,False,False,False,True,Nepal Food Composition Table
+5beb1e0b-0d5f-461c-a5a0-5fa176ada5e7,Groundnut,,Nuts & Oilseeds,567.0,25.3,26.1,40.1,3.1,0.0,0.0,100.0,True,True,True,True,False,False,False,True,Nepal Food Composition Table
+e0e9b724-956c-4f75-918b-099166b59e27,"Groundnut, roasted",,Nuts & Oilseeds,570.0,26.2,26.7,39.8,3.1,0.0,0.0,100.0,True,True,True,True,False,False,False,True,Nepal Food Composition Table
+39c77cca-a349-4122-bf51-b0f6424374b9,Linseed seeds,,Nuts & Oilseeds,533.0,20.3,28.3,37.7,4.8,0.0,0.0,100.0,True,True,True,True,False,False,False,True,Nepal Food Composition Table
+f14d5d49-f3f5-4a0e-a555-b27ee9106fc3,Walnut,,Nuts & Oilseeds,687.0,15.6,11.0,64.5,2.6,0.0,0.0,100.0,True,True,True,True,False,False,False,True,Nepal Food Composition Table
+936469ea-aa3b-41c3-8fe0-2007bfc8e9da,Silam,,Nuts & Oilseeds,461.0,20.0,30.6,22.1,3.13,0.0,0.0,100.0,True,True,True,True,False,False,False,True,Nepal Food Composition Table
+701fa411-4151-4743-91db-1fc2392990c9,Mustard seed,,Nuts & Oilseeds,541.0,20.0,23.8,39.7,1.8,0.0,0.0,100.0,True,True,True,True,False,False,False,True,Nepal Food Composition Table
+8743814d-14dd-4cd4-a503-ec7f83467256,Niger seed,,Nuts & Oilseeds,515.0,23.9,17.1,39.0,10.9,0.0,0.0,100.0,True,True,True,True,False,False,False,True,Nepal Food Composition Table
+9a64b8a9-74e2-4999-ab9b-dd9f880e73ce,Pistachio nut,,Nuts & Oilseeds,626.0,19.8,16.2,53.5,2.1,0.0,0.0,100.0,True,True,True,True,False,False,False,True,Nepal Food Composition Table
+144d8fef-ddfb-4e1c-afbc-1f2a61dc9c23,Poppy Seed,,Nuts & Oilseeds,382.0,15.1,75.3,2.3,1.9,0.0,0.0,100.0,True,True,True,True,False,False,False,True,Nepal Food Composition Table
+a675f83a-e7d2-4528-9c7d-f1498f70ae6c,Safflower seed,,Nuts & Oilseeds,356.0,13.5,17.9,25.6,34.9,0.0,0.0,100.0,True,True,True,True,False,False,False,True,Nepal Food Composition Table
+d89cb38c-5c85-4b46-96cb-e21148bb2769,Sunflower seed,,Nuts & Oilseeds,620.0,19.8,17.9,52.1,1.0,0.0,0.0,100.0,True,True,True,True,False,False,False,True,Nepal Food Composition Table
+3a2b65d3-fbe4-4768-b145-f51e46ef0351,Walnut,,Nuts & Oilseeds,687.0,15.6,11.0,64.5,2.6,0.0,0.0,100.0,True,True,True,True,False,False,False,True,Nepal Food Composition Table
+bc9ab8f3-1b6e-4ee0-a449-6bb8b8cf4c13,Seasome seed black,,Nuts & Oilseeds,554.0,21.3,9.33,47.97,8.86,0.0,0.0,100.0,True,True,True,True,False,False,False,True,Nepal Food Composition Table
+99bc66d9-17d9-457b-8d7e-19b3e1d2b290,Seasome seed white,,Nuts & Oilseeds,599.0,25.9,12.4,49.57,2.53,0.0,0.0,100.0,True,True,True,True,False,False,False,True,Nepal Food Composition Table
+e962208e-c56f-4454-a491-5df0ffd7f33b,Seasome seed brown,,Nuts & Oilseeds,521.0,23.4,22.9,37.3,2.89,0.0,0.0,100.0,True,True,True,True,False,False,False,True,Nepal Food Composition Table
+f926d507-6cda-4ebf-8136-990c00cdc3dd,Siltimur,,Nuts & Oilseeds,542.0,7.1,26.3,42.15,14.4,0.0,0.0,100.0,True,True,True,True,False,False,False,True,Nepal Food Composition Table
+01f7a7b6-5cd6-416e-8420-e4f2b9758bc9,Bhang ko geda,,Nuts & Oilseeds,516.0,19.9,30.6,34.8,3.1,0.0,0.0,100.0,True,True,True,True,False,False,False,True,Nepal Food Composition Table
+84346762-32a8-4f13-ba93-bf8ddbfdac08,Buffalo meat (lean meat),,Meat & Meat Products,86.0,19.4,0.0,0.9,0.0,0.0,0.0,100.0,False,False,True,False,False,False,False,True,Nepal Food Composition Table
+afd4ff94-7171-4f7d-aa15-cf9f96d9c5bf,Buff Sausage,,Meat & Meat Products,150.0,15.9,8.8,5.64,0.0,0.0,0.0,100.0,False,False,True,False,False,False,False,True,Nepal Food Composition Table
+52a38719-187c-4484-9008-7329e39ee8c2,Chicken flesh,,Meat & Meat Products,187.0,18.8,0.0,17.6,0.0,0.0,0.0,100.0,False,False,True,False,False,False,False,True,Nepal Food Composition Table
+37c754bd-1751-4993-ad8a-d5b2ec346881,Chicken Sausage,,Meat & Meat Products,253.0,16.5,0.0,18.8,0.09,0.0,0.0,100.0,False,False,True,False,False,False,False,True,Nepal Food Composition Table
+14cc12ab-73b6-45b3-b148-1af4b52c153c,Duck meat,,Meat & Meat Products,130.0,21.6,0.0,4.8,0.0,0.0,0.0,100.0,False,False,True,False,False,False,False,True,Nepal Food Composition Table
+993c251f-c2de-45ee-9b16-08cc46c2f3cc,Field rat's meet,,Meat & Meat Products,104.0,23.6,0.9,1.0,0.0,0.0,0.0,100.0,False,False,True,False,False,False,False,True,Nepal Food Composition Table
+41122dae-1aee-431e-9511-f2bb9be83f2f,Finch,,Meat & Meat Products,133.0,26.6,0.0,3.0,0.0,0.0,0.0,100.0,False,False,True,False,False,False,False,True,Nepal Food Composition Table
+571c39bc-3d80-4282-b92f-57715ff712f0,Goat- Meat(Lean meat),,Meat & Meat Products,118.0,21.4,0.0,3.6,0.0,0.0,0.0,100.0,False,False,True,False,False,False,False,True,Nepal Food Composition Table
+4d229c78-cd94-41b7-8900-1cb6fda9ae97,"Liver , goat",,Meat & Meat Products,107.0,20.0,0.0,3.0,0.0,0.0,0.0,100.0,False,False,True,False,False,False,False,True,Nepal Food Composition Table
+19ad1ade-66cc-4fff-940e-8dc23de710aa,"Liver , sheep",,Meat & Meat Products,150.0,19.3,1.3,7.5,0.0,0.0,0.0,100.0,False,False,True,False,False,False,False,True,Nepal Food Composition Table
+4197aae1-dcb8-4678-9997-a0ee148400c2,Mutton muscle,,Meat & Meat Products,194.0,18.5,0.0,13.3,0.0,0.0,0.0,100.0,False,False,True,False,False,False,False,True,Nepal Food Composition Table
+5814a224-3858-4d85-b415-42b318a169c4,Pork muscle,,Meat & Meat Products,114.0,18.7,0.0,4.4,0.0,0.0,0.0,100.0,False,False,True,False,False,False,False,True,Nepal Food Composition Table
+83e2b6f3-ce70-4e55-8bfb-d7984c03cc8d,Pigeon meat,,Meat & Meat Products,137.0,23.3,0.0,4.9,0.0,0.0,0.0,100.0,False,False,True,False,False,False,False,True,Nepal Food Composition Table
+8f2d4ef0-e073-4e09-950b-995780ac7afc,Ham Sliced (Barume),,Meat & Meat Products,349.0,20.8,12.5,23.9,0.0,0.0,0.0,100.0,False,False,True,False,False,False,False,True,Nepal Food Composition Table
+f8c50742-651f-40f9-aa2e-02e82454bce1,Ham(Smoked),,Meat & Meat Products,122.0,21.4,0.4,15.0,0.002,0.0,0.0,100.0,False,False,True,False,False,False,False,True,Nepal Food Composition Table
+b45a05a2-a45f-4bd7-99bf-b363b5701074,Pork Bacon (Swiss Gourmet),,Meat & Meat Products,289.0,14.9,10.1,21.0,0.02,0.0,0.0,100.0,False,False,True,False,False,False,False,True,Nepal Food Composition Table
+b1a8aca3-7306-4a49-ab7b-ae2fe399bf20,Pork Prine Bacon,,Meat & Meat Products,296.0,18.8,3.4,23.0,0.012,0.0,0.0,100.0,False,False,True,False,False,False,False,True,Nepal Food Composition Table
+030967a3-04d9-42b8-83a5-efda595bf2b5,Pork Sausages,,Meat & Meat Products,392.0,19.2,13.7,28.95,0.0,0.0,0.0,100.0,False,False,True,False,False,False,False,True,Nepal Food Composition Table
+d6240cea-aa74-4162-bbc0-cbb1835ab25e,Salami Cooked,,Meat & Meat Products,172.0,17.8,0.0,4.0,0.012,0.0,0.0,100.0,False,False,True,False,False,False,False,True,Nepal Food Composition Table
+293cac17-36cb-4902-aefb-1652314e6e0c,"Snail , small",,Meat & Meat Products,74.0,12.6,3.7,1.0,0.0,0.0,0.0,100.0,False,False,True,False,False,False,False,True,Nepal Food Composition Table
+494d933d-3c0c-4318-907e-8142d21f65cf,"Snail , big",,Meat & Meat Products,97.0,10.5,12.4,0.6,0.0,0.0,0.0,100.0,False,False,True,False,False,False,False,True,Nepal Food Composition Table
+39de6492-aac3-450c-82f4-f0e689f08f0e,Turtle meat,,Meat & Meat Products,86.0,16.5,1.5,1.5,0.0,0.0,0.0,100.0,False,False,True,False,False,False,False,True,Nepal Food Composition Table
+9a5e3318-7331-4243-9a0e-c2050ae08974,Venison,,Meat & Meat Products,97.0,21.0,1.9,0.6,0.0,0.0,0.0,100.0,False,False,True,False,False,False,False,True,Nepal Food Composition Table
+4d681d85-e31d-445e-a6d7-338d85e17044,Duck- egg,,Egg,181.0,13.5,0.8,13.5,0.0,0.0,0.0,100.0,False,False,True,False,False,False,True,True,Nepal Food Composition Table
+b39de58b-c7d2-4454-b8a3-8a9debacfde3,Hen- egg,,Egg,173.0,13.3,0.0,13.3,0.0,0.0,0.0,100.0,False,False,True,False,False,False,True,True,Nepal Food Composition Table
+20baa43c-a960-4869-af79-254f277b7b4f,Battai-egg( Quial egg),,Egg,158.0,13.0,0.41,11.09,0.0,0.0,0.0,100.0,False,False,True,False,False,False,True,True,Nepal Food Composition Table
+4074cb10-8c85-4389-a6a1-091f2004ed15,Bam fish,,Fish & Fish Products,100.0,16.1,6.9,0.9,0.0,0.0,0.0,100.0,False,False,True,False,False,False,False,True,Nepal Food Composition Table
+25a75c96-70ef-43b9-8b72-53250349fe41,Hisla,,Fish & Fish Products,273.0,21.8,2.9,19.4,0.0,0.0,0.0,100.0,False,False,True,False,False,False,False,True,Nepal Food Composition Table
+33ab5b16-a99b-46f2-a3f2-2fc55de63853,Katla,,Fish & Fish Products,111.0,19.5,2.9,2.4,0.0,0.0,0.0,100.0,False,False,True,False,False,False,False,True,Nepal Food Composition Table
+b1f84d15-0916-4747-87a3-a3ab5500c548,Kol,,Fish & Fish Products,156.0,14.8,4.4,8.8,0.0,0.0,0.0,100.0,False,False,True,False,False,False,False,True,Nepal Food Composition Table
+6c3f0d86-1173-4e06-8826-0801601448c0,Mungri,,Fish & Fish Products,86.0,15.0,4.2,1.0,0.0,0.0,0.0,100.0,False,False,True,False,False,False,False,True,Nepal Food Composition Table
+4e07e664-2bb8-4c93-8b4b-5ca1eb8f44c6,Singhi,,Fish & Fish Products,124.0,22.8,6.9,0.6,0.0,0.0,0.0,100.0,False,False,True,False,False,False,False,True,Nepal Food Composition Table
+5137d814-c052-4e80-9162-6b7aa2d46217,Tengra fish,,Fish & Fish Products,144.0,19.2,2.3,6.4,0.0,0.0,0.0,100.0,False,False,True,False,False,False,False,True,Nepal Food Composition Table
+94127c16-e9a3-4eca-9bdb-3b657d6e6a0a,Prawn,,Fish & Fish Products,89.0,19.1,0.8,1.0,0.0,0.0,0.0,100.0,False,False,True,False,False,False,False,True,Nepal Food Composition Table
+72d63af1-13a3-417a-92d8-9f428422f5df,Crab small,,Fish & Fish Products,169.0,11.2,9.1,9.8,0.0,0.0,0.0,100.0,False,False,True,False,False,False,False,True,Nepal Food Composition Table
+32418549-c659-4c02-b24b-87057c7e6e56,Rahu,,Fish & Fish Products,97.0,16.7,4.4,1.4,0.0,0.0,0.0,100.0,False,False,True,False,False,False,False,True,Nepal Food Composition Table
+6373a7ab-24f2-4773-b526-9164a0ce75c5,Dry fish (Sun dried ),,Fish & Fish Products,366.0,64.9,16.9,4.21,0.0,0.0,0.0,100.0,False,False,True,False,False,False,False,True,Nepal Food Composition Table
+2580ba9d-d5cc-4cac-abca-29e220b0d352,Dried Fish,,Fish & Fish Products,0.0,58.5,0.0,11.14,0.0,0.0,0.0,100.0,False,False,True,False,False,False,False,True,Nepal Food Composition Table
+72ad76d6-fa0a-4f6f-b0da-91bf7ca18c6f,Salted Dry Fish,,Fish & Fish Products,377.0,62.2,18.4,6.03,0.0,0.0,0.0,100.0,False,False,True,False,False,False,False,True,Nepal Food Composition Table
+f94ccfcd-07c8-4e7b-9002-92747b0e6ffe,Smoked Dry Fish,,Fish & Fish Products,391.0,70.8,11.6,7.23,0.0,0.0,0.0,100.0,False,False,True,False,False,False,False,True,Nepal Food Composition Table
+601addd7-7cf7-4dab-b5e0-19b52fba4d86,Buffalo milk,,Milk & Milk Products,105.0,4.3,7.4,6.5,0.0,0.0,0.0,100.0,False,False,True,False,True,False,False,True,Nepal Food Composition Table
+6ec0ac7e-8b4d-47f0-8d76-12c7625c68cf,Cow milk,,Milk & Milk Products,67.0,3.2,4.4,4.1,0.0,0.0,0.0,100.0,True,False,True,False,True,False,False,True,Nepal Food Composition Table
+54796d30-6d98-4c63-b11f-1b0cfad76774,Curd,,Milk & Milk Products,60.0,3.1,3.0,4.0,0.0,0.0,0.0,100.0,True,False,True,False,True,False,False,True,Nepal Food Composition Table
+2a581adc-952f-4e70-a8c6-93b9c3038eea,Dairy's milk,,Milk & Milk Products,0.0,3.0,0.0,0.0,0.0,0.0,0.0,100.0,True,False,True,False,True,False,False,True,Nepal Food Composition Table
+9bd5d2b2-45da-40d6-a590-20be5995a0fb,Goat milk,,Milk & Milk Products,72.0,3.3,4.6,4.5,0.0,0.0,0.0,100.0,True,False,True,False,True,False,False,True,Nepal Food Composition Table
+58b34f8a-68cc-4126-b021-e6555ab7c3c2,Sheep milk,,Milk & Milk Products,95.0,5.4,5.1,6.0,0.0,0.0,0.0,100.0,True,False,True,False,True,False,False,True,Nepal Food Composition Table
+ae654b81-f2f6-4d7d-89bd-c499e6890039,Paneer,,Milk & Milk Products,331.0,23.7,0.6,26.0,0.3,0.0,0.0,100.0,True,False,True,False,True,False,False,True,Nepal Food Composition Table
+8e8b9587-a7e1-4020-94d0-790d8e485802,Cheese,,Milk & Milk Products,348.0,24.1,6.3,25.1,0.0,0.0,0.0,100.0,True,False,True,False,True,False,False,True,Nepal Food Composition Table
+dba4033d-a351-4ec6-b312-99e09d1d9e17,Human milk,,Milk & Milk Products,65.0,1.1,7.4,3.4,0.0,0.0,0.0,100.0,True,False,True,False,True,False,False,True,Nepal Food Composition Table
+03f9f4fe-956a-4d34-b4d7-dab040b429e3,Buttermilk,,Milk & Milk Products,15.0,0.8,0.5,1.1,0.0,0.0,0.0,100.0,True,False,True,False,True,False,False,True,Nepal Food Composition Table
+3cfc1822-1e49-4abc-8365-230a96e30952,Khuwa ( whole buffalo milk),,Milk & Milk Products,421.0,14.6,20.5,31.2,0.0,0.0,0.0,100.0,False,False,True,False,True,False,False,True,Nepal Food Composition Table
+feadf2f4-9035-4960-889a-5ff49b466d63,Skimmed milk powder( cow's milk),,Milk & Milk Products,357.0,38.0,51.0,0.1,0.0,0.0,0.0,100.0,True,False,True,False,True,False,False,True,Nepal Food Composition Table
+33ee758b-ff02-4d55-bbc8-25cf59122457,"Channa, buffalo's milk",,Milk & Milk Products,292.0,13.4,7.9,23.0,0.0,0.0,0.0,100.0,False,False,True,False,True,False,False,True,Nepal Food Composition Table
+8a2a12bc-5b04-4ad0-bc79-8f552966d2b7,Butter,,Fats & Edible Oils,729.0,0.0,0.0,81.0,0.0,0.0,0.0,100.0,True,False,True,False,True,False,False,True,Nepal Food Composition Table
+89120072-6542-4641-b733-3b3c1a55a02d,Ghee cow,,Fats & Edible Oils,900.0,0.0,0.0,100.0,0.0,0.0,0.0,100.0,True,False,True,False,True,False,False,True,Nepal Food Composition Table
+334e181a-f349-49b6-bc31-de2188b43e72,Ghee (Buffalo),,Fats & Edible Oils,900.0,0.0,0.0,100.0,0.0,0.0,0.0,100.0,False,False,True,False,True,False,False,True,Nepal Food Composition Table
+02f84a95-c471-4afe-969c-81895c9319a0,Ghee vegetable,,Fats & Edible Oils,0.0,0.0,0.0,100.0,0.0,0.0,0.0,100.0,True,False,True,False,True,False,False,True,Nepal Food Composition Table
+1e8c76e1-dd94-42a7-a6c8-e86e3094a292,Vegetable cooking oil,,Fats & Edible Oils,900.0,0.0,0.0,100.0,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+5b0e1959-f4dc-4c74-8f36-063d3aaa451a,Hydrogenated oil,,Fats & Edible Oils,900.0,0.0,0.0,100.0,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+a5af4585-8e7d-4a18-bd12-5cec84c3b16e,Sunflower oil,,Fats & Edible Oils,900.0,0.0,0.0,100.0,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+163ac3ea-81bc-4cc3-9531-da95dbd9b116,Soyabean oil,,Fats & Edible Oils,900.0,0.0,0.0,100.0,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+93e5fabd-4e04-4a91-9016-f55278b92d4d,Corn oil,,Fats & Edible Oils,900.0,0.0,0.0,100.0,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+edc3d594-1c73-4011-96b4-80c930faaec1,Coconut oil,,Fats & Edible Oils,900.0,0.0,0.0,100.0,0.0,0.0,0.0,100.0,True,True,True,True,False,False,False,True,Nepal Food Composition Table
+39305a8d-7d4c-472b-8dd6-d72135cad88e,Cotton seed oil,,Fats & Edible Oils,900.0,0.0,0.0,100.0,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+b6ee08e8-493c-479a-a14c-cdcc163aac29,Olive oil,,Fats & Edible Oils,900.0,0.0,0.0,100.0,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+d8f98c79-2bbf-4a71-a3e5-d37ba624ba9c,Ground nut oil,,Fats & Edible Oils,900.0,0.0,0.0,100.0,0.0,0.0,0.0,100.0,True,True,True,True,False,False,False,True,Nepal Food Composition Table
+07bb33be-f79f-4a82-9ff3-4dcbafc16848,Seasome oil,,Fats & Edible Oils,900.0,0.0,0.0,100.0,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+ed46d620-39e5-4353-a831-435757565641,Linseed oil,,Fats & Edible Oils,900.0,0.0,0.0,100.0,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+d84b7d8e-3127-4e8d-a81f-48b925b48285,Areca nut,,Miscellaneous Foods,249.0,4.9,47.2,4.4,11.2,0.0,0.0,100.0,True,True,True,True,False,False,False,True,Nepal Food Composition Table
+6946dae6-1e55-4c12-814f-47946d234abf,Betel leaves,,Miscellaneous Foods,44.0,3.1,6.1,0.8,2.3,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+1c2dc051-02e6-4f14-baa2-3dd927cc4043,"Biscuit, salty",,Miscellaneous Foods,534.0,6.6,54.6,32.4,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+7da1e533-078f-497c-8f79-cb61665458fb,"Biscuit, sweet",,Miscellaneous Foods,450.0,6.4,71.9,15.2,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+a2825d48-2121-4553-88d4-d2bdf9754b35,Brown bread,,Miscellaneous Foods,244.0,8.8,49.0,1.4,1.2,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+379526ec-9c39-485b-8e92-93824a3d8155,Bread white,,Miscellaneous Foods,245.0,7.8,51.9,0.7,0.2,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+e8b1f9ba-b44e-4850-ade2-f885adfe8c2d,Corn flakes,,Miscellaneous Foods,0.0,7.4,0.0,0.5,1.1,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+7978b173-7f9c-4143-a9b4-c329d55ab573,Canu sugar,,Miscellaneous Foods,398.0,0.1,99.4,0.0,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+e012a85a-9299-4e24-a35d-886c12700900,Coconut tender,,Miscellaneous Foods,41.0,0.9,6.3,1.1,0.0,0.0,0.0,100.0,True,True,True,True,False,False,False,True,Nepal Food Composition Table
+2a6cf87f-079d-4e2e-a006-937ca438bf0a,coconut water,,Miscellaneous Foods,24.0,1.4,4.4,0.1,0.0,0.0,0.0,100.0,True,True,True,True,False,False,False,True,Nepal Food Composition Table
+3641885a-bb54-41e5-b314-e368314c35df,Grounnut cake,,Miscellaneous Foods,386.0,40.9,38.8,7.4,3.2,0.0,0.0,100.0,True,True,True,True,False,False,False,True,Nepal Food Composition Table
+761e8d5f-fa50-4161-9abf-b99892e7f1cf,Honey,,Miscellaneous Foods,319.0,0.3,79.5,0.0,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+24fc6f09-ff76-4ca0-a41f-211f5222e771,jaggary white,,Miscellaneous Foods,357.0,3.7,85.2,0.1,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+916f0584-c384-493a-be88-5aa1157bca12,Chaku,,Miscellaneous Foods,379.0,3.9,89.7,0.5,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+908192c1-0e86-47d6-91e9-125969794761,Dhatelo,,Miscellaneous Foods,504.0,27.5,29.9,30.4,2.7,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+730703d7-16b2-494d-82a4-219f0ccafcb3,Jack fruit seeds,,Miscellaneous Foods,133.0,6.6,25.8,0.4,1.5,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+7a2a4f01-6842-461e-a7a0-02378dc63051,Jaggary cane,,Miscellaneous Foods,383.0,0.4,95.0,0.1,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+d3ae99a0-c28e-4675-9997-7177ac912672,Jandh,,Miscellaneous Foods,2.6,2.0,0.0,0.075,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+c89b678e-199d-4add-a8bf-7fb6cebc0135,Mahuwa flowers,,Miscellaneous Foods,311.0,4.4,72.0,0.6,1.7,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+769ee58b-886e-4d6c-bc27-b994216a5bd3,Malberry leaves powder,,Miscellaneous Foods,293.0,13.0,38.2,2.1,8.5,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+6ca634cb-95f1-4450-bb68-efe2e893d9ea,Papad,,Miscellaneous Foods,228.0,18.8,52.4,0.3,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+dc81c4ab-b545-4973-953b-7e26d5150f99,Pumpkin seed,,Miscellaneous Foods,584.0,24.3,15.6,47.2,0.2,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+1a45a5dc-ca73-420b-a896-8b89d0369031,Sugacane juice,,Miscellaneous Foods,39.0,0.1,9.1,0.2,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+bf46e42c-f1ed-4cc9-81b8-9237b3414efc,Sohan papad,,Miscellaneous Foods,513.0,6.3,63.5,25.9,2.1,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+72ada11d-803a-4d98-b1ec-bfbd567f6c74,Yarsagumba Capsule,,Miscellaneous Foods,312.0,22.0,42.7,5.86,10.35,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+c1fed704-4cc0-4489-ab94-9dc9edcedb58,Cooked rice,,Cooked Food,129.0,2.5,29.4,0.17,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+3dd32713-3b69-4e49-a474-4d358adf6e9e,Dal(pulses),,Cooked Food,48.7,3.3,7.4,0.6,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+f8beb703-1d5b-479f-8080-ebaf8635c472,Green vegeables,,Cooked Food,61.0,2.0,7.3,2.61,2.32,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+a1998a22-df4f-4c97-88c8-980bf345d59c,Mixed vegetables,,Cooked Food,61.0,1.94,7.5,2.51,2.9,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+d942a27d-8621-47aa-8de8-a206d7d34e56,Whole wheat bread,,Cooked Food,218.0,8.0,44.0,1.0,0.0,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+e839552b-2eff-4fa3-a7e4-75791d1280b4,Maize dough( Dhindo),,Cooked Food,111.0,2.8,22.2,1.2,0.0,0.0,0.0,100.0,True,False,True,False,True,False,False,True,Nepal Food Composition Table
+9997cedc-1187-4a9e-87ac-4660c871bdf1,Bengalgram vegetables,,Cooked Food,127.0,5.92,21.5,1.85,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+9a6f342c-f75d-4457-b406-6c5b15ab53a0,Samosa,,Cooked Food,298.0,4.6,36.7,14.8,0.48,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+e0d6914f-5bab-45b0-b33f-bc090d281b4a,Aaluchap,,Cooked Food,238.0,4.2,29.6,11.5,1.01,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+5170679b-43ea-4134-97d4-38093aede32c,Pakauda,,Cooked Food,361.0,5.4,37.3,21.1,3.05,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+3577814d-d6da-4daf-83eb-ba66d1e5f7aa,Sel,,Cooked Food,225.0,4.5,61.3,11.7,0.07,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+dca678e6-5dbc-4cc6-a2f6-5c18983a68af,jeri,,Cooked Food,445.0,2.4,60.4,21.3,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+bd625cf8-05b5-496e-8ee8-58e68ef78e5f,Buff Momo,,Cooked Food,215.0,11.7,24.6,7.74,0.89,0.0,0.0,100.0,False,False,True,False,False,False,False,True,Nepal Food Composition Table
+3023b78b-834c-4769-9329-ffe0c77c69b3,Chicken Momo,,Cooked Food,206.0,9.8,23.6,8.06,0.55,0.0,0.0,100.0,False,False,True,False,False,False,False,True,Nepal Food Composition Table
+50756eea-f851-4859-95f6-beb41b5e0e1e,Paneer Momo,,Cooked Food,256.0,9.3,28.1,11.7,0.84,0.0,0.0,100.0,True,False,True,False,True,False,False,True,Nepal Food Composition Table
+2881788d-d898-4993-a01a-9bfd579f1121,Paneer+Veg Momo,,Cooked Food,143.0,4.7,25.1,2.62,0.91,0.0,0.0,100.0,True,False,True,False,True,False,False,True,Nepal Food Composition Table
+bf4ce40b-a7cb-4464-bd42-b506533d6274,Vegetable Momo,,Cooked Food,148.0,4.4,27.6,2.25,1.17,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+206d813f-0423-4759-be2c-c8b001f4eb16,Aalu Naan,,Cooked Food,175.0,5.3,41.9,0.33,0.08,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+22d41ef4-6777-42d9-be73-6f563092c280,Plain naan,,Cooked Food,269.0,7.6,57.9,1.53,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+5e89c080-eec3-4e7e-a9c7-19ea785a2653,Butter naan,,Cooked Food,283.0,7.5,55.1,4.44,0.05,0.0,0.0,100.0,True,False,True,False,True,False,False,True,Nepal Food Composition Table
+3d21196f-99cb-4739-b895-78c26467cfd4,Kimma naan( mutton),,Cooked Food,261.0,11.1,30.2,7.99,0.21,0.0,0.0,100.0,False,False,True,False,False,False,False,True,Nepal Food Composition Table
+09dcf03f-e4df-45f3-891b-df88c302cdeb,Chicken naan,,Cooked Food,252.0,9.6,39.3,6.28,0.11,0.0,0.0,100.0,False,False,True,False,False,False,False,True,Nepal Food Composition Table
+a032b55e-8abf-4782-80b1-9cab82aa1f76,Veg naan,,Cooked Food,221.0,6.4,40.8,3.53,0.29,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+f53294d3-da26-4d16-870a-0abe7bef4533,Paneer naan,,Cooked Food,256.0,0.0,38.1,7.73,0.08,0.0,0.0,100.0,True,False,True,False,True,False,False,True,Nepal Food Composition Table
+43647f40-a772-49bf-a569-9be8bb3b4f72,Maize: Wheat: soybean,,Weaning Foods Prepared Locally,446.0,22.2,55.7,14.9,0.0,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+85eb25cc-0848-4f1f-9012-1d28f068840c,"Maize, wheat and germinated green mung",,Weaning Foods Prepared Locally,433.0,17.0,65.0,11.7,0.0,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+2750ea4a-2776-47a6-98b9-d2217f11d53c,"Amaranths seed, barley, soybean",,Weaning Foods Prepared Locally,433.0,25.6,54.5,12.5,0.0,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+debff6e2-3515-4a1a-b564-5c42213a412d,"Germinated buckwheat, amaranths seed, soybean",,Weaning Foods Prepared Locally,386.0,24.4,54.9,3.3,0.0,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+7b8bf807-d54e-477a-a462-943eaccdb916,"Foxtail millet, Maize, soybean",,Weaning Foods Prepared Locally,453.0,21.1,54.9,3.4,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+933afd28-851b-49df-988d-6b2d5ca27a4d,"Germinated buckwheat, green mung, Maize",,Weaning Foods Prepared Locally,396.0,18.6,9.1,5.1,0.0,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+b382c62d-d99a-4009-8e3b-d5ca4fbe9eeb,"Uwa, Maize and soybean",,Weaning Foods Prepared Locally,449.0,21.6,57.5,16.6,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+d141af1a-84d6-4550-9a56-184896a3b267,"Barley, Maize and soybean",,Weaning Foods Prepared Locally,425.0,22.3,57.5,11.8,0.0,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+76f6ce6d-0157-41f8-a4e2-e3ddcf853e3e,"Proso millet, wheat, Green Mung",,Weaning Foods Prepared Locally,390.0,18.4,72.8,2.8,0.0,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+670fd291-2bcc-4e74-abfa-a0779530c740,Wheat and Green mung( 1:1),,Weaning Foods Prepared Locally,365.1,15.0,72.0,1.9,1.3,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+fd992cda-f72f-4dfc-8f59-37496897a424,Barley and black gram( 1:1),,Weaning Foods Prepared Locally,358.5,15.1,70.7,1.7,2.7,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+007151cf-dd7e-4dac-81c6-295f3c920a8c,"Wheat, rice and green mung",,Weaning Foods Prepared Locally,398.6,10.2,73.7,7.0,1.6,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+250fc9e4-1204-4fb3-bbb4-a893505be89c,"Rice, maize and Bengal gram",,Weaning Foods Prepared Locally,375.8,8.4,79.7,2.6,1.8,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+163a011e-99db-490b-a8e3-2dd4efb8b8c5,"Millet, rice and and Blackgram",,Weaning Foods Prepared Locally,378.6,12.9,74.1,3.4,1.4,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+f1650c8a-ac71-4d09-aaf3-a95e8738cfee,Millet and blackgram( 1:1),,Weaning Foods Prepared Locally,359.6,13.8,66.2,4.4,3.5,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+c84b1071-e88f-46e5-a874-db1c5d9210d0,Rice and blackgram( 1:1),,Weaning Foods Prepared Locally,375.3,12.3,70.5,4.9,0.7,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+1f5bafc9-8c6c-4b7f-aa0c-df99b23f2222,"Rice, wheat and bengalgram",,Weaning Foods Prepared Locally,428.2,9.3,71.2,11.8,0.9,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+1d330ea1-e483-4189-9385-a7fa82eaa3cb,Jaulo( rice and green mung) 2:1,,Weaning Foods Prepared Locally,300.0,11.4,11.4,5.2,2.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+b11035c4-500c-4044-9f71-090986f68663,Amala,,Wild Edible Food,16.0,2.0,2.1,0.0,1.4,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+b1943adb-3137-4f2a-9ec7-21e062ea39ff,Asparagus,,Wild Edible Food,27.0,2.1,3.8,0.3,0.2,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+73b9efc8-bd62-4ab1-b2c2-b9ba30b00156,Bander bheti,,Wild Edible Food,320.0,2.4,27.3,0.2,3.1,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+0c5e737d-df42-405d-99e5-896c6484a416,Banderi saag,,Wild Edible Food,33.0,3.5,4.3,0.3,0.8,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+8bf7c9bf-1793-41eb-9980-4972124d8767,Ban tarul,,Wild Edible Food,77.0,1.7,17.7,0.0,1.3,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+dd514bcc-eac6-48cb-bd5c-741ddd8a0c81,Bethe sag,,Wild Edible Food,64.0,7.1,8.8,0.0,2.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+296ecea2-2cfb-4290-b9f3-ed4237595aaa,"Bhriingraj, antalicha",,Wild Edible Food,46.0,3.1,64.0,0.8,1.7,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+82aa5237-e707-4982-90b4-31ed35f73d5f,Chamsur jhar,,Wild Edible Food,43.0,3.6,5.7,0.6,2.3,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+b4dc0da3-42f8-401f-95b5-fadda1947d8b,chinia,,Wild Edible Food,59.0,6.1,8.7,0.0,1.5,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+22daabba-2f23-4ff7-9370-f0a3fb303b33,Chitlang sag,,Wild Edible Food,38.0,2.4,6.7,0.2,1.1,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+6452811a-0983-484d-8f38-28e852201856,Chutro,,Wild Edible Food,87.0,2.5,16.2,6.9,1.4,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+adb4f32f-d45d-4b26-b441-555aa331329d,Damaiphal,,Wild Edible Food,51.0,0.5,11.5,0.3,1.7,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+5488056a-61cb-4dc4-b2a0-a98b68237bda,"Wild mushroom,dry",,Wild Edible Food,0.0,12.7,0.0,1.65,10.89,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+b8a7523e-a01e-4aaf-a16f-82ba5da8be93,Frase tarul,,Wild Edible Food,91.0,1.6,21.0,0.0,1.5,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+903a09b4-9256-430b-80bf-7ef938793aca,Gande,,Wild Edible Food,55.0,2.1,11.0,0.3,2.5,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+6723d8d8-a88d-41cd-bf88-527fbe416dbb,Ghod tapre,,Wild Edible Food,68.0,3.0,13.6,0.2,2.6,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+d37b4c11-1dbf-40a9-a590-5c6a70dce5ce,Ginare dried,,Wild Edible Food,238.0,22.0,37.7,0.0,12.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+48595f27-112c-439b-93f9-326063583036,Githa,,Wild Edible Food,96.0,1.5,22.0,0.1,1.3,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+11ca0163-2bd5-457e-80e4-5f79cf3b8c02,Guyelo,,Wild Edible Food,7.8,0.0,0.7,4.6,1.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+5ec16c6e-bc9d-4215-80bd-27be319b2e41,Hathale sag,,Wild Edible Food,31.0,3.1,3.8,0.3,1.3,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+ddebdaf6-4bec-4db5-a444-dfdb7ef94963,Jamun,,Wild Edible Food,40.0,4.0,6.0,0.0,1.4,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+eab1f8d4-3a7a-49c1-8f50-319a82ac6e08,Kali Kath,,Wild Edible Food,114.0,1.59,25.4,0.69,5.76,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+1cd683e0-d263-4446-ae38-d2bcb9e52b42,Kali mayel,,Wild Edible Food,89.0,0.7,21.3,0.0,8.3,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+d690c7f3-41ba-4eaf-95f4-d75034ef722b,Kamal phal,,Wild Edible Food,51.0,1.8,10.3,0.3,4.7,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+c7534842-6546-45e4-a92d-96ce515a11a0,Kane saag,,Wild Edible Food,23.0,2.3,3.2,0.1,1.7,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+895dfcfd-b51d-49c4-a145-1f7bb33377ed,Kavro,,Wild Edible Food,114.0,2.8,25.8,0.0,1.6,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+ca0ac603-9af9-4332-a047-70343c8c4e48,Khaneu,,Wild Edible Food,31.0,1.4,5.6,0.3,6.1,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+b91b4833-7d9d-4c46-9768-473d784d2e96,Koiralo,,Wild Edible Food,54.0,1.0,8.1,3.4,0.8,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+3342b0ad-611f-4701-bf11-98fb9d6026c6,Kikur diano,,Wild Edible Food,17.0,1.6,2.8,0.0,1.2,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+c7be80ea-6e9d-4934-bdec-fe46a8e27a1a,"Latte saag, green stem",,Wild Edible Food,71.0,6.4,11.4,0.0,2.4,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+93a2b4cb-6c93-471c-ba35-144eac390007,"Latte saag, red stem",,Wild Edible Food,48.0,4.4,9.5,0.0,1.1,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+211b02ee-b234-46f2-8378-d8f6012829f3,Lude sag,,Wild Edible Food,49.0,4.7,7.1,0.2,5.5,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+ca50e3af-d6d2-49b2-aa96-9833ee7ae551,Malo,,Wild Edible Food,0.0,1.1,0.0,0.0,1.6,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+9c8d694a-d0d1-43f9-b4d4-83308cdd849b,Maslahare,,Wild Edible Food,70.0,3.3,14.1,0.05,2.9,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+2e2797f2-9b2f-4f9c-8d6d-858a5e13ff9a,Mayal,,Wild Edible Food,68.0,0.4,16.2,0.2,1.8,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+03877d2a-a8db-48c7-8121-1b93874fc87f,Neuro,,Wild Edible Food,36.0,4.4,4.2,0.2,1.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+954bf968-e353-435a-a665-9e21f565c260,Phaper saag,,Wild Edible Food,12.0,3.9,3.8,0.1,0.8,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+4d29fe75-f62b-4b18-890f-089a6e69112a,Pidale,,Wild Edible Food,19.0,2.2,2.4,0.1,1.8,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+08fe21b5-7323-4235-8e61-81dc4e5fd27a,Pudina ( Mint),,Wild Edible Food,38.0,4.5,4.6,0.0,0.2,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+7820c31e-2d60-4d49-a55d-0159dcb94415,Rato tarul,,Wild Edible Food,100.0,1.9,2.3,0.1,10.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+3ac4d402-9b74-4de5-beab-89f730b02055,Sati bayer,,Wild Edible Food,142.0,2.8,32.2,0.5,1.4,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+c538a715-9837-466e-91f2-9a3a26678df7,Sisnu( Stinging Nettle),,Wild Edible Food,53.0,6.9,5.0,0.2,1.8,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+01778345-687a-4072-ae57-db3df54924ed,Sisnu powder dry,,Wild Edible Food,271.0,25.0,39.0,1.9,8.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+4ddffe69-3259-4de5-8cd9-799c1f5fd757,Siplican,,Wild Edible Food,50.0,6.3,5.8,0.0,1.8,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+f0d63dce-391a-47f1-b08c-9c46336a21ec,Seabuck thron squash,,Wild Edible Food,16.0,1.02,40.82,0.1,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+ba842f03-ff44-4879-8b86-c0be678685b7,Tarul githa,,Wild Edible Food,85.0,2.2,3.0,0.05,1.6,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+6d20922a-8e10-4461-995b-8913a06fccd9,Tarul munta,,Wild Edible Food,33.0,2.8,5.0,0.1,2.4,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+c7b04a98-e35e-4612-8af6-657759e737cf,Theki phal,,Wild Edible Food,33.0,0.5,7.5,0.0,0.9,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+8c1a7195-25c7-4b6a-b796-42e7f8ba01cf,Thonte,,Wild Edible Food,29.0,1.5,5.8,0.3,2.7,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+8bb74807-9c4a-4864-9118-37102e2245a1,Timila Pakche,,Wild Edible Food,37.0,1.1,7.2,0.4,1.6,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+f6e7add1-460a-4216-87e7-4e71ef0a0656,"Timilia, wakche",,Wild Edible Food,37.0,1.0,7.4,0.0,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+99c889ce-7806-4cd5-b87d-eb4a7178005c,Vyakur,,Wild Edible Food,0.0,1.6,0.0,0.05,1.8,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+558fa26f-8d2d-48cd-918f-2e21b3b0e67c,Vyakur githa,,Wild Edible Food,66.0,2.0,14.0,0.0,1.7,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+f9702636-8dcc-4908-a4e0-3bc8c934f514,Vyakur jhutre,,Wild Edible Food,78.0,1.5,18.0,0.0,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+4d2175ba-fa35-4e9d-aefd-5fff27a14ca7,Wai Wai,,Instant Seasoned Noodles,476.0,7.68,66.4,20.0,0.15,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+daa37cab-c9ad-40a4-99f0-d37b44b0db25,Aaha,,Instant Seasoned Noodles,433.0,10.36,73.0,11.1,0.09,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+586b3ff1-60ca-45b8-b62c-c919fa0fdfac,New Ma Ma,,Instant Seasoned Noodles,481.0,7.7,64.7,21.3,0.0,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+b459d048-9ffb-4b31-be72-39ccfe1113d2,Hits Noodle,,Instant Seasoned Noodles,450.0,8.3,62.3,18.6,0.0,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+99697a7b-f689-4bce-96e9-d4703bb13af0,Min Min,,Instant Seasoned Noodles,462.0,7.7,67.0,18.1,0.0,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+95c32430-c6d1-4206-80a9-19cb684d08b9,Fe Mee,,Instant Seasoned Noodles,475.0,7.3,67.0,19.8,0.0,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+07f21070-0445-40da-9af7-6ba113ed6ba1,Yom Yum (Snack Noodle),,Instant Seasoned Noodles,469.0,7.3,68.0,18.6,0.0,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+366c693e-259c-4acf-9a87-26ea7291784f,Yam Yam,,Instant Seasoned Noodles,463.0,8.07,67.0,18.1,0.19,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+86c93c19-c7ef-441b-a80b-635cc41522c3,Rara,,Instant Non-Seasoned Noodles,484.0,6.15,70.0,19.9,0.14,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+13bcc4be-3a9e-4317-ae1c-3a67e2a76c88,Maggi,,Instant Non-Seasoned Noodles,458.0,7.12,67.0,17.9,0.09,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+c66a20a9-bf80-4550-ada9-c92d94bbb90b,Ezee,,Instant Non-Seasoned Noodles,440.0,5.9,66.4,16.8,0.0,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+a68d9d5a-3f17-4f9d-9306-537d6d909133,Yeo's Inst. Noodle,,Instant Non-Seasoned Noodles,454.0,11.4,61.0,18.1,0.0,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+e775fe5c-6688-427c-9418-07b2229a63d1,Yeo's Inst. Noodle (Curry F1),,Instant Non-Seasoned Noodles,453.0,9.1,63.6,18.0,0.0,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+5cb553bc-1168-4228-9a98-b9d5049cb7a4,Yeo's Inst. Noodle (Spicy F1.),,Instant Non-Seasoned Noodles,464.0,8.8,63.6,19.4,0.0,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+c0ff6344-467f-4c30-9426-37587012a70f,Yeo's lost. Noodle (Mushroom F1),,Instant Non-Seasoned Noodles,446.0,9.0,63.0,17.6,0.0,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+667732fc-08b5-4b6d-adfa-e2bcec07209a,Ma Ma Inst. Noodle (Chicken F1 Thai),,Instant Non-Seasoned Noodles,445.0,7.3,65.0,17.3,0.0,0.0,0.0,100.0,False,False,False,False,False,True,False,True,Nepal Food Composition Table
+119c03ff-861b-440b-8cb0-6db4291c755d,Ma Ma Inst. Noodle,,Instant Non-Seasoned Noodles,438.0,6.5,68.0,15.6,0.0,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+eed7f3c8-b8d5-4112-8945-c6e8d4f75930,Ma Ma Inst. Noodle (Shour Shrimp F1),,Instant Non-Seasoned Noodles,448.0,9.7,64.0,17.2,0.0,0.0,0.0,100.0,False,False,False,False,False,True,False,True,Nepal Food Composition Table
+7b6889f0-6755-4800-8099-46e1e6f1988c,Tiger bran Noodles,,Stick Noodles,357.0,10.0,75.0,1.6,0.0,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+0406bd84-e844-4bce-8f64-8fb2c94869cf,Surya Noodles,,Stick Noodles,346.0,6.2,79.0,0.6,0.0,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+b405ad89-49a7-43d3-8c31-56f905ee0495,Testy Noodles,,Stick Noodles,352.0,7.0,80.0,0.4,0.0,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+cf00890e-c939-41c5-9eaf-b9f15d35e8d1,Egg steam Noodle (Tiger Br. Coiled),,Stick Noodles,349.0,6.8,77.6,1.3,0.0,0.0,0.0,100.0,False,False,False,False,False,True,True,True,Nepal Food Composition Table
+0d54ccaf-fe0f-4e3c-8a5c-8d0ef343bbd7,Gauri Sankar Noodle,,Stick Noodles,344.0,9.2,76.0,0.46,0.0,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+7e917116-df53-4fcc-9474-233dec7034df,San Noodle,,Stick Noodles,344.0,4.6,81.0,0.19,0.0,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+e4b0c7c8-8878-4d17-bce1-c97390afeab9,San Egg Noodle,,Stick Noodles,353.0,8.0,77.0,1.4,0.0,0.0,0.0,100.0,False,False,False,False,False,True,True,True,Nepal Food Composition Table
+bb7ee727-00ab-49a7-a176-48a49c73a469,Steam Chau Chau (dear Brand Colied),,Stick Noodles,345.0,8.3,77.4,0.3,0.0,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+61e87507-94e7-40cb-a73a-12bcca044591,Yak Noodle,,Stick Noodles,340.0,8.6,76.5,0.2,0.0,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+f7d77fe1-9f12-4c4b-b6d2-821609d518d8,Annapurna steam No.,,Stick Noodles,352.0,10.9,76.0,0.3,0.0,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+e193bf82-2230-42b2-82db-e27cd31be65c,S.- Noodle coiled Singapur,,Stick Noodles,351.0,8.3,79.0,0.2,0.0,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+c24316cb-aee0-499d-bb63-7dc2bb9e9aed,Saugat,,Stick Noodles,349.0,2.0,84.0,0.6,0.0,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+d2467c17-ad6f-4dc8-82a9-b0dad8c71e40,Gimi Spagette,,Stick Noodles,364.0,8.0,83.0,0.19,0.0,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+88321e53-f1e9-4712-a0f6-59951e43df14,Gimi Short Noodle Chicken Soup Base (Zebra),,Stick Noodles,360.0,19.81,80.0,0.23,0.0,0.0,0.0,100.0,False,False,False,False,False,True,False,True,Nepal Food Composition Table
+4a05422c-9358-4518-b453-61d4e84dfd6c,Chicken Cracker,,Cracker,470.0,16.7,57.2,19.4,0.0,0.0,0.0,100.0,False,False,True,False,False,False,False,True,Nepal Food Composition Table
+14725b68-a8fb-41b8-9271-cc4863cc3a99,"Pra""ii Cracker",,Cracker,463.0,7.4,61.3,20.9,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+a252c3a2-3f9e-41e6-83af-37f319658ae6,Paprika Cracker (Thai),,Cracker,490.0,6.1,62.0,24.2,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+732f8c6d-2693-4c02-9947-021697206492,Shrimp Cracker (Thai),,Cracker,473.0,5.1,65.4,21.2,0.0,0.0,0.0,100.0,False,False,True,False,False,False,False,True,Nepal Food Composition Table
+f1bfe689-b3a0-47dc-98bd-47386274781d,Shrimp Cracker (Korea),,Cracker,459.0,4.4,70.3,17.95,0.0,0.0,0.0,100.0,False,False,True,False,False,False,False,True,Nepal Food Composition Table
+c24778a4-203d-4814-bbc5-217b2e85771d,Prawn Cracker raw (China),,Cracker,337.0,2.5,81.1,0.26,0.0,0.0,0.0,100.0,False,False,True,False,False,False,False,True,Nepal Food Composition Table
+49a4ea91-cfd1-4ec8-8705-49aaada9278b,Cheese Ball Hello,,Cracker,463.0,5.1,68.0,19.0,0.0,0.0,0.0,100.0,True,False,True,False,True,False,False,True,Nepal Food Composition Table
+56cae3f1-89bb-4c28-b11d-264e5e62b320,Cheese Ball Hello (India),,Cracker,471.0,4.8,68.0,20.0,0.0,0.0,0.0,100.0,True,False,True,False,True,False,False,True,Nepal Food Composition Table
+1469fbec-05d9-4fcb-86f1-96858573d265,Girni Short Macaroni (Nes),,Macaroni,373.0,8.2,84.5,0.21,0.0,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+402bbf7a-4979-4122-a17f-c44886a94197,Bambion Macaroni (India),,Macaroni,354.0,5.6,82.5,0.19,0.0,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+3caefca2-da26-46ec-80bd-1844a9613018,Ma Ma cut Macaroni (india),,Macaroni,339.0,9.3,75.0,0.2,0.0,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+79f37c9d-d025-40ff-b65f-03893d944ed3,Rice vermiealli (Thai),,Macaroni,351.0,6.6,81.0,0.12,0.0,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+ece8ea25-c891-4727-a3af-10893af02cd4,Special Pasta,,Pasta,354.0,4.0,84.0,0.5,0.0,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+f3c82af2-06c5-44f7-92f6-db45932d8d57,Vegetable Pasta,,Pasta,361.0,6.1,81.0,1.45,0.0,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+cbe95258-89cb-4a76-b0a1-196a0fc4b6a8,Pasta / (Enrico Nepal),,Pasta,351.0,11.8,73.0,1.3,0.0,0.0,0.0,100.0,True,True,False,False,False,True,False,True,Nepal Food Composition Table
+842adb43-775e-4ce4-9677-b8d59552658e,Muesli G.,,Miscellaneous,390.0,10.06,75.0,5.6,2.07,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+aa7db9c3-df78-4027-9395-ca43df2c7626,Protein supplement powder,,Miscellaneous,0.0,3.8,0.0,0.0,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+f0e45a38-6d19-40bd-8a40-ede78707e8eb,High energy soya biscuit,,Miscellaneous,455.0,6.8,69.9,16.5,1.55,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+7c16123a-e640-45ce-ba51-83915fe373de,high energy khajuri biscuit,,Miscellaneous,497.0,8.4,64.6,22.8,1.5,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+5ca311e8-76d3-4ad3-9166-f543b3f0d543,coffee with pulp,,Miscellaneous,307.0,7.83,66.5,1.13,7.63,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+1e8c014e-0d98-45b8-b193-d702c8cd34eb,coff ee without pulp,,Miscellaneous,330.0,7.0,73.2,1.08,1.7,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+f0e00710-4340-49fd-9c27-d6e686dff174,Coffee powder refined,,Miscellaneous,438.0,13.42,61.4,15.41,0.0,0.0,0.0,100.0,True,True,True,False,False,False,False,True,Nepal Food Composition Table
+13a9dc8c-309b-45b4-8b05-b2df8bbc20e0,Nutrimixed,,Miscellaneous,391.0,18.52,63.0,7.25,1.5,0.0,0.0,100.0,True,True,True,True,False,False,False,True,Nepal Food Composition Table

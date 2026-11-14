@@ -128,3 +128,5 @@ food_id,name,name_nepali,category,calories,protein,carbohydrates,fat,fiber,sugar
 127,French Fries,फ्रेन्च फ्राइज,international,312.0,3.4,41.0,15.0,3.8,0.3,210.0,100.0,True,True,True,False,False,False,False,False,USDA
 128,Oatmeal with Water,ओट्स,grain,102.0,3.6,18.0,2.1,2.6,0.8,73.0,150.0,True,True,True,False,False,False,False,False,USDA
 129,Whole Wheat Toast (2 Slices),टोस्ट,international,146.0,5.5,27.5,2.0,3.0,2.5,260.0,50.0,True,True,False,False,False,True,False,False,USDA
+130,God Food,imaginary,international,50,50,20,1,5,0.5,0.5,100,True,True,True,False,False,False,False,False,USDA
+96,Kalo Daal Cooked,कालो मासको दाल,nepali_staple,200.0,12.5,29.1,4.9,9.1,0.5,6.8,150.0,True,False,True,False,True,False,False,True,USDA_Recipe_Calc
