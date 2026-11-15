@@ -10,7 +10,8 @@ class Command(BaseCommand):
     def handle(self, *args, **kwargs):
         # csv_file = Path(settings.BASE_DIR) / 'myapp' / 'data' / 'nepali_food_data.csv'
         # csv_file = Path(settings.BASE_DIR) / 'myapp' / 'data' / 'nepali_food_data_extra.csv'
-        csv_file = Path(settings.BASE_DIR) / 'myapp' / 'data' / 'fao_food.csv'
+        #csv_file = Path(settings.BASE_DIR) / 'myapp' / 'data' / 'fao_food.csv'
+        csv_file = Path(settings.BASE_DIR) / 'myapp' / 'data' / 'destination (1).csv'
         if not csv_file.exists():
             # Try alternate path
             csv_file = Path(settings.BASE_DIR) / 'data' / 'nepali_food_data.csv'
