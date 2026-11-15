@@ -69,12 +69,18 @@ def make_label(cal, prot, carb, fat, fiber, sugar, sodium):
 
 
 def build_dataset():
-    """Load real foods + augment with synthetic positive/negative examples."""
-    foods = list(Food.objects.all())
+    """Train nutrition quality models using only CSV-approved edible foods."""
+    foods = list(Food.objects.filter(
+        is_recommendable=True,
+        is_edible_food=True,
+        is_supplement=False,
+    ))
     if not foods:
-        raise RuntimeError('No foods in database! Run import_foods first.')
+        raise RuntimeError(
+            'No eligible foods in the database. Run `python manage.py import_foods` first.'
+        )
 
-    print(f'Loaded {len(foods)} real foods from NepaliNutriDB')
+    print(f'Loaded {len(foods)} CSV-approved foods from the database')
 
     rows = []
     for f in foods:

@@ -182,7 +182,7 @@ def _generate_reasons(food):
     return "; ".join(phrases) + "."
 
 
-def get_user_recommendations(user):
+def get_user_recommendations(user, filters=None, meal=None):
     """Core function to calculate ranked recommendations for a user."""
     global XGB_MODEL, RF_MODEL
     if XGB_MODEL is None:
@@ -227,8 +227,22 @@ def get_user_recommendations(user):
     disliked_ids = set(RecommendationHistory.objects.filter(
         user=user, feedback='disliked').values_list('food_id', flat=True))
 
-    # 4. Safety filter
-    foods = Food.objects.all()
+    # Apply requested filters before scoring and limiting the results.
+    active_filters = set(filters or ()) & {'nepali', 'veg', 'protein', 'preferred'}
+    foods = Food.objects.filter(
+        is_recommendable=True,
+        is_edible_food=True,
+        is_supplement=False,
+    )
+    if 'nepali' in active_filters:
+        foods = foods.filter(is_nepali=True)
+    if 'veg' in active_filters:
+        foods = foods.filter(is_vegetarian=True)
+    if 'protein' in active_filters:
+        foods = foods.filter(protein__gte=15)
+    if 'preferred' in active_filters:
+        foods = foods.filter(id__in=liked_ids)
+
     if dietary_pref == 'vegetarian':
         foods = foods.filter(is_vegetarian=True)
     elif dietary_pref == 'vegan':
@@ -245,6 +259,15 @@ def get_user_recommendations(user):
             foods = foods.exclude(name__icontains=allergen)
 
     foods = list(foods)
+    meal = (meal or '').strip().lower()
+    if meal in {'breakfast', 'lunch', 'dinner', 'snack'}:
+        foods = [
+            food for food in foods
+            if {'anytime', meal}.intersection(
+                category.strip()
+                for category in food.meal_category.split(',')
+            )
+        ]
     if not foods:
         return []
 
@@ -295,6 +318,10 @@ def get_user_recommendations(user):
             'is_vegetarian': getattr(food, 'is_vegetarian', False),
             'is_vegan':      getattr(food, 'is_vegan', False),
             'is_nepali':     getattr(food, 'is_nepali', False),
+            'food_type':     food.food_type,
+            'meal_category': food.meal_category,
+            'preparation_state': food.preparation_state,
+            'recommendation_group': food.recommendation_group,
             'serving_size':  getattr(food, 'serving_size', 100),
             'serving_unit':  getattr(food, 'serving_unit', 'g'),
             # Scores
@@ -343,7 +370,11 @@ class GetRecommendationsView(APIView):
     permission_classes = [permissions.IsAuthenticated]
 
     def get(self, request):
-        results = get_user_recommendations(request.user)
+        results = get_user_recommendations(
+            request.user,
+            filters=request.query_params.getlist('filter'),
+            meal=request.query_params.get('meal'),
+        )
         return Response(results)
 
 

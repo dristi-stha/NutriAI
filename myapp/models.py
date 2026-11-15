@@ -129,9 +129,17 @@ class Food(models.Model):
     is_vegan = models.BooleanField(default=False)
     is_nepali = models.BooleanField(default=False)
 
-    source_key = models.CharField(max_length=150, blank=True, null=True)
-    source_name = models.CharField(max_length=150, blank=True, default="")
-    source_url = models.CharField(max_length=255, blank=True, default="")
+    food_type = models.CharField(max_length=30, blank=True, default="")
+    meal_category = models.CharField(max_length=80, blank=True, default="")
+    is_recommendable = models.BooleanField(default=False, db_index=True)
+    is_supplement = models.BooleanField(default=False)
+    is_edible_food = models.BooleanField(default=True)
+    preparation_state = models.CharField(max_length=30, blank=True, default="")
+    recommendation_group = models.CharField(max_length=80, blank=True, default="")
+
+    source_key = models.CharField(max_length=120, blank=True, null=True, unique=True)
+    source_name = models.CharField(max_length=150, blank=True)
+    source_url = models.URLField(blank=True)
 
     serving_size = models.FloatField(default=100)
     serving_unit = models.CharField(max_length=30, default="g")
@@ -160,6 +168,39 @@ class FoodVariant(models.Model):
 
     def __str__(self):
         return f"{self.food.name} - {self.name}"
+
+
+class FoodPreference(models.Model):
+    PREFERENCE_CHOICES = [
+        ('like', 'Like'),
+        ('dislike', 'Dislike'),
+    ]
+
+    user = models.ForeignKey(
+        User,
+        on_delete=models.CASCADE,
+        related_name='food_preferences',
+    )
+    food = models.ForeignKey(
+        Food,
+        on_delete=models.CASCADE,
+        related_name='preferences',
+    )
+    preference = models.CharField(max_length=10, choices=PREFERENCE_CHOICES)
+    shown_rank = models.PositiveSmallIntegerField()
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=('user', 'food'),
+                name='unique_user_food_preference',
+            ),
+        ]
+
+    def __str__(self):
+        return f"{self.user.username} - {self.food.name} ({self.preference})"
 
 
 class MealLog(models.Model):

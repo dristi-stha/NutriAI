@@ -46,13 +46,27 @@
         </div>
     </div>
 
-    <!-- Filter Pills -->
-    <div class="rec-filters-bar">
-        <button class="filter-pill active" onclick="setFilter('all', this)">All Picks</button>
-        <button class="filter-pill" onclick="setFilter('nepali', this)">🇳🇵 Nepali Dishes</button>
-        <button class="filter-pill" onclick="setFilter('veg', this)">🥗 Vegetarian</button>
-        <button class="filter-pill" onclick="setFilter('protein', this)">🍗 High Protein</button>
-        <button class="filter-pill" onclick="setFilter('preferred', this)">⭐ Preferred</button>
+    <div class="rec-filter-groups">
+        <div class="rec-filter-group">
+            <div class="rec-filter-label">Preferences</div>
+            <div class="rec-filters-bar" role="group" aria-label="Recommendation preferences">
+                <button id="clearFiltersBtn" class="filter-pill active" type="button" aria-pressed="true" onclick="clearFilters()">All Picks</button>
+                <button class="filter-pill" type="button" data-filter="nepali" aria-pressed="false" onclick="toggleFilter('nepali', this)">🇳🇵 Nepali Dishes</button>
+                <button class="filter-pill" type="button" data-filter="veg" aria-pressed="false" onclick="toggleFilter('veg', this)">🥗 Vegetarian</button>
+                <button class="filter-pill" type="button" data-filter="protein" aria-pressed="false" onclick="toggleFilter('protein', this)">🍗 High Protein</button>
+                <button class="filter-pill" type="button" data-filter="preferred" aria-pressed="false" onclick="toggleFilter('preferred', this)">⭐ Preferred</button>
+            </div>
+        </div>
+        <div class="rec-filter-group">
+            <div class="rec-filter-label">Meal time</div>
+            <div class="meal-filter-bar" role="group" aria-label="Meal time">
+                <button class="filter-pill active" type="button" data-meal="anytime" aria-pressed="true" onclick="setMealFilter('anytime', this)">Any</button>
+                <button class="filter-pill" type="button" data-meal="breakfast" aria-pressed="false" onclick="setMealFilter('breakfast', this)">Breakfast</button>
+                <button class="filter-pill" type="button" data-meal="lunch" aria-pressed="false" onclick="setMealFilter('lunch', this)">Lunch</button>
+                <button class="filter-pill" type="button" data-meal="dinner" aria-pressed="false" onclick="setMealFilter('dinner', this)">Dinner</button>
+                <button class="filter-pill" type="button" data-meal="snack" aria-pressed="false" onclick="setMealFilter('snack', this)">Snack</button>
+            </div>
+        </div>
     </div>
 
     <!-- Loading State -->
@@ -232,13 +246,29 @@
     color: #94a3b8;
 }
 
-/* Filter Pills */
+/* Recommendation filters */
+.rec-filter-groups {
+    display: grid;
+    gap: 14px;
+    margin-bottom: 28px;
+}
+
+.rec-filter-group {
+    display: grid;
+    gap: 7px;
+}
+
+.rec-filter-label {
+    color: #64748b;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
 .rec-filters-bar {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
-    margin-bottom: 28px;
-    overflow-x: auto;
-    padding-bottom: 4px;
 }
 
 .filter-pill {
@@ -262,6 +292,23 @@
 .filter-pill.active {
     background: #0f2744;
     color: #ffffff;
+}
+
+.meal-filter-bar {
+    display: inline-flex;
+    width: fit-content;
+    max-width: 100%;
+    overflow-x: auto;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+}
+
+.meal-filter-bar .filter-pill {
+    border-radius: 0;
+}
+
+.meal-filter-bar .filter-pill + .filter-pill {
+    border-left: 1px solid #cbd5e1;
 }
 
 /* Recommendations Grid */
@@ -686,7 +733,8 @@
 <script>
 // State
 let allRecommendations = [];
-let activeFilter = 'all';
+const activeFilters = new Set();
+let selectedMeal = 'anytime';
 let selectedFoodForLog = null;
 
 // CSRF Helper
@@ -730,7 +778,11 @@ async function fetchRecommendations() {
     errorState.style.display = 'none';
 
     try {
-        const res = await fetch('/api/recommendations/', {
+        const params = new URLSearchParams();
+        activeFilters.forEach(filter => params.append('filter', filter));
+        if (selectedMeal !== 'anytime') params.set('meal', selectedMeal);
+        const query = params.toString();
+        const res = await fetch(`/api/recommendations/${query ? `?${query}` : ''}`, {
             headers: { 'Accept': 'application/json' }
         });
         if (!res.ok) throw new Error('API Error');
@@ -748,12 +800,37 @@ async function fetchRecommendations() {
     }
 }
 
-// Filter function
-function setFilter(filterType, btnEl) {
-    activeFilter = filterType;
-    document.querySelectorAll('.filter-pill').forEach(el => el.classList.remove('active'));
-    btnEl.classList.add('active');
-    renderCards();
+function toggleFilter(filter, button) {
+    if (activeFilters.has(filter)) {
+        activeFilters.delete(filter);
+    } else {
+        activeFilters.add(filter);
+    }
+    button.classList.toggle('active', activeFilters.has(filter));
+    button.setAttribute('aria-pressed', String(activeFilters.has(filter)));
+    const clearButton = document.getElementById('clearFiltersBtn');
+    clearButton.classList.toggle('active', activeFilters.size === 0);
+    clearButton.setAttribute('aria-pressed', String(activeFilters.size === 0));
+}
+
+function clearFilters() {
+    activeFilters.clear();
+    document.querySelectorAll('[data-filter]').forEach(button => {
+        button.classList.remove('active');
+        button.setAttribute('aria-pressed', 'false');
+    });
+    const clearButton = document.getElementById('clearFiltersBtn');
+    clearButton.classList.add('active');
+    clearButton.setAttribute('aria-pressed', 'true');
+}
+
+function setMealFilter(meal, button) {
+    selectedMeal = meal;
+    document.querySelectorAll('[data-meal]').forEach(option => {
+        const selected = option === button;
+        option.classList.toggle('active', selected);
+        option.setAttribute('aria-pressed', String(selected));
+    });
 }
 
 // Render cards
@@ -761,16 +838,7 @@ function renderCards() {
     const grid = document.getElementById('recGrid');
     grid.innerHTML = '';
 
-    let list = [...allRecommendations];
-    if (activeFilter === 'nepali') {
-        list = list.filter(item => item.is_nepali);
-    } else if (activeFilter === 'veg') {
-        list = list.filter(item => item.is_vegetarian);
-    } else if (activeFilter === 'protein') {
-        list = list.filter(item => item.protein >= 15);
-    } else if (activeFilter === 'preferred') {
-        list = list.filter(item => item.liked);
-    }
+    const list = [...allRecommendations];
 
     if (list.length === 0) {
         grid.innerHTML = `<div style="grid-column: 1/-1; text-align: center; padding: 40px; color: #64748b;">No food recommendations found for this filter.</div>`;
@@ -778,7 +846,7 @@ function renderCards() {
     }
 
     list.forEach((food, index) => {
-        const isTopPick = index < 3 && activeFilter === 'all';
+        const isTopPick = index < 3;
         const card = document.createElement('div');
         card.className = 'rec-card';
         card.id = `food-card-${food.id}`;
