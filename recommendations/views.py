@@ -2,12 +2,14 @@
 NutriAI — Recommendation Scoring Engine & Meal Planner
 Hybrid formula: 50% XGBoost quality + 30% budget fit + 20% preference history
 """
+import math
 import joblib
 import numpy as np
 import datetime
 from pathlib import Path
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
+from django.views.decorators.csrf import ensure_csrf_cookie
 from django.utils import timezone
 from django.http import JsonResponse
 from rest_framework import viewsets, permissions, status
@@ -15,6 +17,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 
 from myapp.models import Food, MealLog, UserProfile
+from myapp.services.calculations import calculate_nutrition_baseline
 from .models import RecommendationHistory
 from .serializers import RecommendationHistorySerializer
 
@@ -42,17 +45,19 @@ def _get_budget(user):
          rem_cal, rem_prot, rem_carb, rem_fat, over_budget)
     """
     calorie_target = 2000.0
+    prot_target = calorie_target * 0.20 / 4
+    carb_target = calorie_target * 0.50 / 4
+    fat_target = calorie_target * 0.30 / 9
     try:
         profile = getattr(user, 'userprofile', None) or getattr(user, 'profile', None)
         if profile:
-            calorie_target = float(profile.calorie_target or 2000)
+            baseline = calculate_nutrition_baseline(profile)
+            calorie_target = float(baseline['calorie_target'])
+            prot_target = float(baseline['macro_targets']['protein'])
+            carb_target = float(baseline['macro_targets']['carbohydrates'])
+            fat_target = float(baseline['macro_targets']['fat'])
     except Exception:
         pass
-
-    # Standard macro split: 20% protein, 50% carbs, 30% fat
-    prot_target = calorie_target * 0.20 / 4   # g (4 kcal/g)
-    carb_target = calorie_target * 0.50 / 4   # g
-    fat_target  = calorie_target * 0.30 / 9   # g (9 kcal/g)
 
     today = timezone.localdate() if hasattr(timezone, 'localdate') else datetime.date.today()
     logs = MealLog.objects.filter(user=user, consumed_at__date=today)
@@ -104,7 +109,7 @@ def _cosine(a, b):
 
 
 def _budget_fit(food, rem_cal, rem_prot, rem_carb, rem_fat,
-                calorie_target, over_budget):
+                calorie_target, prot_target, carb_target, fat_target, over_budget):
     cal  = float(food.calories      or 0)
     prot = float(food.protein       or 0)
     carb = float(food.carbohydrates or 0)
@@ -115,9 +120,9 @@ def _budget_fit(food, rem_cal, rem_prot, rem_carb, rem_fat,
 
     meals = 3.0
     ref_cal  = max(calorie_target / meals, 1.0)
-    ref_prot = max(calorie_target * 0.20 / 4 / meals, 1.0)
-    ref_carb = max(calorie_target * 0.50 / 4 / meals, 1.0)
-    ref_fat  = max(calorie_target * 0.30 / 9 / meals, 1.0)
+    ref_prot = max(prot_target / meals, 1.0)
+    ref_carb = max(carb_target / meals, 1.0)
+    ref_fat  = max(fat_target / meals, 1.0)
 
     budget_vec = np.array([rem_cal / ref_cal,
                            rem_prot / ref_prot,
@@ -294,7 +299,8 @@ def get_user_recommendations(user, filters=None, meal=None):
 
         # Budget fit via cosine similarity (handles over-budget case)
         budget_fit = _budget_fit(food, rem_cal, rem_prot, rem_carb, rem_fat,
-                                 calorie_target, over_budget)
+                                 calorie_target, prot_target, carb_target, fat_target,
+                                 over_budget)
 
         # Behavioral preference
         pref = _preference_score(food.id, liked_ids, disliked_ids)
@@ -344,6 +350,7 @@ def get_user_recommendations(user, filters=None, meal=None):
 
 # ── Web Template View: /meal-planner/ ─────────────────────────────────────────
 @login_required
+@ensure_csrf_cookie
 def meal_planner_view(request):
     """Renders the Meal Planner / Recommendations page."""
     budget_info = _get_budget(request.user)
@@ -416,24 +423,30 @@ class QuickLogMealView(APIView):
     def post(self, request):
         food_id = request.data.get('food_id')
         meal_type = request.data.get('meal_type', 'lunch')
-        quantity = float(request.data.get('quantity', 1.0))
+        try:
+            quantity_grams = float(request.data.get('quantity_grams', 100))
+        except (TypeError, ValueError):
+            return Response({'error': 'Portion size must be a number of grams.'}, status=400)
+
+        if not math.isfinite(quantity_grams) or quantity_grams <= 0:
+            return Response({'error': 'Portion size must be greater than zero grams.'}, status=400)
 
         try:
             food = Food.objects.get(id=food_id)
-            serv = max(float(food.serving_size or 100), 1.0)
-            
-            cal = float(food.calories or 0) * (quantity if quantity != 1.0 else 1.0)
-            prot = float(food.protein or 0) * (quantity if quantity != 1.0 else 1.0)
-            carb = float(food.carbohydrates or 0) * (quantity if quantity != 1.0 else 1.0)
-            fat = float(food.fat or 0) * (quantity if quantity != 1.0 else 1.0)
-            fib = float(getattr(food, 'fiber', 0) or 0) * (quantity if quantity != 1.0 else 1.0)
+            portion_factor = quantity_grams / 100
+
+            cal = float(food.calories or 0) * portion_factor
+            prot = float(food.protein or 0) * portion_factor
+            carb = float(food.carbohydrates or 0) * portion_factor
+            fat = float(food.fat or 0) * portion_factor
+            fib = float(getattr(food, 'fiber', 0) or 0) * portion_factor
 
             MealLog.objects.create(
                 user=request.user,
                 food=food,
                 food_name=food.name,
                 meal_type=meal_type,
-                quantity=quantity,
+                quantity=quantity_grams,
                 calories=round(cal, 1),
                 protein=round(prot, 1),
                 carbohydrates=round(carb, 1),
@@ -445,9 +458,27 @@ class QuickLogMealView(APIView):
             # Mark in recommendation history if exists
             RecommendationHistory.objects.filter(user=request.user, food=food).update(is_eaten=True)
 
+            budget_info = _get_budget(request.user)
+            budget = {
+                'calorie_target': round(budget_info[0]),
+                'prot_target': round(budget_info[1], 1),
+                'carb_target': round(budget_info[2], 1),
+                'fat_target': round(budget_info[3], 1),
+                'consumed_cal': round(budget_info[4]),
+                'consumed_prot': round(budget_info[5], 1),
+                'consumed_carb': round(budget_info[6], 1),
+                'consumed_fat': round(budget_info[7], 1),
+                'rem_cal': round(budget_info[8]),
+                'rem_prot': round(budget_info[9], 1),
+                'rem_carb': round(budget_info[10], 1),
+                'rem_fat': round(budget_info[11], 1),
+                'over_budget': budget_info[12],
+            }
+
             return Response({
                 'status': 'logged',
-                'message': f"{food.name} added to your {meal_type} log!"
+                'message': f"{food.name} added to your {meal_type} log!",
+                'budget': budget,
             })
         except Food.DoesNotExist:
             return Response({'error': 'Food not found'}, status=404)

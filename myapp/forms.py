@@ -42,9 +42,10 @@ class UserProfileForm(forms.ModelForm):
             "gender": forms.Select(
                 choices=[
                     ("", "Select Gender"),
-                    ("Male", "Male"),
-                    ("Female", "Female"),
-                    ("Other", "Other"),
+                    ("male", "Male"),
+                    ("female", "Female"),
+                    ("other", "Other"),
+                    ("prefer_not_to_say", "Prefer not to say"),
                 ],
                 attrs={"class": "form-control"}
             ),
@@ -65,19 +66,19 @@ class UserProfileForm(forms.ModelForm):
             "activity_level": forms.Select(
                 choices=[
                     ("", "Select Activity Level"),
-                    ("Sedentary", "Sedentary"),
-                    ("Light", "Lightly Active"),
-                    ("Moderate", "Moderately Active"),
-                    ("Active", "Very Active"),
+                    ("sedentary", "Sedentary"),
+                    ("light", "Lightly Active"),
+                    ("moderate", "Moderately Active"),
+                    ("very", "Very Active"),
                 ],
                 attrs={"class": "form-control"}
             ),
             "goal": forms.Select(
                 choices=[
                     ("", "Select Goal"),
-                    ("Lose", "Lose Weight"),
-                    ("Maintain", "Maintain Weight"),
-                    ("Gain", "Gain Weight"),
+                    ("lose", "Lose Weight"),
+                    ("maintain", "Maintain Weight"),
+                    ("gain", "Gain Weight"),
                 ],
                 attrs={"class": "form-control"}
             ),

@@ -426,6 +426,19 @@
 
                             </p>
 
+                            <p>
+                                <label for="portion-grams">Portion eaten (grams)</label>
+                                <input
+                                    type="number"
+                                    id="portion-grams"
+                                    name="portion_grams"
+                                    min="1"
+                                    step="1"
+                                    value="100"
+                                    required
+                                >
+                            </p>
+
 
 
                             <!-- ==========================
@@ -471,7 +484,7 @@
                                 </p>
 
                                 <p>
-                                    Enter the nutrition information:
+                                    Enter nutrition values per 100 g:
                                 </p>
 
 
@@ -480,7 +493,7 @@
                                 <p>
 
                                     <label for="manual-calories">
-                                        Calories (kcal)
+                                        Calories per 100 g (kcal)
                                     </label>
 
                                     <input
@@ -500,7 +513,7 @@
                                 <p>
 
                                     <label for="manual-protein">
-                                        Protein (g)
+                                        Protein per 100 g
                                     </label>
 
                                     <input
@@ -520,7 +533,7 @@
                                 <p>
 
                                     <label for="manual-carbohydrates">
-                                        Carbohydrates (g)
+                                        Carbohydrates per 100 g
                                     </label>
 
                                     <input
@@ -540,7 +553,7 @@
                                 <p>
 
                                     <label for="manual-fat">
-                                        Fat (g)
+                                        Fat per 100 g
                                     </label>
 
                                     <input
@@ -560,7 +573,7 @@
                                 <p>
 
                                     <label for="manual-fiber">
-                                        Fiber (g)
+                                        Fiber per 100 g
                                     </label>
 
                                     <input
@@ -721,6 +734,8 @@
 
                         calories: "{{ meal.calories }}",
 
+                        quantity: "{{ meal.quantity }}",
+
                         protein: "{{ meal.protein }}",
 
                         carbohydrates: "{{ meal.carbohydrates }}",
@@ -790,6 +805,11 @@
                 let selectedFood = null;
 
                 let selectedCustomFood = null;
+
+                function nutritionPer100g(value, quantity) {
+                    const loggedGrams = Number(quantity);
+                    return loggedGrams > 1 ? Number(value) * 100 / loggedGrams : Number(value);
+                }
 
 
 
@@ -949,23 +969,23 @@
 
 
                             manualCalories.value =
-                                selectedCustomFood.calories;
+                                nutritionPer100g(selectedCustomFood.calories, selectedCustomFood.quantity);
 
 
                             manualProtein.value =
-                                selectedCustomFood.protein;
+                                nutritionPer100g(selectedCustomFood.protein, selectedCustomFood.quantity);
 
 
                             manualCarbohydrates.value =
-                                selectedCustomFood.carbohydrates;
+                                nutritionPer100g(selectedCustomFood.carbohydrates, selectedCustomFood.quantity);
 
 
                             manualFat.value =
-                                selectedCustomFood.fat;
+                                nutritionPer100g(selectedCustomFood.fat, selectedCustomFood.quantity);
 
 
                             manualFiber.value =
-                                selectedCustomFood.fiber;
+                                nutritionPer100g(selectedCustomFood.fiber, selectedCustomFood.quantity);
 
 
                             foodSuggestion.style.display =
@@ -1247,7 +1267,7 @@
 
 
                                 <span class="recent-value">
-                                    {{ meal.quantity }}
+                                    {{ meal.calories|floatformat:0 }} kcal
                                 </span>
 
                             </div>

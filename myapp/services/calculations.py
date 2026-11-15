@@ -27,6 +27,8 @@ def calculate_bmr(
     if not weight or not height or not age:
         return None
 
+    gender = (gender or "").strip().lower()
+
     if gender == "male":
 
         bmr = (
@@ -46,7 +48,12 @@ def calculate_bmr(
         )
 
     else:
-        return None
+        bmr = (
+            10 * weight
+            + 6.25 * height
+            - 5 * age
+            - 78
+        )
 
     return round(bmr)
 
@@ -57,6 +64,14 @@ def calculate_tdee(
 ):
     if not bmr or not activity_level:
         return None
+
+    activity_level = (activity_level or "").strip().lower()
+    activity_level = {
+        "lightly active": "light",
+        "moderately active": "moderate",
+        "very active": "very",
+        "active": "very",
+    }.get(activity_level, activity_level)
 
     activity_multipliers = {
 
@@ -79,6 +94,39 @@ def calculate_tdee(
     tdee = bmr * multiplier
 
     return round(tdee)
+
+
+def calculate_calorie_target(profile, tdee):
+    manual_target = profile.daily_calorie_target
+    if manual_target and manual_target > 0:
+        return round(manual_target)
+    if not tdee:
+        return 2000
+
+    goal = (profile.goal or "maintain").strip().lower()
+    goal = {
+        "lose weight": "lose",
+        "maintain weight": "maintain",
+        "gain weight": "gain",
+    }.get(goal, goal)
+    goal_multipliers = {
+        "lose": 0.85,
+        "maintain": 1.0,
+        "gain": 1.10,
+    }
+    return round(tdee * goal_multipliers.get(goal, 1.0))
+
+
+def calculate_macro_targets(profile, calorie_target):
+    weight = profile.weight or 0
+    protein = round(weight * 1.2, 1) if weight > 0 else round(calorie_target * 0.20 / 4, 1)
+    fat = round(calorie_target * 0.30 / 9, 1)
+    carbohydrates = round(max(0, (calorie_target - protein * 4 - fat * 9) / 4), 1)
+    return {
+        "protein": protein,
+        "carbohydrates": carbohydrates,
+        "fat": fat,
+    }
 
 
 def calculate_nutrition_baseline(profile):
@@ -106,8 +154,13 @@ def calculate_nutrition_baseline(profile):
         activity_level=profile.activity_level
     )
 
+    calorie_target = calculate_calorie_target(profile, tdee)
+    macro_targets = calculate_macro_targets(profile, calorie_target)
+
     return {
         "age": age,
         "bmr": bmr,
         "tdee": tdee,
+        "calorie_target": calorie_target,
+        "macro_targets": macro_targets,
     }

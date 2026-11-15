@@ -25,24 +25,24 @@
         <div class="rec-budget-card">
             <div class="rec-budget-label">Remaining Calories</div>
             <div class="rec-budget-val {% if over_budget %}text-danger{% else %}text-primary{% endif %}">
-                {{ rem_cal }} <span class="unit">kcal</span>
+                <span id="remainingCaloriesValue">{{ rem_cal }}</span> <span class="unit">kcal</span>
             </div>
-            <div class="rec-budget-sub">Target: {{ calorie_target }} kcal | Eaten: {{ consumed_cal }} kcal</div>
+            <div id="calorieBudgetSummary" class="rec-budget-sub">Target: {{ calorie_target }} kcal | Eaten: {{ consumed_cal }} kcal</div>
         </div>
         <div class="rec-budget-card">
             <div class="rec-budget-label">Remaining Protein</div>
-            <div class="rec-budget-val text-info">{{ rem_prot }} <span class="unit">g</span></div>
-            <div class="rec-budget-sub">Target: {{ prot_target }}g | Eaten: {{ consumed_prot }}g</div>
+            <div class="rec-budget-val text-info"><span id="remainingProteinValue">{{ rem_prot }}</span> <span class="unit">g</span></div>
+            <div id="proteinBudgetSummary" class="rec-budget-sub">Target: {{ prot_target }}g | Eaten: {{ consumed_prot }}g</div>
         </div>
         <div class="rec-budget-card">
             <div class="rec-budget-label">Remaining Carbs</div>
-            <div class="rec-budget-val text-warning">{{ rem_carb }} <span class="unit">g</span></div>
-            <div class="rec-budget-sub">Target: {{ carb_target }}g | Eaten: {{ consumed_carb }}g</div>
+            <div class="rec-budget-val text-warning"><span id="remainingCarbohydratesValue">{{ rem_carb }}</span> <span class="unit">g</span></div>
+            <div id="carbohydratesBudgetSummary" class="rec-budget-sub">Target: {{ carb_target }}g | Eaten: {{ consumed_carb }}g</div>
         </div>
         <div class="rec-budget-card">
             <div class="rec-budget-label">Remaining Fat</div>
-            <div class="rec-budget-val text-danger">{{ rem_fat }} <span class="unit">g</span></div>
-            <div class="rec-budget-sub">Target: {{ fat_target }}g | Eaten: {{ consumed_fat }}g</div>
+            <div class="rec-budget-val text-danger"><span id="remainingFatValue">{{ rem_fat }}</span> <span class="unit">g</span></div>
+            <div id="fatBudgetSummary" class="rec-budget-sub">Target: {{ fat_target }}g | Eaten: {{ consumed_fat }}g</div>
         </div>
     </div>
 
@@ -101,6 +101,7 @@
             </div>
 
             <form id="quickLogForm" onsubmit="submitQuickLog(event)">
+                {% csrf_token %}
                 <input type="hidden" id="logFoodId" value="">
                 
                 <div class="form-group-modal">
@@ -114,10 +115,10 @@
                 </div>
 
                 <div class="form-group-modal">
-                    <label for="logQuantity">Portion / Serving Size</label>
+                    <label for="logGrams">Portion eaten (grams)</label>
                     <div class="quantity-input-wrap">
-                        <input type="number" id="logQuantity" class="modal-input" min="0.1" step="0.1" value="1.0" oninput="updateNutritionPreview()" required>
-                        <span class="quantity-unit-label">serving (~<span id="modalServingG">100</span>g)</span>
+                        <input type="number" id="logGrams" class="modal-input" min="1" step="1" value="100" oninput="updateNutritionPreview()" required>
+                        <span class="quantity-unit-label">g</span>
                     </div>
                 </div>
 
@@ -764,6 +765,25 @@ function showToast(message) {
     }, 3200);
 }
 
+function updateBudgetSummary(budget) {
+    document.getElementById('remainingCaloriesValue').textContent = budget.rem_cal;
+    document.getElementById('remainingProteinValue').textContent = budget.rem_prot;
+    document.getElementById('remainingCarbohydratesValue').textContent = budget.rem_carb;
+    document.getElementById('remainingFatValue').textContent = budget.rem_fat;
+    document.getElementById('calorieBudgetSummary').textContent =
+        `Target: ${budget.calorie_target} kcal | Eaten: ${budget.consumed_cal} kcal`;
+    document.getElementById('proteinBudgetSummary').textContent =
+        `Target: ${budget.prot_target}g | Eaten: ${budget.consumed_prot}g`;
+    document.getElementById('carbohydratesBudgetSummary').textContent =
+        `Target: ${budget.carb_target}g | Eaten: ${budget.consumed_carb}g`;
+    document.getElementById('fatBudgetSummary').textContent =
+        `Target: ${budget.fat_target}g | Eaten: ${budget.consumed_fat}g`;
+
+    const calorieValue = document.getElementById('remainingCaloriesValue').closest('.rec-budget-val');
+    calorieValue.classList.toggle('text-danger', budget.over_budget);
+    calorieValue.classList.toggle('text-primary', !budget.over_budget);
+}
+
 // Fetch Recommendations
 async function fetchRecommendations() {
     const refreshBtn = document.getElementById('refreshBtn');
@@ -950,8 +970,7 @@ function openLogModal(foodId) {
     document.getElementById('logFoodId').value = selectedFoodForLog.id;
     document.getElementById('modalFoodTitle').textContent = `Add "${selectedFoodForLog.name}" to Log`;
     document.getElementById('modalFoodNepali').textContent = selectedFoodForLog.name_nepali || '';
-    document.getElementById('modalServingG').textContent = selectedFoodForLog.serving_size || 100;
-    document.getElementById('logQuantity').value = '1.0';
+    document.getElementById('logGrams').value = '100';
 
     updateNutritionPreview();
     document.getElementById('logModal').style.display = 'flex';
@@ -964,19 +983,22 @@ function closeLogModal() {
 
 function updateNutritionPreview() {
     if (!selectedFoodForLog) return;
-    const qty = parseFloat(document.getElementById('logQuantity').value) || 1.0;
+    const grams = parseFloat(document.getElementById('logGrams').value) || 0;
     const preview = document.getElementById('modalNutritionPreview');
 
-    const cal = Math.round(selectedFoodForLog.calories * qty);
-    const prot = (selectedFoodForLog.protein * qty).toFixed(1);
-    const carb = (selectedFoodForLog.carbohydrates * qty).toFixed(1);
-    const fat = (selectedFoodForLog.fat * qty).toFixed(1);
+    const portionFactor = grams / 100;
+    const cal = Math.round(selectedFoodForLog.calories * portionFactor);
+    const prot = (selectedFoodForLog.protein * portionFactor).toFixed(1);
+    const carb = (selectedFoodForLog.carbohydrates * portionFactor).toFixed(1);
+    const fat = (selectedFoodForLog.fat * portionFactor).toFixed(1);
+    const fiber = (selectedFoodForLog.fiber * portionFactor).toFixed(1);
 
     preview.innerHTML = `
         <span style="color: #ea580c;">🔥 ${cal} kcal</span>
         <span>Protein: ${prot}g</span>
         <span>Carbs: ${carb}g</span>
         <span>Fat: ${fat}g</span>
+        <span>Fiber: ${fiber}g</span>
     `;
 }
 
@@ -985,7 +1007,7 @@ async function submitQuickLog(e) {
     e.preventDefault();
     const foodId = document.getElementById('logFoodId').value;
     const mealType = document.getElementById('logMealType').value;
-    const quantity = document.getElementById('logQuantity').value;
+    const quantityGrams = document.getElementById('logGrams').value;
     const submitBtn = document.getElementById('logSubmitBtn');
 
     submitBtn.disabled = true;
@@ -1001,12 +1023,13 @@ async function submitQuickLog(e) {
             body: JSON.stringify({
                 food_id: foodId,
                 meal_type: mealType,
-                quantity: quantity
+                quantity_grams: quantityGrams
             })
         });
 
         if (!res.ok) throw new Error('Logging failed');
         const data = await res.json();
+        updateBudgetSummary(data.budget);
         showToast(data.message || 'Meal logged successfully!');
         closeLogModal();
         // Refresh recommendations after logging meal to reflect updated budget!

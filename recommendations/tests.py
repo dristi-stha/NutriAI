@@ -1,8 +1,10 @@
-from django.test import TestCase
+import json
+from datetime import date
 from django.contrib.auth.models import User
-from myapp.models import Food
+from django.test import Client, TestCase
+from myapp.models import Food, MealLog, UserProfile
 from rest_framework.test import APIRequestFactory, force_authenticate
-from recommendations.views import GetRecommendationsView, get_user_recommendations
+from recommendations.views import GetRecommendationsView, _get_budget, get_user_recommendations
 
 
 class RecommendationEligibilityTests(TestCase):
@@ -85,3 +87,61 @@ class RecommendationEligibilityTests(TestCase):
 		response = GetRecommendationsView.as_view()(request)
 
 		self.assertEqual([item['name'] for item in response.data], ['API target'])
+
+	def test_meal_planner_quick_log_has_csrf_and_updates_budget(self):
+		UserProfile.objects.create(
+			user=self.user,
+			date_of_birth=date(1990, 1, 1),
+			gender='female',
+			height=165,
+			weight=65,
+			activity_level='moderate',
+			goal='lose',
+		)
+		food = Food.objects.create(
+			name='Quick-log soup', calories=150, protein=12,
+			carbohydrates=18, fat=4, fiber=3,
+			is_recommendable=True, is_edible_food=True, is_supplement=False,
+		)
+		client = Client(enforce_csrf_checks=True)
+		client.force_login(self.user)
+
+		page = client.get('/meal-planner/')
+		csrf_cookie = page.cookies.get('csrftoken')
+		self.assertIsNotNone(csrf_cookie)
+
+		response = client.post(
+			'/api/recommendations/quick-log/',
+			data=json.dumps({'food_id': food.id, 'meal_type': 'lunch', 'quantity_grams': 150}),
+			content_type='application/json',
+			HTTP_X_CSRFTOKEN=csrf_cookie.value,
+		)
+
+		self.assertEqual(response.status_code, 200)
+		self.assertEqual(MealLog.objects.filter(user=self.user).count(), 1)
+		meal = MealLog.objects.get(user=self.user)
+		self.assertEqual(meal.quantity, 150)
+		self.assertEqual(meal.calories, 225)
+		self.assertEqual(meal.protein, 18)
+		self.assertEqual(meal.carbohydrates, 27)
+		self.assertEqual(meal.fat, 6)
+		self.assertEqual(meal.fiber, 4.5)
+		self.assertEqual(_get_budget(self.user)[4], 225)
+		self.assertEqual(response.json()['budget']['consumed_cal'], 225)
+		self.assertContains(client.get('/meal-planner/'), 'Eaten: 225 kcal')
+
+	def test_budget_uses_goal_calories_and_personalized_macros(self):
+		UserProfile.objects.create(
+			user=self.user,
+			date_of_birth=date(1990, 1, 1),
+			gender='female',
+			height=165,
+			weight=65,
+			activity_level='moderate',
+			goal='lose',
+		)
+
+		budget = _get_budget(self.user)
+
+		self.assertLess(budget[0], 2000)
+		self.assertEqual(budget[1], 78)

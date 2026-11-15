@@ -1,3 +1,4 @@
+import math
 from django.shortcuts import render, redirect
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
@@ -252,6 +253,17 @@ def userdash(request):
         manual_carbohydrates = request.POST.get("manual_carbohydrates")
         manual_fat = request.POST.get("manual_fat")
         manual_fiber = request.POST.get("manual_fiber")
+        try:
+            portion_grams = float(request.POST.get("portion_grams") or 100)
+        except ValueError:
+            messages.error(request, "Enter a valid portion size in grams.")
+            return redirect("userdash")
+
+        if not math.isfinite(portion_grams) or portion_grams <= 0:
+            messages.error(request, "Portion size must be greater than zero grams.")
+            return redirect("userdash")
+
+        portion_factor = portion_grams / 100
 
         if not food_name or not meal_type:
             messages.error(
@@ -278,12 +290,12 @@ def userdash(request):
                     food=variant.food,
                     food_name=f"{variant.food.name} - {variant.name}",
                     meal_type=meal_type,
-                    quantity=1,
-                    calories=variant.calories,
-                    protein=variant.protein,
-                    carbohydrates=variant.carbohydrates,
-                    fat=variant.fat,
-                    fiber=variant.fiber,
+                    quantity=portion_grams,
+                    calories=round(variant.calories * portion_factor, 1),
+                    protein=round(variant.protein * portion_factor, 1),
+                    carbohydrates=round(variant.carbohydrates * portion_factor, 1),
+                    fat=round(variant.fat * portion_factor, 1),
+                    fiber=round(variant.fiber * portion_factor, 1),
                     consumed_at=timezone.now(),
                 )
 
@@ -296,7 +308,37 @@ def userdash(request):
 
 
             # =========================================
-            # CASE 2: PREVIOUSLY SAVED CUSTOM FOOD
+            # CASE 2: CATALOG FOOD WITHOUT VARIANTS
+            # =========================================
+
+            catalog_food = Food.objects.filter(
+                name__iexact=food_name
+            ).first()
+
+            if catalog_food:
+                if catalog_food.variants.exists():
+                    messages.error(request, "Please select a food option first.")
+                    return redirect("userdash")
+
+                MealLog.objects.create(
+                    user=request.user,
+                    food=catalog_food,
+                    food_name=catalog_food.name,
+                    meal_type=meal_type,
+                    quantity=portion_grams,
+                    calories=round(catalog_food.calories * portion_factor, 1),
+                    protein=round(catalog_food.protein * portion_factor, 1),
+                    carbohydrates=round(catalog_food.carbohydrates * portion_factor, 1),
+                    fat=round(catalog_food.fat * portion_factor, 1),
+                    fiber=round(catalog_food.fiber * portion_factor, 1),
+                    consumed_at=timezone.now(),
+                )
+                messages.success(request, f"{catalog_food.name} logged successfully!")
+                return redirect("userdash")
+
+
+            # =========================================
+            # CASE 3: PREVIOUSLY SAVED CUSTOM FOOD
             # =========================================
 
             previous_custom_food = MealLog.objects.filter(
@@ -313,12 +355,12 @@ def userdash(request):
                     food=None,
                     food_name=food_name,
                     meal_type=meal_type,
-                    quantity=1,
-                    calories=previous_custom_food.calories,
-                    protein=previous_custom_food.protein,
-                    carbohydrates=previous_custom_food.carbohydrates,
-                    fat=previous_custom_food.fat,
-                    fiber=previous_custom_food.fiber,
+                    quantity=portion_grams,
+                    calories=round(previous_custom_food.calories * portion_factor, 1),
+                    protein=round(previous_custom_food.protein * portion_factor, 1),
+                    carbohydrates=round(previous_custom_food.carbohydrates * portion_factor, 1),
+                    fat=round(previous_custom_food.fat * portion_factor, 1),
+                    fiber=round(previous_custom_food.fiber * portion_factor, 1),
                     consumed_at=timezone.now(),
                 )
 
@@ -331,7 +373,7 @@ def userdash(request):
 
 
             # =========================================
-            # CASE 3: COMPLETELY NEW MANUAL FOOD
+            # CASE 4: COMPLETELY NEW MANUAL FOOD
             # =========================================
 
             if not manual_calories:
@@ -349,12 +391,12 @@ def userdash(request):
                 food=None,
                 food_name=food_name,
                 meal_type=meal_type,
-                quantity=1,
-                calories=float(manual_calories),
-                protein=float(manual_protein or 0),
-                carbohydrates=float(manual_carbohydrates or 0),
-                fat=float(manual_fat or 0),
-                fiber=float(manual_fiber or 0),
+                quantity=portion_grams,
+                calories=round(float(manual_calories) * portion_factor, 1),
+                protein=round(float(manual_protein or 0) * portion_factor, 1),
+                carbohydrates=round(float(manual_carbohydrates or 0) * portion_factor, 1),
+                fat=round(float(manual_fat or 0) * portion_factor, 1),
+                fiber=round(float(manual_fiber or 0) * portion_factor, 1),
                 consumed_at=timezone.now(),
             )
 
@@ -373,6 +415,9 @@ def userdash(request):
                 "Selected food option was not found."
             )
 
+            return redirect("userdash")
+        except ValueError:
+            messages.error(request, "Nutrition values must be valid numbers.")
             return redirect("userdash")
 
 # --------------------------
