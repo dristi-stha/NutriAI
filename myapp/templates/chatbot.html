@@ -16,18 +16,22 @@
             </form>
         </div>
 
-        <div class="chatbot-messages" aria-live="polite">
+        <div id="chatbot-messages" class="chatbot-messages" aria-live="polite" aria-busy="false">
             {% if chat_history %}
                 {% for chat in chat_history %}
                 <article class="chat-message chat-message--{{ chat.role }}">
-                    <p>{{ chat.content|linebreaksbr }}</p>
+                    <div class="chat-message__content">{{ chat.content }}</div>
                 </article>
                 {% endfor %}
             {% else %}
             <article class="chat-message chat-message--assistant">
-                <p>Hi! Ask me a nutrition question to get started.</p>
+                <div class="chat-message__content">Hi! Ask me a nutrition question to get started.</div>
             </article>
             {% endif %}
+            <div id="chatbot-loading" class="chatbot-loading" role="status" aria-live="polite" hidden>
+                <span class="chatbot-spinner" aria-hidden="true"></span>
+                <span>NutriAI is preparing a reply...</span>
+            </div>
         </div>
 
         {% if messages %}
@@ -36,12 +40,67 @@
             {% endfor %}
         {% endif %}
 
-        <form method="post" class="chatbot-form">
+        <form id="chatbot-form" method="post" class="chatbot-form">
             {% csrf_token %}
             <label class="sr-only" for="chatbot-message">Your message</label>
             <textarea id="chatbot-message" name="message" rows="2" maxlength="2000" required placeholder="Ask about meals, nutrition, or healthy habits..."></textarea>
-            <button type="submit">Send</button>
+            <button id="chatbot-send" type="submit">Send</button>
         </form>
     </section>
 </main>
+<script>
+function escapeChatText(text) {
+    return text.replace(/[&<>"']/g, character => ({
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#39;'
+    })[character]);
+}
+
+function formatChatMarkdown(text) {
+    return escapeChatText(text)
+        .replace(/\*\*([\s\S]+?)\*\*/g, '<strong>$1</strong>')
+        .replace(/__([\s\S]+?)__/g, '<strong>$1</strong>')
+        .replace(/\*([^*\n]+)\*/g, '<em>$1</em>')
+        .replace(/_([^_\n]+)_/g, '<em>$1</em>')
+        .replace(/`([^`\n]+)`/g, '<code>$1</code>')
+        .replace(/\n/g, '<br>');
+}
+
+const chatMessages = document.getElementById('chatbot-messages');
+chatMessages.querySelectorAll('.chat-message--assistant .chat-message__content').forEach(content => {
+    content.innerHTML = formatChatMarkdown(content.textContent);
+});
+
+function scrollChatToBottom() {
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+}
+
+requestAnimationFrame(scrollChatToBottom);
+
+document.getElementById('chatbot-form').addEventListener('submit', event => {
+    const message = document.getElementById('chatbot-message');
+    if (!message.value.trim()) {
+        event.preventDefault();
+        message.focus();
+        return;
+    }
+
+    const pendingMessage = document.createElement('article');
+    pendingMessage.className = 'chat-message chat-message--user';
+    const pendingContent = document.createElement('div');
+    pendingContent.className = 'chat-message__content';
+    pendingContent.textContent = message.value.trim();
+    pendingMessage.appendChild(pendingContent);
+    chatMessages.appendChild(pendingMessage);
+
+    document.getElementById('chatbot-loading').hidden = false;
+    chatMessages.setAttribute('aria-busy', 'true');
+    document.getElementById('chatbot-send').disabled = true;
+    message.readOnly = true;
+    requestAnimationFrame(scrollChatToBottom);
+});
+</script>
 {% endblock %}

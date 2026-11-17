@@ -219,6 +219,12 @@ def get_user_recommendations(user, filters=None, meal=None):
                 allergies_list = [a.name.lower() for a in profile.allergies.all()]
             elif isinstance(profile.allergies, str):
                 allergies_list = [a.strip().lower() for a in profile.allergies.split(',') if a.strip()]
+        if getattr(profile, 'custom_allergies', ''):
+            allergies_list.extend(
+                item.strip().lower()
+                for item in profile.custom_allergies.replace(';', ',').split(',')
+                if item.strip()
+            )
 
     # 2. Daily budget
     (calorie_target, prot_target, carb_target, fat_target,
@@ -261,7 +267,9 @@ def get_user_recommendations(user, filters=None, meal=None):
     # Exclude allergens if model has allergen tags
     if allergies_list:
         for allergen in allergies_list:
-            foods = foods.exclude(name__icontains=allergen)
+            foods = foods.exclude(allergens__name__iexact=allergen).exclude(
+                name__icontains=allergen
+            )
 
     foods = list(foods)
     meal = (meal or '').strip().lower()
