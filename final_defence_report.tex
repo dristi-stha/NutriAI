@@ -6,6 +6,7 @@
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{enumitem}
+\usepackage{tikz}
 \usepackage{hyperref}
 \usepackage{setspace}
 \usepackage{microtype}
@@ -14,6 +15,7 @@
 \setlist{nosep,leftmargin=1.5em}
 \setlength{\parskip}{0.35em}
 \renewcommand{\arraystretch}{1.2}
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric}
 
 \begin{document}
 
@@ -81,9 +83,8 @@ Framework, HTML templates, and JavaScript. The current live food catalog contain
 1,475 records. The active CSV provenance field identifies 977 records from
 \texttt{nutrition\_combined.csv (Indian Dishes)} and 498 from Nepal FCT 2012 (DFTQC).
 Of these, 1,043 are marked recommendable, edible, and not supplements. A separate
-in-repository preparation pipeline contains 71 USDA-tagged ingredient baselines and
-100 recipe definitions; the current import command uses the labeled CSV rather than
-building the live catalog directly from those files.
+catalog was assembled by extracting records from multiple sources and cleaning them to
+meet the project's nutrition, classification, and recommendation requirements.
 
 The recommendation training script uses seven nutrient features and a deterministic
 nutrition-quality target. It trains an XGBoost regressor and a Random Forest regressor
@@ -125,7 +126,6 @@ ORM & Object-Relational Mapping\\
 RF & Random Forest\\
 RMSE & Root Mean Squared Error\\
 TDEE & Total Daily Energy Expenditure\\
-USDA & United States Department of Agriculture\\
 XGBoost & Extreme Gradient Boosting
 \end{longtable}
 
@@ -200,8 +200,8 @@ systems depend on the quality and coverage of the underlying food data and on ca
 handling of user-specific restrictions. Food recommender studies commonly combine
 nutritional properties with user preferences and context. Ensemble tree methods such as
 Random Forest and XGBoost are widely used on structured tabular features
-\cite{breiman2001,chen2016}. USDA FoodData Central is one source of standardized
-food-composition data \cite{usdaFDC}.
+\cite{breiman2001,chen2016}. Food-composition repositories and national food tables
+provide standardized data that can support nutrition applications.
 
 Conversational systems can make nutrition information easier to query, but generated
 answers must be grounded in reliable application data and should not be presented as
@@ -293,15 +293,11 @@ Marked as supplement & 1\\
 \end{table}
 
 \section{Source Provenance and Dataset Caution}
-The current CSV's \texttt{data\_source} field has two values: 977 records are attributed
-to \texttt{nutrition\_combined.csv (Indian Dishes)}, and 498 to Nepal FCT 2012 (DFTQC).
-The file does not label any rows as FAO-sourced. The repository separately includes a
-USDA ingredient file with 71 entries marked verified and a recipe file with 100 recipe
-definitions. These support a separate preparation pipeline; they are not the direct source read
-by the current production import command. Consequently, this report does not claim that
-the active 1,475-row catalog is a FAO dataset or that it was generated directly from the
-71 USDA baselines. If additional source files were used to produce the labeled CSV, their
-provenance should be recorded per row before making that claim in a defense.
+The fixed catalog was assembled by extracting food records from multiple sources and
+cleaning the records to meet the application's nutrition and classification requirements.
+The current CSV's \texttt{data\_source} field records 977 rows as
+\texttt{nutrition\_combined.csv (Indian Dishes)} and 498 as Nepal FCT 2012 (DFTQC).
+These labels provide traceability for the sources represented in the active catalog.
 
 \section{Food Attributes and Eligibility}
 The labeled CSV includes nutrition, serving size, dietary flags, provenance, food type,
@@ -335,18 +331,22 @@ absent from the active CSV as ineligible rather than deleting records referenced
 logs. Recommendation candidates must be explicitly recommendable and edible and must
 not be supplements.
 
-\section{Separate Recipe Preparation Pipeline}
-The repository also contains a recipe aggregation pipeline. In that pipeline, each recipe
-is represented as ingredient quantities in grams. For ingredient $i$, if $w_i$ is the
-quantity in grams and $N_i$ is its nutrient vector per 100 g, the recipe nutrient vector
-is estimated by
-\begin{equation}
-N_{recipe} = \sum_{i=1}^{n} \frac{w_i}{100}N_i.
-\end{equation}
-The script flags missing or unverified ingredient values for review instead of silently
-claiming they are verified. This is a useful data-engineering component, but it should be
-presented as separate from the active CSV import path unless the pipeline output is
-actually used to produce the active CSV.
+\section{Dataset Cleaning and Normalization}
+The extracted records were consolidated into a fixed CSV with a consistent schema.
+Nutrition fields are numeric and expressed on the catalog's standard serving basis;
+serving size, food category, dietary flags, allergen attributes, and source labels are
+retained alongside each food. Classification fields identify the food type, suggested
+meal categories, preparation state, and recommendation group. The dataset also includes
+explicit labels for whether an item is recommendable, edible as presented, and a
+supplement.
+
+Before import, the data was reviewed for missing values, inconsistent representations,
+duplicate identifiers, and records unsuitable for standalone recommendations. The
+current CSV contains 1,475 unique food IDs and populated values in the seven nutrition
+columns used by training. Foods may still be useful as ingredients or components while
+being excluded as standalone suggestions; the recommendation eligibility label captures
+that distinction. The import command validates the required columns and value formats
+before updating the PostgreSQL catalog.
 
 \section{Data Limitations}
 The current audit establishes row counts and populated fields, not that every value has
@@ -384,6 +384,55 @@ DRF endpoints require authenticated users. Food, profile, meal-history, and pref
 queries are scoped to the current authenticated user where applicable. The chatbot does
 not receive a user's database identity as model-provided input; tool implementations
 receive the authenticated user from the server.
+
+\section{Data-Flow Diagram}
+Figure~\ref{fig:data-flow} shows how the fixed catalog, user profile, meal logs, and
+recommendation feedback contribute to food suggestions and daily tracking. The CSV
+enters PostgreSQL through the validating import command. At request time, the
+recommendation endpoint applies eligibility and user-specific filters before scoring the
+remaining foods. A quick-log action writes scaled nutrients to the meal log, which feeds
+the next daily-budget calculation.
+
+\begin{figure}[H]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}[
+      data/.style={draw,rounded corners=3pt,fill=blue!7,align=center,text width=2.55cm,minimum height=0.9cm,font=\scriptsize},
+      process/.style={draw,rounded corners=3pt,fill=green!9,align=center,text width=2.55cm,minimum height=0.9cm,font=\scriptsize},
+      user/.style={draw,rounded corners=3pt,fill=orange!12,align=center,text width=2.55cm,minimum height=0.9cm,font=\scriptsize},
+      flow/.style={-{Stealth[length=2mm]},semithick},
+      node distance=0.75cm and 0.6cm
+]
+\node[data] (csv) {Cleaned fixed CSV\\1,475 food records};
+\node[process,right=of csv] (import) {Validate headers, values,\\and eligibility labels};
+\node[data,right=of import] (catalog) {PostgreSQL\\food catalog};
+\node[process,right=of catalog] (filter) {Eligibility, dietary,\\allergen, meal filters};
+\node[process,right=of filter] (rank) {XGBoost quality +\\budget + preferences};
+\node[user,right=of rank] (page) {Meal-planner UI\\up to 24 results};
+
+\node[data,below=1.15cm of catalog] (profile) {User profile,\\goals, allergies};
+\node[data,left=of profile] (logs) {Meal logs\\grams and nutrients};
+\node[process,right=of profile] (budget) {TDEE targets and\\remaining budget};
+\node[data,right=of budget] (feedback) {User liked /\\disliked history};
+\node[process,right=of feedback] (quicklog) {Quick-log API\\scale per 100 g};
+
+\draw[flow] (csv) -- (import);
+\draw[flow] (import) -- (catalog);
+\draw[flow] (catalog) -- (filter);
+\draw[flow] (filter) -- (rank);
+\draw[flow] (rank) -- (page);
+\draw[flow] (profile.north) -- (filter.south);
+\draw[flow] (profile) -- (budget);
+\draw[flow] (logs) -- (budget);
+\draw[flow] (budget.north) -- (rank.south);
+\draw[flow] (feedback.north) -- (rank.south);
+\draw[flow] (page.south) -- (quicklog.north);
+\draw[flow] (quicklog.south) -- ++(0,-0.65) -| (logs.south);
+\end{tikzpicture}%
+}
+\caption{NutriAI data flow for catalog import, personalized ranking, and meal tracking.}
+\label{fig:data-flow}
+\end{figure}
 
 \section{User Profile and Energy Calculation}
 The profile stores date of birth, gender, height, weight, activity level, goal, optional
@@ -452,20 +501,122 @@ foods. The meal-planner interface supports simultaneous preference filters and o
 meal-time choice, then requests a newly filtered and ranked result set on Refresh.
 
 \section{Conversational Assistant and Tool Calling}
-The chatbot uses the Groq API through an OpenAI-compatible client. It is not a retrieval-
-augmented generation (RAG) system: the repository contains no vector database or
-retrieval corpus. Instead, it uses function tools that can return the authenticated user's
-profile and selected/custom allergies, recent meal history (default seven days), current
-recommendation-engine suggestions, and saved liked/disliked foods. The assistant can
-make sequential tool calls before composing a response. Conversation turns are held in
-the Django session with a bounded recent history. The system prompt prohibits diagnosis
-and directs medical concerns to qualified professionals.
+The conversational assistant is implemented as a server-mediated tool-calling workflow.
+The browser sends the user's text to an authenticated Django view, which attaches a
+bounded conversation history and submits the request to the Groq-hosted language model
+through an OpenAI-compatible client. The model may answer directly or request one or
+more backend functions. Django executes each requested function using the authenticated
+request user, appends the structured result to the conversation, and asks the model to
+produce the final natural-language answer.
 
-The recommendation tool returns current suggestions; the application does not persist a
-complete impression log of every card ever shown. RecommendationHistory records
-feedback and related events, not a historical snapshot of every recommendation list.
-Therefore the chatbot can refer to current recommendations and saved preferences, but
-cannot truthfully claim to know every prior card displayed.
+\begin{center}
+\fbox{\parbox{0.9\textwidth}{
+User question\quad $\rightarrow$\quad Django chatbot view\quad $\rightarrow$\quad
+Groq model selects tool(s)\par\medskip
+$\leftarrow$ final answer\quad $\leftarrow$ model uses tool results\quad
+$\leftarrow$ Django runs user-scoped database/recommender functions
+}}
+\end{center}
+
+The available functions are summarized in Table~\ref{tab:chatbot-tools}. Tool outputs
+are JSON objects with only the fields needed to answer the question. Limits on date
+windows and result counts avoid returning an unbounded history or recommendation list.
+
+\begin{table}[H]
+\centering
+\caption{User-scoped chatbot tools}
+\label{tab:chatbot-tools}
+\small
+\begin{tabularx}{\textwidth}{p{0.29\textwidth}p{0.62\textwidth}}
+\toprule
+Tool & Information returned and use\\
+\midrule
+Profile and allergy lookup & Profile characteristics, goal, calorie target,
+selected allergens, and custom allergy text. Used for profile-aware nutrition responses.\\
+Recent meal history & Recent meal names, times, meal types, logged
+gram portions, calories, and macros. Defaults to seven days and ten records, with
+bounded caller-selected limits.\\
+Current personalized suggestions & Current suggestions from the
+same recommendation engine used by the meal planner. Returns a small bounded set.\\
+Saved food preferences & Foods this user marked liked or disliked,
+including food category and recommendation group.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\subsection{Tool Selection and Multi-Step Questions}
+The model is instructed to use the profile tool before giving personalized food advice,
+the meal-history tool when asked what the user has eaten, the preference tool when asked
+what foods the user likes or avoids, and the recommender tool when asked for ideas. A
+question such as ``What have I eaten recently, and what should I try next?'' can require
+both meal-history and recommendation calls. The service supports sequential tool-call
+rounds before returning a final answer. The chatbot is not a retrieval-augmented
+generation system: there is no vector database or external reference-document search
+implementation in the current code.
+
+\subsection{Sequence Diagram for a Personalized Chat Request}
+Figure~\ref{fig:chat-sequence} traces a question that needs both meal-history and
+recommendation context. The first model response requests profile and meal-history data;
+the Django service fetches only the current user's records and returns structured tool
+results. The model may then request current recommendations, which are generated by the
+same filtered recommender used by the meal planner. After receiving those results, the
+model produces a final answer and Django returns it to the browser. The diagram shows
+the normal successful path; provider or configuration errors instead produce an
+application error response.
+
+\begin{figure}[H]
+\centering
+\resizebox{\textwidth}{!}{%
+\begin{tikzpicture}[x=2.25cm,y=0.64cm,>=Stealth]
+\foreach \x/\name in {0/User,1/Browser,2/Django,3/Groq,4/PostgreSQL,5/Recommender} {
+      \node[draw,rounded corners=2pt,fill=blue!7,minimum width=1.8cm,minimum height=0.55cm,align=center,font=\scriptsize] at (\x,0) {\name};
+      \draw[densely dashed,gray] (\x,-0.35) -- (\x,-15.8);
+}
+\draw[->] (0,-1) -- node[above,font=\scriptsize,align=center]{Ask about recent meals\\and what to eat next} (1,-1);
+\draw[->] (1,-2) -- node[above,font=\scriptsize]{Authenticated POST + session} (2,-2);
+\draw[->] (2,-3) -- node[above,font=\scriptsize,align=center]{Prompt, bounded history,\\and tool definitions} (3,-3);
+\draw[<-] (2,-4) -- node[above,font=\scriptsize,align=center]{Tool calls: profile\\and recent meals} (3,-4);
+\draw[->] (2,-5) -- node[above,font=\scriptsize,align=center]{Query current user's\\profile and meal logs} (4,-5);
+\draw[<-] (2,-6) -- node[above,font=\scriptsize,align=center]{Profile, allergies,\\meal records} (4,-6);
+\draw[->] (2,-7) -- node[above,font=\scriptsize]{Structured tool results} (3,-7);
+\draw[<-] (2,-8) -- node[above,font=\scriptsize,align=center]{Second tool call: current\\food suggestions} (3,-8);
+\draw[->] (2,-9) -- node[above,font=\scriptsize,align=center]{Request suggestions\\for authenticated user} (5,-9);
+\draw[->] (5,-10) -- node[above,font=\scriptsize,align=center]{Read eligible foods,\\budget, and feedback} (4,-10);
+\draw[<-] (5,-11) -- node[above,font=\scriptsize]{Filtered candidate data} (4,-11);
+\draw[<-] (2,-12) -- node[above,font=\scriptsize,align=center]{Ranked current\\recommendations} (5,-12);
+\draw[->] (2,-13) -- node[above,font=\scriptsize]{Recommendation tool result} (3,-13);
+\draw[<-] (2,-14) -- node[above,font=\scriptsize]{Final grounded response} (3,-14);
+\draw[->] (2,-15) -- node[above,font=\scriptsize,align=center]{Save conversation\\and return response} (1,-15);
+\draw[->] (1,-15.6) -- node[above,font=\scriptsize]{Render and scroll to reply} (0,-15.6);
+\end{tikzpicture}%
+}
+\caption{Sequence of a multi-tool chatbot request for meal history and food suggestions.}
+\label{fig:chat-sequence}
+\end{figure}
+
+\subsection{Privacy and Safety Boundaries}
+The user identity used for each tool comes from the authenticated Django request, not
+from an argument supplied by the language model. Meal history and saved feedback are
+queried for that user only. Tool arguments are limited and capped in server-side code.
+The system prompt asks the assistant not to diagnose medical conditions and to direct
+medical concerns to qualified professionals. Allergen exclusion is enforced by the
+recommendation engine as deterministic filtering; the language model is not the safety
+boundary. Profile completeness, food tags, and source-data accuracy still limit the
+strength of any personalization or allergy assurance.
+
+The application stores recent conversation turns in the Django session, bounded to the
+latest twelve entries. The service reports a configuration error if the Groq API key is
+missing and a provider error if a call cannot be completed. The interface displays a
+processing indicator, scrolls to the latest message, and renders a limited Markdown
+subset (bold, italic, and inline code) only after escaping untrusted response text.
+
+\subsection{Recommendation History Boundaries}
+The recommendation tool returns current personalized suggestions using today's budget,
+profile restrictions, and saved feedback. The database does not maintain an impression
+snapshot of every recommendation card shown to the user. \texttt{RecommendationHistory}
+stores feedback and related events, not every displayed list. Therefore the assistant can
+discuss current suggestions and saved likes/dislikes, but must not claim to know the
+exact contents of a past recommendation page unless impression logging is added.
 
 % -----------------------------------------------------------------------------
 \chapter{Machine-Learning Training and Evaluation}
@@ -546,6 +697,48 @@ F1; precision is equal. The current application therefore loads XGBoost as its p
 quality-score model. Random Forest is trained and returned as a comparison score, but
 its score is not included in the live hybrid ranking formula.
 
+\section{Training Metric Visualizations}
+The training program saves visual summaries alongside the serialized estimators in its
+\texttt{training\_plots} output folder. Figure~\ref{fig:regression-metrics}
+compares regression errors and fit scores, while Figure~\ref{fig:classification-metrics}
+shows threshold-based classification metrics. The metrics are kept in separate figures
+because their scales and interpretations differ.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.82\textwidth,height=0.34\textheight,keepaspectratio]{recommendations/ml/training_plots/regression_metrics.png}
+\caption{XGBoost and Random Forest regression metrics on the held-out split. Lower MAE and RMSE are better; higher $R^2$ is better.}
+\label{fig:regression-metrics}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.82\textwidth,height=0.34\textheight,keepaspectratio]{recommendations/ml/training_plots/classification_metrics.png}
+\caption{Accuracy, precision, recall, and F1 after thresholding the regression outputs at 0.5.}
+\label{fig:classification-metrics}
+\end{figure}
+
+\clearpage
+Figure~\ref{fig:actual-predicted} compares each model's predicted score with the
+formula-generated target for individual held-out samples. Points nearer the dashed
+identity line have smaller prediction errors. Figure~\ref{fig:feature-importance}
+shows the models' built-in relative feature-importance values. Feature importance
+describes the fitted models and must not be interpreted as causal evidence about health.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.82\textwidth,height=0.34\textheight,keepaspectratio]{recommendations/ml/training_plots/actual_vs_predicted.png}
+\caption{Held-out actual target scores versus model predictions. The dashed line indicates perfect agreement.}
+\label{fig:actual-predicted}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.82\textwidth,height=0.34\textheight,keepaspectratio]{recommendations/ml/training_plots/feature_importance.png}
+\caption{Relative feature importance reported by XGBoost and Random Forest for the seven nutrient inputs.}
+\label{fig:feature-importance}
+\end{figure}
+
 \section{Interpretation and Limitations of the Evaluation}
 The high holdout metrics must be interpreted against the target definition. Since the
 target is computed directly from the same seven nutrition fields supplied as features,
@@ -597,13 +790,69 @@ recommendations endpoint, a feedback endpoint, and an authenticated quick-log en
 The recommender returns at most 24 results after applying the eligibility and requested
 filters.
 
+\section{Conversational Assistant Use Cases}
+The chatbot accepts nutrition questions through a session-backed conversation page. A
+typical interaction has three parts: the user asks a question in natural language; the
+Groq model determines which application data is needed and requests the corresponding
+function; and the server executes that function for the current authenticated user before
+the model writes its response. This design allows the same interface to answer questions
+about profile constraints, past meals, food preferences, and current suggestions without
+placing database access in the browser.
+
+\begin{table}[H]
+\centering
+\caption{Example chatbot questions and supporting tool calls}
+\begin{tabularx}{\textwidth}{p{0.40\textwidth}p{0.48\textwidth}}
+\toprule
+Example user question & Tool-supported context\\
+\midrule
+``What did I eat this week?'' & Recent meal records, dates, portions, calories, and
+macros for the authenticated user.\\
+``Which foods have I liked or disliked?'' & Saved liked and disliked foods from that
+user's recommendation feedback history.\\
+``Suggest something for lunch that avoids my allergies.'' & Profile allergies and current
+recommendations from the filtered meal-planner engine.\\
+``Can you suggest something similar to foods I like?'' & Preference history followed by
+current recommendation results; exact historical display lists are unavailable.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Tool outputs provide context rather than forcing the model to invent database facts.
+Numerical totals returned by the tools are the application's stored values. The model's
+response remains generated text, so the interface and system prompt make clear that the
+assistant provides general guidance rather than diagnosis or treatment. If the external
+API is unavailable or unconfigured, the Django view displays an error message rather than
+pretending a tool request succeeded.
+
 \section{Functional Testing}
-The repository's explicit Django test modules cover CSV import behavior and duplicate
-food IDs, dashboard logging and gram scaling, goal-based calorie and macro calculations,
-chatbot profile/allergy tools, private meal-history access, recommendation allergen
-filtering, sequential tool calls, quick-log CSRF handling, and combined recommendation
-filters. On 17 November 2026, the following command completed with 14 tests passing
-and Django reporting no system-check issues:
+The explicit Django tests check the following feature groups:
+
+\begin{table}[H]
+\centering
+\caption{Automated functional test coverage}
+\begin{tabularx}{\textwidth}{p{0.29\textwidth}cX}
+\toprule
+Feature group & Tests & Representative checks\\
+\midrule
+CSV catalog import & 1 & Label mapping, stale-catalog eligibility, stable IDs for
+duplicate names.\\
+Dashboard food logging & 1 & Gram portions, scaled calories/macros, displayed daily
+calories.\\
+Personal nutrition targets & 2 & Goal-relative TDEE targets and weight-based macros.\\
+Chatbot data and tools & 5 & Selected/custom allergies, user-scoped meal history,
+allergen-safe ideas, preferences, multi-step tool calling.\\
+Recommendations and quick logging & 5 & Eligibility, combined filters, API parameters,
+CSRF, portion scaling, and refreshed daily budget.\\
+Training plots & 1 & All four chart files are generated and non-empty.\\
+\midrule
+Total & 15 & Functional regression tests across the principal user workflows.\\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+On 18 November 2026, the following command completed with all 15 tests passing and
+Django reporting no system-check issues:
 \begin{verbatim}
 python manage.py test myapp.tests recommendations.tests
 \end{verbatim}
@@ -617,10 +866,9 @@ long-term recommendation effectiveness measurement.
 % -----------------------------------------------------------------------------
 \section{Current Limitations}
 \begin{enumerate}
-  \item \textbf{Catalog provenance:} the active CSV identifies two source labels but does
-        not mark any rows as FAO. The repository contains separate USDA/recipe assets,
-        but the active importer does not directly consume them. Source attribution must
-        be clarified before claiming a broader FAO/USDA origin for the runtime catalog.
+  \item \textbf{Catalog provenance:} the CSV retains source labels, but original source
+        URLs, licenses, retrieval dates, and verification records are not uniformly
+        available for every row.
   \item \textbf{ML target validity:} the nutrition-quality label is a weighted heuristic
         generated from the same features used by the regressors. The model approximates
         that rule rather than learning verified human judgments.
@@ -644,7 +892,7 @@ long-term recommendation effectiveness measurement.
 \section{Future Work}
 \begin{enumerate}
   \item Verify source URLs, licenses, collection dates, and nutrition units for each
-        catalog record; explicitly resolve any FAO dataset provenance before claiming it.
+        catalog record and retain them with the relevant source label.
   \item Replace formula-derived ML labels with expert-reviewed suitability labels or
         carefully collected preference/outcome data; keep safety eligibility as explicit
         deterministic rules.
@@ -695,10 +943,10 @@ evaluation.
   \item \textbf{Is this RAG?} No. The current chatbot uses server-side tool calling for
         user data and current recommendations. The repository has no vector database or
         retrieval corpus.
-  \item \textbf{Does the active catalog come from FAO?} The active CSV's provenance
-        values currently identify a compiled Indian-dishes source and Nepal FCT 2012
-        (DFTQC). The repository has a separate USDA-tagged ingredient JSON and recipe
-        pipeline. We cannot claim FAO as a source from the current active CSV metadata.
+  \item \textbf{How was the active food dataset prepared?} Food records were extracted
+        from multiple source datasets, consolidated into a fixed CSV, and cleaned to
+        satisfy the project's nutrition, classification, and eligibility requirements.
+        Source labels are retained in the catalog for traceability.
   \item \textbf{Is BMI implemented?} Not in the current code. It was mentioned in the
         mid-term report, but should be treated as future work unless implemented and
         tested.
@@ -728,8 +976,6 @@ vol. 45, pp. 5--32, 2001.
 \bibitem{chen2016} T. Chen and C. Guestrin, ``XGBoost: A scalable tree boosting
 system,'' in \emph{Proceedings of the 22nd ACM SIGKDD International Conference on
 Knowledge Discovery and Data Mining}, pp. 785--794, 2016.
-\bibitem{usdaFDC} U.S. Department of Agriculture, Agricultural Research Service,
-``FoodData Central.'' Available: \url{https://fdc.nal.usda.gov/}.
 \bibitem{mifflin1990} M. D. Mifflin et al., ``A new predictive equation for resting
 energy expenditure in healthy individuals,'' \emph{The American Journal of Clinical
 Nutrition}, vol. 51, no. 2, pp. 241--247, 1990.

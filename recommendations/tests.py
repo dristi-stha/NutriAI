@@ -1,10 +1,13 @@
 import json
+import tempfile
 from datetime import date
 from django.contrib.auth.models import User
 from django.test import Client, TestCase
+import numpy as np
 from myapp.models import Food, MealLog, UserProfile
 from rest_framework.test import APIRequestFactory, force_authenticate
 from recommendations.views import GetRecommendationsView, _get_budget, get_user_recommendations
+from recommendations.ml.train import generate_training_plots
 
 
 class RecommendationEligibilityTests(TestCase):
@@ -145,3 +148,37 @@ class RecommendationEligibilityTests(TestCase):
 
 		self.assertLess(budget[0], 2000)
 		self.assertEqual(budget[1], 78)
+
+
+class TrainingPlotTests(TestCase):
+	def test_training_plots_are_saved_for_both_models(self):
+		metrics = {
+			name: {
+				'mae': 0.1, 'rmse': 0.2, 'r2': 0.8,
+				'accuracy': 0.9, 'precision': 0.8, 'recall': 0.7, 'f1': 0.75,
+			}
+			for name in ('XGBoost', 'Random Forest')
+		}
+		predictions = {
+			'XGBoost': np.array([0.2, 0.7, 0.8]),
+			'Random Forest': np.array([0.3, 0.6, 0.75]),
+		}
+		feature_importances = {
+			'XGBoost': np.array([0.2, 0.2, 0.2, 0.1, 0.1, 0.1, 0.1]),
+			'Random Forest': np.array([0.15, 0.2, 0.15, 0.1, 0.1, 0.1, 0.2]),
+		}
+
+		with tempfile.TemporaryDirectory() as output_dir:
+			paths = generate_training_plots(
+				y_test=np.array([0.25, 0.65, 0.85]),
+				predictions=predictions,
+				metrics=metrics,
+				feature_importances=feature_importances,
+				output_dir=output_dir,
+			)
+
+			self.assertEqual(set(paths), {
+				'regression_metrics', 'classification_metrics',
+				'actual_vs_predicted', 'feature_importance',
+			})
+			self.assertTrue(all(path.is_file() and path.stat().st_size > 0 for path in paths.values()))

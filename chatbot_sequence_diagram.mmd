@@ -1,0 +1,37 @@
+sequenceDiagram
+    actor User
+    participant UI as Browser chat UI
+    participant Django as Django chatbot view
+    participant Groq as Groq language model
+    participant DB as PostgreSQL
+    participant Recommender as Recommendation service
+
+    User->>UI: Ask about meal history and food ideas
+    UI->>Django: Authenticated POST with message and session history
+    Django->>Groq: Conversation, system prompt, available tools
+    Groq-->>Django: Tool call request(s)
+
+    loop For each requested tool call
+        alt Profile and allergy lookup
+            Django->>DB: Read current user's profile and allergies
+            DB-->>Django: Profile and allergy fields
+        else Recent meal history
+            Django->>DB: Read current user's recent meal logs
+            DB-->>Django: Meals, portions, dates, and nutrition
+        else Saved likes and dislikes
+            Django->>DB: Read current user's recommendation feedback
+            DB-->>Django: Liked and disliked foods
+        else Current food suggestions
+            Django->>Recommender: Generate suggestions for current user
+            Recommender->>DB: Read eligible foods, profile, logs, and feedback
+            DB-->>Recommender: User-scoped data and food candidates
+            Recommender-->>Django: Ranked current recommendations
+        end
+        Django-->>Groq: Structured tool result
+        Groq-->>Django: Next tool request or final answer
+    end
+
+    Django->>Django: Store bounded conversation history
+    Django-->>UI: Final answer or friendly error
+    UI->>UI: Render response and scroll to latest message
+    UI-->>User: Display assistant reply

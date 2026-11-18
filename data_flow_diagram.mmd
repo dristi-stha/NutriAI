@@ -1,0 +1,31 @@
+flowchart LR
+    User[Registered user] -->|Profile, filters, feedback, meal actions| Browser[Django template UI]
+    CSV[Cleaned fixed food CSV] --> Import[Validated Django import]
+    Import --> FoodDB[(PostgreSQL food catalog)]
+
+    Browser -->|Authenticated request| Web[Django views and DRF API]
+    Web --> ProfileDB[(User profile and dietary restrictions)]
+    Web --> MealDB[(Meal, water, and weight logs)]
+    Web --> FeedbackDB[(Recommendation feedback)]
+
+    FoodDB --> Eligibility[Eligibility and safety filtering]
+    ProfileDB --> Eligibility
+    ProfileDB --> Budget[Personal calorie and macro targets]
+    MealDB --> Budget
+    Eligibility --> Candidates[Eligible food candidates]
+    Candidates --> Rank[Recommendation scoring]
+    Budget --> Rank
+    FeedbackDB --> Rank
+    Rank --> Results[Sorted recommendations: up to 24]
+    Results --> Browser
+
+    Browser -->|Quick-log selected food and grams| QuickLog[Quick-log endpoint]
+    QuickLog -->|Scale per-100-g nutrients| MealDB
+    MealDB -->|Updated daily totals| Budget
+
+    Browser -->|Nutrition question| Chat[Django chatbot service]
+    Chat -->|User-scoped tool requests| ProfileDB
+    Chat --> MealDB
+    Chat --> FeedbackDB
+    Chat --> Rank
+    Chat -->|Natural-language response| Browser

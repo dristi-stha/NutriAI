@@ -11,6 +11,9 @@ import sys
 import django
 import numpy as np
 import joblib
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent.parent))
@@ -168,6 +171,87 @@ def evaluate(name, y_true, y_pred):
             'accuracy': acc, 'precision': prec, 'recall': rec, 'f1': f1}
 
 
+def generate_training_plots(y_test, predictions, metrics, feature_importances, output_dir):
+    """Save holdout metric, fit, and feature-importance charts as PNG files."""
+    output_dir = Path(output_dir)
+    output_dir.mkdir(parents=True, exist_ok=True)
+    model_names = ['XGBoost', 'Random Forest']
+    colors = ['#2e7d32', '#ef8a17']
+    plot_paths = {}
+
+    # Keep error and classification metrics on separate scales for readability.
+    for chart_name, metric_names, title, ylabel in [
+        ('regression_metrics', ['mae', 'rmse', 'r2'], 'Regression metrics (lower errors are better)', 'Score / error'),
+        ('classification_metrics', ['accuracy', 'precision', 'recall', 'f1'], 'Classification metrics at threshold 0.5', 'Score'),
+    ]:
+        positions = np.arange(len(metric_names))
+        width = 0.36
+        figure, axis = plt.subplots(figsize=(9, 5.5))
+        for model_index, model_name in enumerate(model_names):
+            values = [metrics[model_name][metric] for metric in metric_names]
+            bars = axis.bar(
+                positions + (model_index - 0.5) * width,
+                values,
+                width,
+                label=model_name,
+                color=colors[model_index],
+            )
+            axis.bar_label(bars, fmt='%.3f', padding=3, fontsize=8)
+
+        axis.set_title(title)
+        axis.set_ylabel(ylabel)
+        axis.set_xticks(positions, [metric.upper() for metric in metric_names])
+        axis.legend(frameon=False)
+        axis.grid(axis='y', alpha=0.25)
+        axis.set_axisbelow(True)
+        figure.tight_layout()
+        path = output_dir / f'{chart_name}.png'
+        figure.savefig(path, dpi=160, bbox_inches='tight')
+        plt.close(figure)
+        plot_paths[chart_name] = path
+
+    actual = np.asarray(y_test)
+    all_scores = np.concatenate([actual, *[np.asarray(predictions[name]) for name in model_names]])
+    low = min(0.0, float(all_scores.min()))
+    high = max(1.0, float(all_scores.max()))
+    figure, axes = plt.subplots(1, 2, figsize=(11, 5))
+    for axis, model_name, color in zip(axes, model_names, colors):
+        predicted = np.asarray(predictions[model_name])
+        axis.scatter(actual, predicted, color=color, alpha=0.72, edgecolors='white', linewidths=0.4)
+        axis.plot([low, high], [low, high], color='#333333', linestyle='--', linewidth=1)
+        axis.set_title(model_name)
+        axis.set_xlabel('Formula target')
+        axis.set_ylabel('Predicted quality score')
+        axis.set_xlim(low, high)
+        axis.set_ylim(low, high)
+        axis.grid(alpha=0.22)
+    figure.suptitle('Held-out predictions vs formula-generated targets')
+    figure.tight_layout()
+    path = output_dir / 'actual_vs_predicted.png'
+    figure.savefig(path, dpi=160, bbox_inches='tight')
+    plt.close(figure)
+    plot_paths['actual_vs_predicted'] = path
+
+    feature_names = ['Calories', 'Protein', 'Carbohydrates', 'Fat', 'Fiber', 'Sugar', 'Sodium']
+    figure, axes = plt.subplots(1, 2, figsize=(11, 5.5))
+    for axis, model_name, color in zip(axes, model_names, colors):
+        importances = np.asarray(feature_importances[model_name])
+        order = np.argsort(importances)
+        axis.barh(np.asarray(feature_names)[order], importances[order], color=color)
+        axis.set_title(model_name)
+        axis.set_xlabel('Relative feature importance')
+        axis.grid(axis='x', alpha=0.22)
+        axis.set_axisbelow(True)
+    figure.suptitle('Model feature importance (descriptive, not causal)')
+    figure.tight_layout()
+    path = output_dir / 'feature_importance.png'
+    figure.savefig(path, dpi=160, bbox_inches='tight')
+    plt.close(figure)
+    plot_paths['feature_importance'] = path
+
+    return plot_paths
+
+
 def train():
     X, y = build_dataset()
 
@@ -189,7 +273,8 @@ def train():
         verbosity=0
     )
     xgb.fit(X_train, y_train)
-    xgb_metrics = evaluate('XGBoost', y_test, xgb.predict(X_test))
+    xgb_predictions = xgb.predict(X_test)
+    xgb_metrics = evaluate('XGBoost', y_test, xgb_predictions)
 
     # ── Random Forest ─────────────────────────────────────────────────────
     rf = RandomForestRegressor(
@@ -200,7 +285,25 @@ def train():
         n_jobs=1
     )
     rf.fit(X_train, y_train)
-    rf_metrics = evaluate('Random Forest', y_test, rf.predict(X_test))
+    rf_predictions = rf.predict(X_test)
+    rf_metrics = evaluate('Random Forest', y_test, rf_predictions)
+
+    plot_paths = generate_training_plots(
+        y_test=y_test,
+        predictions={
+            'XGBoost': xgb_predictions,
+            'Random Forest': rf_predictions,
+        },
+        metrics={
+            'XGBoost': xgb_metrics,
+            'Random Forest': rf_metrics,
+        },
+        feature_importances={
+            'XGBoost': xgb.feature_importances_,
+            'Random Forest': rf.feature_importances_,
+        },
+        output_dir=Path(__file__).parent / 'training_plots',
+    )
 
     # ── Score spread check ────────────────────────────────────────────────
     print('\n-- Score spread on full dataset -------------------------')
@@ -218,6 +321,9 @@ def train():
     joblib.dump(rf,  model_dir / 'rf_model.pkl')
 
     print('\nModels saved: model.pkl  rf_model.pkl')
+    print('Training plots saved:')
+    for name, path in plot_paths.items():
+        print(f'  {name}: {path}')
     print('\nDefense-ready metrics:')
     for k in ['mae', 'rmse', 'r2', 'accuracy', 'precision', 'recall', 'f1']:
         print(f'  XGB {k:12s}: {xgb_metrics[k]:.4f}   RF: {rf_metrics[k]:.4f}')
